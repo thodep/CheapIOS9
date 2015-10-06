@@ -135,7 +135,7 @@
         <!--More Information-->
         <scene sceneID="nFZ-9S-oFb">
             <objects>
-                <viewController id="jn6-Gy-UNc" userLabel="More Information" customClass="DetailViewController" customModule="TorontoCheapEats" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController autoresizesArchivedViewToFullSize="NO" id="jn6-Gy-UNc" userLabel="More Information" customClass="DetailViewController" customModule="TorontoCheapEats" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jWc-3I-gl0"/>
                         <viewControllerLayoutGuide type="bottom" id="8bz-mi-FxL"/>
@@ -229,6 +229,9 @@
                                         <exclude reference="ier-Vj-kYB"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <segue destination="ruI-9m-ELf" kind="show" id="blO-L9-rVy"/>
+                                </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="FI5-FF-tXa">
                                 <rect key="frame" x="12" y="202" width="577" height="216"/>
@@ -371,12 +374,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fxp-aE-0Pq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3809" y="131"/>
+            <point key="canvasLocation" x="3855" y="433"/>
         </scene>
-        <!--View Controller-->
+        <!--Review View Controller-->
         <scene sceneID="HFA-by-SfJ">
             <objects>
-                <viewController id="ruI-9m-ELf" sceneMemberID="viewController">
+                <viewController id="ruI-9m-ELf" customClass="ReviewViewController" customModule="TorontoCheapEats" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KFV-FD-jKy"/>
                         <viewControllerLayoutGuide type="bottom" id="soL-Mc-JZN"/>
@@ -389,7 +392,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aga-Qt-NQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3809" y="832"/>
+            <point key="canvasLocation" x="4523" y="433"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1Aw-P0-WiG">
@@ -442,11 +445,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="restaurantMapView" destination="j13-U7-egW" id="fMV-CP-opP"/>
+                        <segue destination="jn6-Gy-UNc" kind="show" identifier="MapViewPushtoDetailView" id="B4R-qX-wMS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8NW-dH-CcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2287" y="909"/>
+            <point key="canvasLocation" x="3087" y="893"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="nQp-dI-MNF">
@@ -486,4 +490,7 @@
             <point key="canvasLocation" x="1475" y="909"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="B4R-qX-wMS"/>
+    </inferredMetricsTieBreakers>
 </document>

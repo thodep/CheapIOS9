@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		243820D8A4AB02A257E747BB /* libPods-TorontoCheapEats.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32E5F78A1897F7A41867FC2C /* libPods-TorontoCheapEats.a */; };
 		D1561BEA1BC43DDD007B72A3 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1561BE91BC43DDD007B72A3 /* LogInViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		D1561BEC1BC44D05007B72A3 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1561BEB1BC44D05007B72A3 /* ReviewViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D16DD89D1BB473D20058EE3D /* YelpAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DD89C1BB473D20058EE3D /* YelpAPI.swift */; settings = {ASSET_TAGS = (); }; };
 		D16DD8A11BB47F640058EE3D /* Yelp-Bridging-Header.m in Sources */ = {isa = PBXBuildFile; fileRef = D16DD8A01BB47F640058EE3D /* Yelp-Bridging-Header.m */; settings = {ASSET_TAGS = (); }; };
 		D17AC4591BBD7D610039E5F1 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17AC4581BBD7D610039E5F1 /* AddressBook.framework */; };
@@ -63,6 +64,7 @@
 		2196BDE510B11700835A9191 /* Pods-TorontoCheapEats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TorontoCheapEats.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TorontoCheapEats/Pods-TorontoCheapEats.debug.xcconfig"; sourceTree = "<group>"; };
 		32E5F78A1897F7A41867FC2C /* libPods-TorontoCheapEats.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TorontoCheapEats.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1561BE91BC43DDD007B72A3 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		D1561BEB1BC44D05007B72A3 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		D16DD89C1BB473D20058EE3D /* YelpAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpAPI.swift; sourceTree = "<group>"; };
 		D16DD89E1BB47F640058EE3D /* TorontoCheapEats-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TorontoCheapEats-Bridging-Header.h"; sourceTree = "<group>"; };
 		D16DD89F1BB47F640058EE3D /* Yelp-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Yelp-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				D1B13CED1BB4F972006A546C /* BusinessViewController.swift */,
 				D1DF01FB1BB8FA3700C9290C /* DetailViewController.swift */,
 				D1561BE91BC43DDD007B72A3 /* LogInViewController.swift */,
+				D1561BEB1BC44D05007B72A3 /* ReviewViewController.swift */,
 			);
 			name = ViewContollers;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 			files = (
 				D1B13CEE1BB4F972006A546C /* BusinessViewController.swift in Sources */,
 				D1B13CF01BB50003006A546C /* BusinessTableViewCell.swift in Sources */,
+				D1561BEC1BC44D05007B72A3 /* ReviewViewController.swift in Sources */,
 				D19DB4451BBA121600DF6F53 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				D1F6FA6F1BBF0F8E00476BA7 /* BusinessController.swift in Sources */,
 				D1F6FA6D1BBEEE6B00476BA7 /* MapViewController.swift in Sources */,
