@@ -43,6 +43,8 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
         searchController.searchBar.placeholder = "Search Here..."
         searchController.searchBar.delegate = self
         searchController.searchBar.sizeToFit()
+        //dismiss Search Bar in Detail ViewController
+        self.definesPresentationContext = true
         searchController.searchBar.barTintColor = UIColor(red: 231.0/255.0, green: 95.0/255.0, blue:
             53.0/255.0, alpha: 0.3)
         // Set cancel button in white
@@ -70,14 +72,6 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
         })
     }
     
- 
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-//        if  searchResults.count > 0 {
-//        
-//            tableView.reloadData()
-//        }
-        searchController.searchBar.resignFirstResponder()
-    }
     
      func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
     if searchController.active {
@@ -111,7 +105,6 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! BusinessTableViewCell
         if let rests = self.businesses{
-            //let rest = rests[indexPath.row]
          let rest = (searchController.active) ? searchResults[indexPath.row] : rests[indexPath.row]
             cell.nameLabel.text = rest.name
             cell.addressLabel.text = rest.address

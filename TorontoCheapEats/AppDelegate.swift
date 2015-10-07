@@ -14,7 +14,6 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 import ParseFacebookUtilsV4
 
-//import "FBSDKCoreKit/FBSDKCoreKit.h"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
