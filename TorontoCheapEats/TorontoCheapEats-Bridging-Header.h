@@ -6,3 +6,13 @@
 #import "BDBOAuth1RequestOperationManager.h"
 #import "UIImageView+AFNetworking.h"
 #import "UIScrollView+SVInfiniteScrolling.h"
+// Parse API
+#import <Parse/Parse.h>
+#import <ParseUI/ParseUI.h>
+#import <Bolts/Bolts.h>
+#import <ParseFacebookUtilsV4/PFFacebookUtils.h>
+
+
+// Facebook API
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>

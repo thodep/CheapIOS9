@@ -15,7 +15,8 @@ class MapViewController: UIViewController ,  CLLocationManagerDelegate, MKMapVie
     @IBOutlet weak var restaurantMapView: MKMapView!
     let locationManager = CLLocationManager()
     let detailVC = DetailViewController()
-   
+    var restaurantList:Business?
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         guard let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {return}
@@ -28,6 +29,9 @@ class MapViewController: UIViewController ,  CLLocationManagerDelegate, MKMapVie
         super.viewDidLoad()
         
         mapSetUp()
+        // Empty Back Button
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain,
+            target: nil, action: nil)
     }
     
     func mapSetUp(){
@@ -76,12 +80,22 @@ class MapViewController: UIViewController ,  CLLocationManagerDelegate, MKMapVie
         if let business = view.annotation as? Business, let thumbnailImageView = view.leftCalloutAccessoryView as? UIImageView {
             thumbnailImageView.contentMode = .ScaleAspectFit
             thumbnailImageView.setImageWithURL(business.imageURL)
+            restaurantList = business
+            
+        }
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        //
+        if segue.identifier == "MapViewPushtoDetailView" {
+            let dtVC = segue.destinationViewController as? DetailViewController
+            dtVC?.resturant = restaurantList
+            
         }
     }
     //----------click on annotation to go to Detail VC
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
 
-       performSegueWithIdentifier("Business", sender: self)
+        performSegueWithIdentifier("MapViewPushtoDetailView", sender: self)
        // self.navigationController?.pushViewController(self.detailVC, animated: true)
     }
 

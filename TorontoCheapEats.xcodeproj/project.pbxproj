@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		243820D8A4AB02A257E747BB /* libPods-TorontoCheapEats.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32E5F78A1897F7A41867FC2C /* libPods-TorontoCheapEats.a */; };
-		9F22B42E1BC3169A00D9D33B /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F22B42D1BC3169A00D9D33B /* ButtonStyle.swift */; settings = {ASSET_TAGS = (); }; };
-		9F22B4311BC316C100D9D33B /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F22B4301BC316C100D9D33B /* TextFieldStyle.swift */; settings = {ASSET_TAGS = (); }; };
-		9FE9987F1BC317C10054A927 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE9987E1BC317C10054A927 /* BackgroundView.swift */; settings = {ASSET_TAGS = (); }; };
+		D1561BEA1BC43DDD007B72A3 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1561BE91BC43DDD007B72A3 /* LogInViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		D1561BEC1BC44D05007B72A3 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1561BEB1BC44D05007B72A3 /* ReviewViewController.swift */; settings = {ASSET_TAGS = (); }; };
+
 		D16DD89D1BB473D20058EE3D /* YelpAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DD89C1BB473D20058EE3D /* YelpAPI.swift */; settings = {ASSET_TAGS = (); }; };
 		D16DD8A11BB47F640058EE3D /* Yelp-Bridging-Header.m in Sources */ = {isa = PBXBuildFile; fileRef = D16DD8A01BB47F640058EE3D /* Yelp-Bridging-Header.m */; settings = {ASSET_TAGS = (); }; };
 		D17AC4591BBD7D610039E5F1 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17AC4581BBD7D610039E5F1 /* AddressBook.framework */; };
@@ -19,6 +19,17 @@
 		D1B13CE91BB4F344006A546C /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B13CE81BB4F344006A546C /* Business.swift */; settings = {ASSET_TAGS = (); }; };
 		D1B13CEE1BB4F972006A546C /* BusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B13CED1BB4F972006A546C /* BusinessViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D1B13CF01BB50003006A546C /* BusinessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B13CEF1BB50003006A546C /* BusinessTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		D1BF087C1BC43A79000936E0 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BF087B1BC43A79000936E0 /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
+		D1BF087E1BC43A87000936E0 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BF087D1BC43A87000936E0 /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
+		D1BF08801BC43AC6000936E0 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BF087F1BC43AC6000936E0 /* FBSDKShareKit.framework */; settings = {ASSET_TAGS = (); }; };
+		D1BF08821BC43B16000936E0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BF08811BC43B16000936E0 /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
+		D1BF08841BC43B20000936E0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BF08831BC43B20000936E0 /* Parse.framework */; settings = {ASSET_TAGS = (); }; };
+		D1BF08861BC43B30000936E0 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BF08851BC43B30000936E0 /* ParseFacebookUtilsV4.framework */; settings = {ASSET_TAGS = (); }; };
+		D1BF08881BC43B39000936E0 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BF08871BC43B39000936E0 /* ParseUI.framework */; settings = {ASSET_TAGS = (); }; };
+		D1BF088A1BC43B87000936E0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BF08891BC43B87000936E0 /* AudioToolbox.framework */; };
+		D1BF088C1BC43BAA000936E0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BF088B1BC43BAA000936E0 /* SystemConfiguration.framework */; };
+		D1BF088E1BC43BC0000936E0 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BF088D1BC43BC0000936E0 /* libsqlite3.tbd */; };
+		D1BF08901BC43BCF000936E0 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BF088F1BC43BCF000936E0 /* libstdc++.6.tbd */; };
 		D1DF01FC1BB8FA3700C9290C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DF01FB1BB8FA3700C9290C /* DetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D1DF01FE1BB8FAE000C9290C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1DF01FD1BB8FAE000C9290C /* CoreLocation.framework */; };
 		D1F6FA6D1BBEEE6B00476BA7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F6FA6C1BBEEE6B00476BA7 /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -53,9 +64,9 @@
 		0F1F82423E8D5865D0737974 /* Pods-TorontoCheapEats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TorontoCheapEats.release.xcconfig"; path = "Pods/Target Support Files/Pods-TorontoCheapEats/Pods-TorontoCheapEats.release.xcconfig"; sourceTree = "<group>"; };
 		2196BDE510B11700835A9191 /* Pods-TorontoCheapEats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TorontoCheapEats.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TorontoCheapEats/Pods-TorontoCheapEats.debug.xcconfig"; sourceTree = "<group>"; };
 		32E5F78A1897F7A41867FC2C /* libPods-TorontoCheapEats.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TorontoCheapEats.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F22B42D1BC3169A00D9D33B /* ButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
-		9F22B4301BC316C100D9D33B /* TextFieldStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = "<group>"; };
-		9FE9987E1BC317C10054A927 /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		D1561BE91BC43DDD007B72A3 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		D1561BEB1BC44D05007B72A3 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+
 		D16DD89C1BB473D20058EE3D /* YelpAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpAPI.swift; sourceTree = "<group>"; };
 		D16DD89E1BB47F640058EE3D /* TorontoCheapEats-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TorontoCheapEats-Bridging-Header.h"; sourceTree = "<group>"; };
 		D16DD89F1BB47F640058EE3D /* Yelp-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Yelp-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -67,6 +78,17 @@
 		D1B13CE81BB4F344006A546C /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		D1B13CED1BB4F972006A546C /* BusinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessViewController.swift; sourceTree = "<group>"; };
 		D1B13CEF1BB50003006A546C /* BusinessTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessTableViewCell.swift; sourceTree = "<group>"; };
+		D1BF087B1BC43A79000936E0 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		D1BF087D1BC43A87000936E0 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		D1BF087F1BC43AC6000936E0 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		D1BF08811BC43B16000936E0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		D1BF08831BC43B20000936E0 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		D1BF08851BC43B30000936E0 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		D1BF08871BC43B39000936E0 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		D1BF08891BC43B87000936E0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D1BF088B1BC43BAA000936E0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D1BF088D1BC43BC0000936E0 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		D1BF088F1BC43BCF000936E0 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
 		D1DF01FB1BB8FA3700C9290C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D1DF01FD1BB8FAE000C9290C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D1F6FA6C1BBEEE6B00476BA7 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -91,10 +113,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1BF08901BC43BCF000936E0 /* libstdc++.6.tbd in Frameworks */,
+				D1BF088E1BC43BC0000936E0 /* libsqlite3.tbd in Frameworks */,
+				D1BF088C1BC43BAA000936E0 /* SystemConfiguration.framework in Frameworks */,
+				D1BF088A1BC43B87000936E0 /* AudioToolbox.framework in Frameworks */,
+				D1BF08881BC43B39000936E0 /* ParseUI.framework in Frameworks */,
+				D1BF087C1BC43A79000936E0 /* FBSDKCoreKit.framework in Frameworks */,
+				D1BF08841BC43B20000936E0 /* Parse.framework in Frameworks */,
 				D17AC45B1BBD7D680039E5F1 /* MapKit.framework in Frameworks */,
+				D1BF087E1BC43A87000936E0 /* FBSDKLoginKit.framework in Frameworks */,
+				D1BF08861BC43B30000936E0 /* ParseFacebookUtilsV4.framework in Frameworks */,
+				D1BF08801BC43AC6000936E0 /* FBSDKShareKit.framework in Frameworks */,
 				D17AC4591BBD7D610039E5F1 /* AddressBook.framework in Frameworks */,
 				D1DF01FE1BB8FAE000C9290C /* CoreLocation.framework in Frameworks */,
 				243820D8A4AB02A257E747BB /* libPods-TorontoCheapEats.a in Frameworks */,
+				D1BF08821BC43B16000936E0 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +151,17 @@
 		0CD9CC33283DB7B5D3E4C6E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D1BF088F1BC43BCF000936E0 /* libstdc++.6.tbd */,
+				D1BF088D1BC43BC0000936E0 /* libsqlite3.tbd */,
+				D1BF088B1BC43BAA000936E0 /* SystemConfiguration.framework */,
+				D1BF08891BC43B87000936E0 /* AudioToolbox.framework */,
+				D1BF08871BC43B39000936E0 /* ParseUI.framework */,
+				D1BF08851BC43B30000936E0 /* ParseFacebookUtilsV4.framework */,
+				D1BF08831BC43B20000936E0 /* Parse.framework */,
+				D1BF08811BC43B16000936E0 /* Bolts.framework */,
+				D1BF087F1BC43AC6000936E0 /* FBSDKShareKit.framework */,
+				D1BF087D1BC43A87000936E0 /* FBSDKLoginKit.framework */,
+				D1BF087B1BC43A79000936E0 /* FBSDKCoreKit.framework */,
 				D17AC45A1BBD7D680039E5F1 /* MapKit.framework */,
 				D17AC4581BBD7D610039E5F1 /* AddressBook.framework */,
 				D1DF01FD1BB8FAE000C9290C /* CoreLocation.framework */,
@@ -187,6 +231,8 @@
 				D1F6FA6C1BBEEE6B00476BA7 /* MapViewController.swift */,
 				D1B13CED1BB4F972006A546C /* BusinessViewController.swift */,
 				D1DF01FB1BB8FA3700C9290C /* DetailViewController.swift */,
+				D1561BE91BC43DDD007B72A3 /* LogInViewController.swift */,
+				D1561BEB1BC44D05007B72A3 /* ReviewViewController.swift */,
 			);
 			name = ViewContollers;
 			sourceTree = "<group>";
@@ -476,12 +522,14 @@
 			files = (
 				D1B13CEE1BB4F972006A546C /* BusinessViewController.swift in Sources */,
 				D1B13CF01BB50003006A546C /* BusinessTableViewCell.swift in Sources */,
+				D1561BEC1BC44D05007B72A3 /* ReviewViewController.swift in Sources */,
 				D19DB4451BBA121600DF6F53 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				D1F6FA6F1BBF0F8E00476BA7 /* BusinessController.swift in Sources */,
 				D1F6FA6D1BBEEE6B00476BA7 /* MapViewController.swift in Sources */,
 				D16DD89D1BB473D20058EE3D /* YelpAPI.swift in Sources */,
 				D1FEAF171BB471D8000F0F12 /* AppDelegate.swift in Sources */,
 				D1B13CE91BB4F344006A546C /* Business.swift in Sources */,
+				D1561BEA1BC43DDD007B72A3 /* LogInViewController.swift in Sources */,
 				D1FEAF1F1BB471D9000F0F12 /* TorontoCheapEats.xcdatamodeld in Sources */,
 				9F22B42E1BC3169A00D9D33B /* ButtonStyle.swift in Sources */,
 				9FE9987F1BC317C10054A927 /* BackgroundView.swift in Sources */,
@@ -633,6 +681,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TorontoCheapEats/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -652,6 +704,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TorontoCheapEats/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
