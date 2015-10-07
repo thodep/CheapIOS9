@@ -28,12 +28,12 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "57F8F826CC3712A786DAEB8BABB355A0C43A487E"
     },
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/thodep\/TorontoCheapEats.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:thodep\/FinaliOSProject.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8EB41DCF8A32F7668707400EF7963326B76BAB67"
     },
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:thodep\/FinaliOSProject.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/thodep\/TorontoCheapEats.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A2DB4E4A68D3AA5829B841DBC8DD6ED7D7B31245"
     },
