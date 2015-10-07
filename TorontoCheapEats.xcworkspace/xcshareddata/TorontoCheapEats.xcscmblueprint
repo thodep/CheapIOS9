@@ -1,22 +1,22 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "AA1A4FC1FD7752F7677EDC7E6154EA0D1116A5EC+++4ED92B4",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "AA1A4FC1FD7752F7677EDC7E6154EA0D1116A5EC+++470E661",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "57F8F826CC3712A786DAEB8BABB355A0C43A487E+++98DC36B" : 0,
-    "E2392EB98B4DBB8DD8D0C1CC634C728A7BACB7CF+++18A5F79" : 0,
-    "8EB41DCF8A32F7668707400EF7963326B76BAB67+++509C6D7" : 0,
-    "8EB41DCF8A32F7668707400EF7963326B76BAB67+++5DB5C30" : 0,
-    "AA1A4FC1FD7752F7677EDC7E6154EA0D1116A5EC+++4ED92B4" : 0
+    "8EB41DCF8A32F7668707400EF7963326B76BAB67+++FE6D76B" : 0,
+    "E2392EB98B4DBB8DD8D0C1CC634C728A7BACB7CF+++5751419" : 0,
+    "57F8F826CC3712A786DAEB8BABB355A0C43A487E+++A9C6DD7" : 0,
+    "AA1A4FC1FD7752F7677EDC7E6154EA0D1116A5EC+++470E661" : 0,
+    "8EB41DCF8A32F7668707400EF7963326B76BAB67+++040ACE7" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "041D04DC-2362-42B6-BF1A-B19AA6132199",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "57F8F826CC3712A786DAEB8BABB355A0C43A487E+++98DC36B" : "FinalProject\/",
-    "E2392EB98B4DBB8DD8D0C1CC634C728A7BACB7CF+++18A5F79" : "Final-Project-Cheap-Eats\/",
-    "8EB41DCF8A32F7668707400EF7963326B76BAB67+++509C6D7" : "FinalProject\/TorontoCheapEats\/",
-    "8EB41DCF8A32F7668707400EF7963326B76BAB67+++5DB5C30" : "FinalProject\/TorontoCheapEats\/",
-    "AA1A4FC1FD7752F7677EDC7E6154EA0D1116A5EC+++4ED92B4" : "CheapIOS9\/"
+    "8EB41DCF8A32F7668707400EF7963326B76BAB67+++FE6D76B" : "FinalProject\/TorontoCheapEats\/",
+    "E2392EB98B4DBB8DD8D0C1CC634C728A7BACB7CF+++5751419" : "Final-Project-Cheap-Eats\/",
+    "57F8F826CC3712A786DAEB8BABB355A0C43A487E+++A9C6DD7" : "FinalProject\/",
+    "AA1A4FC1FD7752F7677EDC7E6154EA0D1116A5EC+++470E661" : "CheapIOS9\/",
+    "8EB41DCF8A32F7668707400EF7963326B76BAB67+++040ACE7" : "FinalProject\/TorontoCheapEats\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "TorontoCheapEats",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -25,27 +25,27 @@
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/thodep\/Final-App.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "57F8F826CC3712A786DAEB8BABB355A0C43A487E+++98DC36B"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "57F8F826CC3712A786DAEB8BABB355A0C43A487E+++A9C6DD7"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/thodep\/TorontoCheapEats.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8EB41DCF8A32F7668707400EF7963326B76BAB67+++509C6D7"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8EB41DCF8A32F7668707400EF7963326B76BAB67+++040ACE7"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:thodep\/FinaliOSProject.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8EB41DCF8A32F7668707400EF7963326B76BAB67+++5DB5C30"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8EB41DCF8A32F7668707400EF7963326B76BAB67+++FE6D76B"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/thodep\/CheapIOS9.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AA1A4FC1FD7752F7677EDC7E6154EA0D1116A5EC+++4ED92B4"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AA1A4FC1FD7752F7677EDC7E6154EA0D1116A5EC+++470E661"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/thodep\/Final-Project-Cheap-Eats.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E2392EB98B4DBB8DD8D0C1CC634C728A7BACB7CF+++18A5F79"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E2392EB98B4DBB8DD8D0C1CC634C728A7BACB7CF+++5751419"
     }
   ]
 }
