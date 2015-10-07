@@ -380,10 +380,10 @@
             </objects>
             <point key="canvasLocation" x="3855" y="433"/>
         </scene>
-        <!--Review View Controller-->
+        <!--Login-->
         <scene sceneID="HFA-by-SfJ">
             <objects>
-                <viewController storyboardIdentifier="Login" id="ruI-9m-ELf" customClass="ReviewViewController" customModule="TorontoCheapEats" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" title="Login" id="ruI-9m-ELf" customClass="ReviewViewController" customModule="TorontoCheapEats" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KFV-FD-jKy"/>
                         <viewControllerLayoutGuide type="bottom" id="soL-Mc-JZN"/>
@@ -588,12 +588,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8L1-Dn-HaQ">
-                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="NYc-Yg-wdk"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="NYc-Yg-wdk">
+                            <connections>
+                                <segue destination="ZNc-wM-oSX" kind="presentation" id="o9E-Sj-XYm"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aga-Qt-NQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4584" y="-296"/>
+            <point key="canvasLocation" x="4604" y="-296"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1Aw-P0-WiG">
@@ -717,7 +721,7 @@
         <!--Sign Up Controller-->
         <scene sceneID="ao1-I1-aPB">
             <objects>
-                <viewController storyboardIdentifier="Signup" id="D3j-H7-hvu" userLabel="Sign Up Controller" customClass="SignUpViewController" customModule="TorontoCheapEats" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Signup" title="SignUp" id="D3j-H7-hvu" userLabel="Sign Up Controller" customClass="SignUpViewController" customModule="TorontoCheapEats" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="THS-Fq-fOe"/>
                         <viewControllerLayoutGuide type="bottom" id="KfV-29-dn1"/>
@@ -1111,6 +1115,7 @@
         <image name="facebook" width="202" height="46"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="o9E-Sj-XYm"/>
         <segue reference="YCR-5E-yJ3"/>
     </inferredMetricsTieBreakers>
 </document>
