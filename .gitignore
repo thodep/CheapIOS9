@@ -24,3 +24,5 @@ xcuserdata
 *.xcuserstate
 
 TorontoCheapEats.xcworkspace/xcuserdata/yungdai.xcuserdatad/UserInterfaceState.xcuserstate
+
+.DS_Store
