@@ -43,12 +43,14 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
         searchController.searchBar.placeholder = "Search Here..."
         searchController.searchBar.delegate = self
         searchController.searchBar.sizeToFit()
+        
         //dismiss Search Bar in Detail ViewController
         self.definesPresentationContext = true
+        
         searchController.searchBar.barTintColor = UIColor(red: 231.0/255.0, green: 95.0/255.0, blue:
             53.0/255.0, alpha: 0.3)
         // Set cancel button in white
-        searchController.searchBar.tintColor = UIColor.whiteColor()
+        //searchController.searchBar.tintColor = UIColor.whiteColor()
 
         tableView.tableHeaderView = searchController.searchBar
         
@@ -75,10 +77,11 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
     
      func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
     if searchController.active {
-    return false
+   
+        return false
             } else {
     return true
-    }
+        }
     }
     
     //---------------------
@@ -89,12 +92,14 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
             self.searchForRestaurants(false)
         }
     }
-    
+
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
         if searchController.active {
-        return searchResults.count
+            
+            return searchResults.count
+            
             } else  if let biz = self.businesses {
           return biz.count
         }
@@ -116,7 +121,6 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
             cell.restaurantImage.layer.cornerRadius = 10
             cell.restaurantImage.layer.masksToBounds = true
             cell.backgroundColor = UIColor.clearColor()
-            
         }
         
     return cell

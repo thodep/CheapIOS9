@@ -59,6 +59,7 @@ class Business: NSObject , MKAnnotation{
         openHours = !isClosed
         } else {
         openHours = false
+            
         }
         //----------- restaurant image API
         let imageURLString = dictionary["image_url"] as? String

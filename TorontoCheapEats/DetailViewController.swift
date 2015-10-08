@@ -115,6 +115,10 @@ class DetailViewController: UIViewController,MKMapViewDelegate, CLLocationManage
 
     }
     
+    // unwind segue from Review Controller
+    @IBAction func close(segue:UIStoryboardSegue) {
+    }
+    
     @IBAction func callForReservation(sender: AnyObject) {
     
         if phoneNumber == nil {
