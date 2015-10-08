@@ -25,8 +25,12 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
 
     
     override func viewDidLoad() {
+        
+       
         super.viewDidLoad()
+       
         configureSearchController()
+        
         configureViewControllerForBusinessesAndInfiniteScrolling()
          self.tableView.backgroundColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue:240.0/255.0, alpha: 0.2)
      
@@ -35,6 +39,7 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
             target: nil, action: nil)
         
     }
+ 
     //----Adding Search Bar & implement Search Methods-------------
     func configureSearchController() {
         searchController = UISearchController(searchResultsController: nil)
@@ -50,7 +55,7 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
         searchController.searchBar.barTintColor = UIColor(red: 231.0/255.0, green: 95.0/255.0, blue:
             53.0/255.0, alpha: 0.3)
         // Set cancel button in white
-        //searchController.searchBar.tintColor = UIColor.whiteColor()
+        searchController.searchBar.tintColor = UIColor.whiteColor()
 
         tableView.tableHeaderView = searchController.searchBar
         

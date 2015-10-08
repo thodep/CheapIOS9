@@ -217,8 +217,8 @@
 		D1F6FA721BBF0FE000476BA7 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				D1FEAF221BB471D9000F0F12 /* LaunchScreen.storyboard */,
 				D1FEAF1A1BB471D8000F0F12 /* Main.storyboard */,
+				D1FEAF221BB471D9000F0F12 /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";

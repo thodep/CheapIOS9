@@ -85,13 +85,14 @@ class DetailViewController: UIViewController,MKMapViewDelegate, CLLocationManage
                 if (resturant?.openHours! == true ) {
                     
                     hoursOperation.text = "Open"
-                    hoursOperation.textColor = UIColor.greenColor()
+                    hoursOperation.textColor = UIColor(red: 34/255, green: 139/255, blue: 34/255, alpha: 1)
         
                 }  else if (resturant?.openHours! == false) {
                     hoursOperation.text = "Closed"
                     hoursOperation.textColor = UIColor.redColor()
         }
         
+     
         //--------Restaurant Phone Number
         if phoneNumber !== nil{
             phoneNumber.text = resturant?.phoneNumber1
