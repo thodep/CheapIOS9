@@ -59,7 +59,6 @@ class ReviewViewController: UIViewController, UIAlertViewDelegate {
         let uiAlert = UIAlertController(title: "Awesome!", message: "Thanks For Good Rating !! ", preferredStyle: UIAlertControllerStyle.Alert)
         self.presentViewController(uiAlert, animated: true, completion: nil)
        
-        
         uiAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
             print("got customer rating save on Parse")
         }))
@@ -86,11 +85,7 @@ class ReviewViewController: UIViewController, UIAlertViewDelegate {
             uiAlert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { action in
                 print("Click of cancel button")
             }))
-        // how to dimiss the view from main view
-        
-       // self.bgroundView.removeFromSuperview()
-        //self.closeButton.removeFromSuperview()
-       // performSegueWithIdentifier(identifier: String, sender: AnyObject?)
+
     }
     
     override func viewDidAppear(animated: Bool) {
