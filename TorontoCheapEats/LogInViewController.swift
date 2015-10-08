@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Parse
+import ParseFacebookUtilsV4
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
@@ -23,14 +25,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        usernameField.delegate = self
-        passwordField.delegate = self
+//        
+//        usernameField!.delegate = self
+//        passwordField!.delegate = self
         
         if PFUser.currentUser()?.sessionToken != nil {
             print("sending user to the main app screen because he's a current user")
             
-            self.performSegueWithIdentifier("mainApp", sender: self)
+            self.performSegueWithIdentifier("pushToMainPage", sender: self)
         } else {
             // Show the signup or login screen
             return
@@ -182,7 +184,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         }
                         print("user is logged in and location is updated")
                     }
-                    self.performSegueWithIdentifier("mainApp", sender: nil)
+                    self.performSegueWithIdentifier("pushToMainPage", sender: nil)
                 }
             } else {
                 // User needs to verify email address before continuing
@@ -213,7 +215,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     }
                     print("user is logged in and location is updated")
                 }
-                self.performSegueWithIdentifier("mainApp", sender: nil)
+                self.performSegueWithIdentifier("pushToMainPage", sender: nil)
                 
             } else {
                 print("log in failed")
@@ -243,7 +245,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func facebookButton
         (sender: AnyObject) {
             self.errorMessage.alpha = 0
-            
             PFFacebookUtils.logInInBackgroundWithReadPermissions(permissions as [AnyObject]) {
                 (user: PFUser?, error: NSError?) -> Void in
                 
@@ -290,7 +291,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                                 }
                                 parseUser.saveInBackground()
                                 print("Parse User Saved")
-                                self.performSegueWithIdentifier("mainApp", sender: nil)
+                                self.performSegueWithIdentifier("pushToMainPage", sender: nil)
                             }
                         })
                     } else {
@@ -305,7 +306,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                             }
                             
                         }
-                        self.performSegueWithIdentifier("mainApp", sender: nil)
+                        self.performSegueWithIdentifier("pushToMainPage", sender: nil)
                     }
                 }
             }

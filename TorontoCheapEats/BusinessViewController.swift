@@ -19,6 +19,7 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
     var searchController: UISearchController!
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var loginButton: UIBarButtonItem!
     
     let numberOfElements = 20
     var numberOfRestaurantsOffset:Int = 0 //the starting point for restaurants retrived in search starting zero
@@ -34,6 +35,17 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain,
             target: nil, action: nil)
         
+        if PFUser.currentUser()?.sessionToken != nil {
+            loginButton.title = "Logout"
+            
+        } else {
+            loginButton.title = "Login"
+        }
+        
+        if (FBSDKAccessToken.currentAccessToken() != nil) {
+            print("User is already logged in go to the next viewcontroller")
+            
+        }
     }
     //----Adding Search Bar & implement Search Methods-------------
     func configureSearchController() {
@@ -155,7 +167,26 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func loginButtonPressed(sender: AnyObject) {
+        
+        if loginButton.title == "Login" {
+            self.performSegueWithIdentifier("loginPage", sender: self)
+        } else if loginButton.title == "Logout" {
+            processSignOut()
+        }
+            
+        
+    }
 
+    
+    // Sign the current user out of the app
+    func processSignOut() {
+        
+        // // Sign out
+        PFUser.logOut()
+
+    }
 }
 
 

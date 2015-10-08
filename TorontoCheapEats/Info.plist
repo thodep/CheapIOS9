@@ -78,6 +78,7 @@
 	</dict>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>fbauth2</string>
 		<string>telprompt</string>
 		<string>tel</string>
 	</array>

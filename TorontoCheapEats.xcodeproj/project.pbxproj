@@ -179,6 +179,7 @@
 		9F22B42F1BC3169D00D9D33B /* Element Styling */ = {
 			isa = PBXGroup;
 			children = (
+				D1B13CEF1BB50003006A546C /* BusinessTableViewCell.swift */,
 				9FA753671BC5B468003AEA78 /* TextFieldStyle.swift */,
 				9FA753651BC5B45B003AEA78 /* BackgroundView.swift */,
 				9FA753691BC5B48D003AEA78 /* ButtonStyle.swift */,
@@ -218,17 +219,21 @@
 		D18617F11BB59136001F03CF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D1F6FA6E1BBF0F8E00476BA7 /* BusinessController.swift */,
+				D1F6FA781BBF104900476BA7 /* CoreData */,
+				D18617F01BB5912B001F03CF /* API */,
+				9F22B42F1BC3169D00D9D33B /* Element Styling */,
 				D1B13CE81BB4F344006A546C /* Business.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
 		};
-		D1F6FA701BBF0F9B00476BA7 /* ModelControllers */ = {
+		D1C0FF4F1BC70301009ADCD5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D1F6FA6E1BBF0F8E00476BA7 /* BusinessController.swift */,
+				D1FEAF161BB471D8000F0F12 /* AppDelegate.swift */,
 			);
-			name = ModelControllers;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		D1F6FA711BBF0FC800476BA7 /* ViewContollers */ = {
@@ -253,38 +258,6 @@
 			name = Storyboards;
 			sourceTree = "<group>";
 		};
-		D1F6FA731BBF0FEC00476BA7 /* AppDelegate */ = {
-			isa = PBXGroup;
-			children = (
-				D1FEAF161BB471D8000F0F12 /* AppDelegate.swift */,
-			);
-			name = AppDelegate;
-			sourceTree = "<group>";
-		};
-		D1F6FA751BBF100E00476BA7 /* ReusibleViews */ = {
-			isa = PBXGroup;
-			children = (
-				D1F6FA761BBF102200476BA7 /* Cells */,
-			);
-			name = ReusibleViews;
-			sourceTree = "<group>";
-		};
-		D1F6FA761BBF102200476BA7 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				D1B13CEF1BB50003006A546C /* BusinessTableViewCell.swift */,
-			);
-			name = Cells;
-			sourceTree = "<group>";
-		};
-		D1F6FA771BBF103700476BA7 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				D1FEAF201BB471D9000F0F12 /* Assets.xcassets */,
-			);
-			name = Assets;
-			sourceTree = "<group>";
-		};
 		D1F6FA781BBF104900476BA7 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,15 +269,19 @@
 		D1F6FA791BBF105C00476BA7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D11529B21BBA29A100A55C22 /* ObjectiveCFile */,
+				D1FEAF201BB471D9000F0F12 /* Assets.xcassets */,
 				D1FEAF251BB471D9000F0F12 /* Info.plist */,
 			);
 			name = Resources;
+			path = TorontoCheapEats;
 			sourceTree = "<group>";
 		};
 		D1FEAF0A1BB471D8000F0F12 = {
 			isa = PBXGroup;
 			children = (
 				D1FEAF151BB471D8000F0F12 /* TorontoCheapEats */,
+				D1F6FA791BBF105C00476BA7 /* Resources */,
 				D1FEAF2D1BB471D9000F0F12 /* TorontoCheapEatsTests */,
 				D1FEAF381BB471D9000F0F12 /* TorontoCheapEatsUITests */,
 				D1FEAF141BB471D8000F0F12 /* Products */,
@@ -326,18 +303,10 @@
 		D1FEAF151BB471D8000F0F12 /* TorontoCheapEats */ = {
 			isa = PBXGroup;
 			children = (
-				9F22B42F1BC3169D00D9D33B /* Element Styling */,
-				D18617F01BB5912B001F03CF /* API */,
-				D1F6FA731BBF0FEC00476BA7 /* AppDelegate */,
-				D1F6FA771BBF103700476BA7 /* Assets */,
-				D1F6FA781BBF104900476BA7 /* CoreData */,
-				D1F6FA701BBF0F9B00476BA7 /* ModelControllers */,
+				D1C0FF4F1BC70301009ADCD5 /* Controllers */,
 				D18617F11BB59136001F03CF /* Models */,
-				D1F6FA791BBF105C00476BA7 /* Resources */,
-				D1F6FA751BBF100E00476BA7 /* ReusibleViews */,
 				D1F6FA721BBF0FE000476BA7 /* Storyboards */,
 				D1F6FA711BBF0FC800476BA7 /* ViewContollers */,
-				D11529B21BBA29A100A55C22 /* ObjectiveCFile */,
 			);
 			path = TorontoCheapEats;
 			sourceTree = "<group>";
