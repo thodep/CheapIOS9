@@ -34,6 +34,7 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
         // Empty back button title
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain,
             target: nil, action: nil)
+        // Yung Code
         
         if PFUser.currentUser()?.sessionToken != nil {
             loginButton.title = "Logout"
@@ -55,13 +56,15 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
         searchController.searchBar.placeholder = "Search Here..."
         searchController.searchBar.delegate = self
         searchController.searchBar.sizeToFit()
+        
+        
         searchController.searchBar.barTintColor = UIColor(red: 231.0/255.0, green: 95.0/255.0, blue:
             53.0/255.0, alpha: 0.3)
         // Set cancel button in white
         searchController.searchBar.tintColor = UIColor.whiteColor()
 
         tableView.tableHeaderView = searchController.searchBar
-        
+        self.definesPresentationContext = true
     }
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
@@ -151,6 +154,7 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
                 biz[selectedRow]
             }
         }
+       
     }
     
     
@@ -167,15 +171,17 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
         // Dispose of any resources that can be recreated.
     }
     
-    
+    // Yung Code
     @IBAction func loginButtonPressed(sender: AnyObject) {
         
+
         if loginButton.title == "Login" {
-            self.performSegueWithIdentifier("loginPage", sender: self)
+            let loginVC : UIViewController = (storyboard?.instantiateViewControllerWithIdentifier("Login"))!
+            self.presentViewController(loginVC, animated: true, completion: nil)
         } else if loginButton.title == "Logout" {
             processSignOut()
         }
-            
+        
         
     }
 
@@ -185,7 +191,7 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
         
         // // Sign out
         PFUser.logOut()
-
+        print("User logged out")
     }
 }
 

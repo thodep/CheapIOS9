@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rg7-Ez-Ail">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rg7-Ez-Ail">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -138,7 +138,6 @@
                         <barButtonItem key="rightBarButtonItem" title="Login" id="ll5-Vq-sN8">
                             <connections>
                                 <action selector="loginButtonPressed:" destination="ZNc-wM-oSX" id="q3E-Ns-ITX"/>
-                                <segue destination="ruI-9m-ELf" kind="presentation" id="GG0-CQ-MEv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -149,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ywT-rf-bHN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3093" y="142"/>
+            <point key="canvasLocation" x="3205" y="106"/>
         </scene>
         <!--More Information-->
         <scene sceneID="nFZ-9S-oFb">
@@ -164,31 +163,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="jPk-sw-56l">
-                                <rect key="frame" x="15" y="74" width="570" height="467"/>
+                                <rect key="frame" x="15" y="74" width="570" height="516"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="BTn-Qr-a4b" userLabel="Details stack">
-                                        <rect key="frame" x="0.0" y="0.0" width="285" height="114"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="BTn-Qr-a4b" userLabel="Details stack">
+                                        <rect key="frame" x="0.0" y="0.0" width="285" height="126"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="detailRestNameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="y7U-N1-0Zd">
-                                                <rect key="frame" x="0.0" y="0.0" width="285" height="46"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="285" height="51"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3sm-a1-P5F">
-                                                <rect key="frame" x="0.0" y="46" width="114" height="10"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3sm-a1-P5F">
+                                                <rect key="frame" x="0.0" y="51" width="114" height="13"/>
                                                 <animations/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="detailTypeLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Vmz-WY-XbD">
-                                                <rect key="frame" x="0.0" y="56" width="285" height="29"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="detailTypeLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Vmz-WY-XbD">
+                                                <rect key="frame" x="0.0" y="63" width="285" height="32"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="phoneNumber" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="scO-XY-h7L">
-                                                <rect key="frame" x="0.0" y="85" width="285" height="29"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="phoneNumber" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="scO-XY-h7L">
+                                                <rect key="frame" x="0.0" y="95" width="285" height="32"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -212,11 +211,11 @@
                                             </mask>
                                         </variation>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="fSN-ae-mQl" userLabel="Maps and Buttons Stack">
-                                        <rect key="frame" x="0.0" y="117" width="570" height="350"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="fSN-ae-mQl" userLabel="Maps and Buttons Stack">
+                                        <rect key="frame" x="0.0" y="129" width="570" height="387"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dws-hv-TEg">
-                                                <rect key="frame" x="0.0" y="0.0" width="570" height="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="570" height="39"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                                 <state key="normal" title="Write A Review">
@@ -224,24 +223,24 @@
                                                 </state>
                                             </button>
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="FI5-FF-tXa">
-                                                <rect key="frame" x="0.0" y="37" width="570" height="210"/>
+                                                <rect key="frame" x="0.0" y="41" width="570" height="232"/>
                                                 <animations/>
                                                 <connections>
                                                     <outlet property="delegate" destination="jn6-Gy-UNc" id="HaU-UR-Ha5"/>
                                                 </connections>
                                             </mapView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="detailAddressLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jQ-7p-19N">
-                                                <rect key="frame" x="0.0" y="249" width="570" height="29"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="detailAddressLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jQ-7p-19N">
+                                                <rect key="frame" x="0.0" y="275" width="570" height="32"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dVB-2b-jKC" userLabel="Get Directions Stack">
-                                                <rect key="frame" x="0.0" y="280" width="570" height="70"/>
+                                                <rect key="frame" x="0.0" y="309" width="570" height="78"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q31-2K-icf" customClass="ButtonStyle" customModule="TorontoCheapEats" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="570" height="35"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="570" height="39"/>
                                                         <animations/>
                                                         <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
@@ -264,7 +263,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHX-7f-Prf" customClass="ButtonStyle" customModule="TorontoCheapEats" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="40" width="570" height="30"/>
+                                                        <rect key="frame" x="0.0" y="44" width="570" height="34"/>
                                                         <animations/>
                                                         <color key="backgroundColor" red="0.82745098039999998" green="0.72941176470000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
@@ -374,7 +373,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fxp-aE-0Pq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3855" y="433"/>
+            <point key="canvasLocation" x="3983" y="749"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="HFA-by-SfJ">
@@ -552,7 +551,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aga-Qt-NQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4604" y="-296"/>
+            <point key="canvasLocation" x="4596" y="-296"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1Aw-P0-WiG">
@@ -671,7 +670,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YZh-6t-p8U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3855" y="-296"/>
+            <point key="canvasLocation" x="3263" y="-816"/>
         </scene>
         <!--Sign Up Controller-->
         <scene sceneID="ao1-I1-aPB">
@@ -904,7 +903,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="o9E-Sj-XYm"/>
-        <segue reference="GG0-CQ-MEv"/>
         <segue reference="YCR-5E-yJ3"/>
     </inferredMetricsTieBreakers>
 </document>

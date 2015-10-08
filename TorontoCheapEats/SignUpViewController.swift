@@ -243,7 +243,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         PFUser.logOut()
         
         // Display sign in / up view controller
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "pushToMainPage", bundle: nil)
         let loginViewController = storyboard.instantiateViewControllerWithIdentifier("Login") 
         self.presentViewController(loginViewController, animated: true, completion: nil)
     }

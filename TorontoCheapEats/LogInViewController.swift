@@ -25,14 +25,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        
-//        usernameField!.delegate = self
-//        passwordField!.delegate = self
+        //
+        //        usernameField!.delegate = self
+        //        passwordField!.delegate = self
         
         if PFUser.currentUser()?.sessionToken != nil {
             print("sending user to the main app screen because he's a current user")
             
             self.performSegueWithIdentifier("pushToMainPage", sender: self)
+            
         } else {
             // Show the signup or login screen
             return
@@ -172,10 +173,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             // check for email verification
             if user!["emailVerified"] as! Bool == true {
                 dispatch_async(dispatch_get_main_queue()) {
-                    self.performSegueWithIdentifier(
-                        "mainApp",
-                        sender: self
-                    )
+                    
                     // save the user's location to parse before you save the information
                     PFGeoPoint.geoPointForCurrentLocationInBackground { (geoPoint:PFGeoPoint?, error:NSError?) -> Void in
                         if let user = PFUser.currentUser() {
@@ -183,8 +181,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                             user.saveInBackground()
                         }
                         print("user is logged in and location is updated")
+                        
                     }
-                    self.performSegueWithIdentifier("pushToMainPage", sender: nil)
+                    self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
                 }
             } else {
                 // User needs to verify email address before continuing
@@ -215,7 +214,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     }
                     print("user is logged in and location is updated")
                 }
-                self.performSegueWithIdentifier("pushToMainPage", sender: nil)
+                self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
                 
             } else {
                 print("log in failed")
@@ -291,7 +290,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                                 }
                                 parseUser.saveInBackground()
                                 print("Parse User Saved")
-                                self.performSegueWithIdentifier("pushToMainPage", sender: nil)
+                                self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
                             }
                         })
                     } else {
@@ -306,7 +305,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                             }
                             
                         }
-                        self.performSegueWithIdentifier("pushToMainPage", sender: nil)
+                        // if I have already logged it, I should dismiss this view controller
+                        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
                     }
                 }
             }
