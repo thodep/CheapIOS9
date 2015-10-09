@@ -15,8 +15,33 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cheapeats" translatesAutoresizingMaskIntoConstraints="NO" id="xjs-iz-d2c">
+                                <rect key="frame" x="235" y="91" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="BX2-qU-Mq9"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toronto Cheap Eats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cJ-an-m1K">
+                                <rect key="frame" x="144" y="274" width="312" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="312" id="dzL-xc-eSa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="29"/>
+                                <color key="textColor" red="0.98431372549019602" green="0.40392156862745099" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xjs-iz-d2c" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="6nx-cg-9Ml"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="xjs-iz-d2c" secondAttribute="bottom" constant="379" id="DEn-A2-OF2"/>
+                            <constraint firstItem="9cJ-an-m1K" firstAttribute="top" secondItem="xjs-iz-d2c" secondAttribute="bottom" constant="53" id="EmD-o6-gvC"/>
+                            <constraint firstItem="9cJ-an-m1K" firstAttribute="centerX" secondItem="xjs-iz-d2c" secondAttribute="centerX" id="hnQ-M1-kLh"/>
+                            <constraint firstItem="9cJ-an-m1K" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="iO4-sb-8fX"/>
+                            <constraint firstItem="xjs-iz-d2c" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="71" id="iwW-uH-wwX"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +49,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cheapeats" width="256" height="256"/>
+    </resources>
 </document>
