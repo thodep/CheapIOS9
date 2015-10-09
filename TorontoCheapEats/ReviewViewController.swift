@@ -10,12 +10,27 @@ import UIKit
 
 class ReviewViewController: UIViewController {
 
+    @IBOutlet weak var badRating: ButtonStyle!
+    
+    @IBOutlet weak var goodRating: ButtonStyle!
+    
+    @IBOutlet weak var closeButton: ButtonStyle!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
+    
+    @IBAction func happButtonPressed(sender: AnyObject) {
+    }
+    
+    
+    @IBAction func unHappyButtonPressed(sender: AnyObject) {
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

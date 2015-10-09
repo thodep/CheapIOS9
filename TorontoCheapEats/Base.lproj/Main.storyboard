@@ -376,10 +376,10 @@
             </objects>
             <point key="canvasLocation" x="3983" y="749"/>
         </scene>
-        <!--View Controller-->
+        <!--Review View Controller-->
         <scene sceneID="mgD-vt-KIA">
             <objects>
-                <viewController id="2It-Zs-Uw0" sceneMemberID="viewController">
+                <viewController id="2It-Zs-Uw0" customClass="ReviewViewController" customModule="TorontoCheapEats" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="O8k-He-mnN"/>
                         <viewControllerLayoutGuide type="bottom" id="5XT-nx-Cpj"/>
@@ -406,9 +406,12 @@
                                         <state key="normal" image="great"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
-                                                <real key="value" value="0.0"/>
+                                                <real key="value" value="40"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="happButtonPressed:" destination="2It-Zs-Uw0" eventType="touchUpInside" id="Bhy-6C-teB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhd-NJ-4wG" customClass="ButtonStyle" customModule="TorontoCheapEats" customModuleProvider="target">
                                         <rect key="frame" x="303" y="0.0" width="30" height="31"/>
@@ -433,9 +436,12 @@
                                         <state key="normal" image="bad"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
-                                                <real key="value" value="0.0"/>
+                                                <real key="value" value="40"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="unHappyButtonPressed:" destination="2It-Zs-Uw0" eventType="touchUpInside" id="ugb-4X-GpN"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -465,6 +471,11 @@
                             <constraint firstItem="5XT-nx-Cpj" firstAttribute="top" secondItem="NEQ-WQ-mYn" secondAttribute="bottom" id="iJl-bt-c47"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="badRating" destination="5ds-uf-eI8" id="orT-k0-UHn"/>
+                        <outlet property="closeButton" destination="bhd-NJ-4wG" id="HMu-IP-q7y"/>
+                        <outlet property="goodRating" destination="HbH-2F-g4N" id="JqI-FY-cPR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JNw-Aa-5D9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
