@@ -239,12 +239,12 @@
 		D1F6FA711BBF0FC800476BA7 /* ViewContollers */ = {
 			isa = PBXGroup;
 			children = (
-				9FA753631BC5B378003AEA78 /* SignUpViewController.swift */,
-				D1F6FA6C1BBEEE6B00476BA7 /* MapViewController.swift */,
 				D1B13CED1BB4F972006A546C /* BusinessViewController.swift */,
 				D1DF01FB1BB8FA3700C9290C /* DetailViewController.swift */,
-				D1561BE91BC43DDD007B72A3 /* LogInViewController.swift */,
+				D1F6FA6C1BBEEE6B00476BA7 /* MapViewController.swift */,
 				D1561BEB1BC44D05007B72A3 /* ReviewViewController.swift */,
+				D1561BE91BC43DDD007B72A3 /* LogInViewController.swift */,
+				9FA753631BC5B378003AEA78 /* SignUpViewController.swift */,
 			);
 			name = ViewContollers;
 			sourceTree = "<group>";

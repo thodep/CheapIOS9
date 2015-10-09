@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse // to save rating on Parse
 
 class ReviewViewController: UIViewController , UIAlertViewDelegate{
 
@@ -52,6 +53,9 @@ class ReviewViewController: UIViewController , UIAlertViewDelegate{
 
         uiAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
             print("Click of default button")
+            print("Saved on Parse")
+            // to go back to detailVC
+            self.dismissViewControllerAnimated(true, completion: nil)
         }))
         
         uiAlert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { action in
@@ -66,6 +70,9 @@ class ReviewViewController: UIViewController , UIAlertViewDelegate{
         
         uiAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
             print("Click of default button")
+            print("Saved on Parse")
+             // to go back to detailVC
+            self.dismissViewControllerAnimated(true, completion: nil)
         }))
         
         uiAlert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { action in
@@ -79,14 +86,5 @@ class ReviewViewController: UIViewController , UIAlertViewDelegate{
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
