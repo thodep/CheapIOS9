@@ -85,14 +85,7 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
         })
     }
     
- 
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-//        if  searchResults.count > 0 {
-//        
-//            tableView.reloadData()
-//        }
-        searchController.searchBar.resignFirstResponder()
-    }
+
     
      func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
     if searchController.active {

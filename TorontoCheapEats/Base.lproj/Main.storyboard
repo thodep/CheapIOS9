@@ -402,7 +402,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbH-2F-g4N" userLabel="NotCheap" customClass="ButtonStyle" customModule="TorontoCheapEats" customModuleProvider="target">
                                         <rect key="frame" x="184" y="98" width="64" height="64"/>
-                                        <color key="backgroundColor" red="0.97647064920000004" green="0.2078431547" blue="0.11372549830000001" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.98431372549999996" green="0.38823529410000002" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="great"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
@@ -432,7 +432,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ds-uf-eI8" userLabel="Cheap" customClass="ButtonStyle" customModule="TorontoCheapEats" customModuleProvider="target">
                                         <rect key="frame" x="92" y="98" width="64" height="64"/>
-                                        <color key="backgroundColor" red="0.16862745583057404" green="0.97647064924240112" blue="0.76470595598220825" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.16862745583057404" green="0.99215692281723022" blue="0.73725491762161255" alpha="1" colorSpace="deviceRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="JNn-2V-heK"/>
                                         </constraints>
