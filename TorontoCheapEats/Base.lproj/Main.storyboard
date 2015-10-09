@@ -133,6 +133,31 @@
                             <constraint firstItem="rg7-Ez-Ail" firstAttribute="bottom" secondItem="CdE-Gj-s0n" secondAttribute="top" id="tsC-bu-VZt"/>
                             <constraint firstItem="rg7-Ez-Ail" firstAttribute="leading" secondItem="9AQ-tg-Duh" secondAttribute="leading" id="zxK-CG-VvS"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
+                                <color key="value" red="1" green="0.46048092969999999" blue="0.27389336780000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
+                                <color key="value" red="1" green="0.46048092969999999" blue="0.27389336780000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="useGradient" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHorizontal" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="roundness">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="point" keyPath="startPoint">
+                                <point key="value" x="1" y="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="point" keyPath="endPoint">
+                                <point key="value" x="0.0" y="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="BorderWidth">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" title="CHEAP EATS" id="hrk-5U-rX1">
                         <barButtonItem key="rightBarButtonItem" title="Login" id="ll5-Vq-sN8">
@@ -361,22 +386,22 @@
                         <viewControllerLayoutGuide type="top" id="KFV-FD-jKy"/>
                         <viewControllerLayoutGuide type="bottom" id="soL-Mc-JZN"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="mXe-y4-6XN">
+                    <view key="view" contentMode="scaleToFill" id="mXe-y4-6XN" customClass="BackgroundView" customModule="TorontoCheapEats" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="188-g7-xxn" userLabel="Login Page Stack">
-                                <rect key="frame" x="30" y="84" width="540" height="330"/>
+                                <rect key="frame" x="15" y="84" width="570" height="450"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="rNb-zf-1KZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="540" height="66"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="570" height="90"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The most fullfilling eating experience" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="vl0-PQ-INK">
-                                        <rect key="frame" x="0.0" y="71" width="540" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="95" width="570" height="0.0"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" id="4OF-qj-5qh"/>
@@ -392,10 +417,10 @@
                                         </variation>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JhG-Jc-OJb" userLabel="Username Background" customClass="BackgroundView" customModule="TorontoCheapEats" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="76" width="540" height="33"/>
+                                        <rect key="frame" x="0.0" y="100" width="570" height="45"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GQw-K9-tbj" userLabel="Username" customClass="TextFieldStyle" customModule="TorontoCheapEats" customModuleProvider="target">
-                                                <rect key="frame" x="14" y="8" width="513" height="17"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GQw-K9-tbj" userLabel="Username">
+                                                <rect key="frame" x="15" y="14" width="542" height="17"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -421,13 +446,41 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="BorderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="BorderColour">
+                                                <color key="value" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="startPoint">
+                                                <point key="value" x="0.0" y="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="endPoint">
+                                                <point key="value" x="36" y="-38"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
+                                                <color key="value" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
+                                                <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="useGradient" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="viewColour">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCT-d5-z3p" userLabel="Password Background" customClass="BackgroundView" customModule="TorontoCheapEats" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="114" width="540" height="33"/>
+                                        <rect key="frame" x="0.0" y="150" width="570" height="45"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hsp-lV-cQu" userLabel="Password" customClass="TextFieldStyle" customModule="TorontoCheapEats" customModuleProvider="target">
-                                                <rect key="frame" x="14" y="8" width="513" height="17"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hsp-lV-cQu" userLabel="Password">
+                                                <rect key="frame" x="14" y="14" width="542" height="17"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -452,10 +505,16 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="BorderColour">
+                                                <color key="value" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="BorderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Scj-C3-2Uf">
-                                        <rect key="frame" x="262" y="152" width="16" height="13"/>
+                                        <rect key="frame" x="277" y="200" width="16" height="13"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="13" id="GNK-Xv-TSj"/>
@@ -465,7 +524,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIk-bB-8hB" customClass="ButtonStyle" customModule="TorontoCheapEats" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="170" width="540" height="33"/>
+                                        <rect key="frame" x="0.0" y="218" width="570" height="45"/>
                                         <animations/>
                                         <color key="backgroundColor" red="1" green="0.21207259480000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -476,13 +535,20 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="useBorder" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="BorderColour">
+                                                <color key="value" red="0.1908926729" green="0.24981940150000001" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="BorderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="loginButtonPressed:" destination="ruI-9m-ELf" eventType="touchUpInside" id="3DK-Rx-8nJ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8p-ru-jbd" customClass="ButtonStyle" customModule="TorontoCheapEats" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="208" width="540" height="33"/>
+                                        <rect key="frame" x="0.0" y="268" width="570" height="45"/>
                                         <animations/>
                                         <color key="backgroundColor" red="1" green="0.21207259480000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -493,6 +559,12 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="BorderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="BorderColour">
+                                                <color key="value" red="0.070976476740000002" green="0.16157963389999999" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="signupButtonPressed:" destination="ruI-9m-ELf" eventType="touchUpInside" id="JDS-zY-gb5"/>
@@ -500,14 +572,14 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login or Sign up with Facebook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W57-Qo-UbK">
-                                        <rect key="frame" x="0.0" y="246" width="540" height="33"/>
+                                        <rect key="frame" x="0.0" y="318" width="570" height="45"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPn-gE-OOa" userLabel="Login" customClass="ButtonStyle" customModule="TorontoCheapEats" customModuleProvider="target">
-                                        <rect key="frame" x="169" y="284" width="202" height="46"/>
+                                        <rect key="frame" x="184" y="368" width="202" height="82"/>
                                         <animations/>
                                         <state key="normal" image="facebook"/>
                                         <connections>
@@ -538,11 +610,29 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="188-g7-xxn" firstAttribute="width" secondItem="mXe-y4-6XN" secondAttribute="width" multiplier="0.9" id="Kvr-iY-tBz"/>
-                            <constraint firstItem="188-g7-xxn" firstAttribute="height" secondItem="mXe-y4-6XN" secondAttribute="height" multiplier="0.55" id="Vx9-en-chK"/>
+                            <constraint firstItem="188-g7-xxn" firstAttribute="width" secondItem="mXe-y4-6XN" secondAttribute="width" multiplier="0.95" id="Kvr-iY-tBz"/>
+                            <constraint firstItem="188-g7-xxn" firstAttribute="height" secondItem="mXe-y4-6XN" secondAttribute="height" multiplier="0.75" id="Vx9-en-chK"/>
                             <constraint firstItem="188-g7-xxn" firstAttribute="centerX" secondItem="mXe-y4-6XN" secondAttribute="centerX" id="wC7-Uv-uBe"/>
                             <constraint firstItem="188-g7-xxn" firstAttribute="top" secondItem="KFV-FD-jKy" secondAttribute="bottom" constant="20" id="yzI-fn-Gbo"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
+                                <color key="value" red="1" green="0.66418577509999999" blue="0.41636442569999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
+                                <color key="value" red="1" green="0.46048092969999999" blue="0.27389336780000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="useGradient" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="roundness">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="BorderWidth">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="8L1-Dn-HaQ">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="NYc-Yg-wdk">
@@ -866,6 +956,7 @@
                                         <rect key="frame" x="0.0" y="300" width="540" height="50"/>
                                         <animations/>
                                         <color key="backgroundColor" red="1" green="0.21207259480000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Create Account">
                                             <color key="titleColor" red="0.99056603769999996" green="0.99056603769999996" blue="0.99056603769999996" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -873,6 +964,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="useBorder" value="NO"/>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="widthClass=compact" misplaced="YES">
                                             <rect key="frame" x="0.0" y="300" width="360" height="30"/>
@@ -928,8 +1020,25 @@
                             <constraint firstItem="m9F-4Z-Bnd" firstAttribute="centerX" secondItem="GMD-gA-3xM" secondAttribute="centerX" id="yic-kR-Zbg"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="useGradient" value="NO"/>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHorizontal" value="NO"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="roundness">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
+                                <real key="value" value="-1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
+                                <color key="value" red="1" green="0.46048092969999999" blue="0.27389336780000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
+                                <color key="value" red="1" green="0.66418577510602272" blue="0.41636442571869037" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="point" keyPath="startPoint">
+                                <point key="value" x="1" y="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="point" keyPath="endPoint">
+                                <point key="value" x="0.0" y="14"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="useGradient" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="ohN-kz-jgp">

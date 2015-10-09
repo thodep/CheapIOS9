@@ -23,6 +23,15 @@ import UIKit
     }
     
 
+    private func setupBorders() {
+        
+        if (useBorder) {
+            layer.borderWidth = BorderWidth
+            layer.borderColor = BorderColour?.CGColor
+            self.setNeedsDisplay()
+        }
+        
+    }
     
     
 

@@ -11,6 +11,11 @@ import UIKit
 @IBDesignable class BackgroundView: UIView {
     
     // MARK: Inspectable properties ******************************
+    @IBInspectable var startPoint: CGPoint = CGPoint(x: 1, y: 0)
+    @IBInspectable var endPoint: CGPoint = CGPoint(x: 1, y: 0)
+
+    @IBInspectable var StartColor: UIColor = UIColor.whiteColor()
+    @IBInspectable var EndColor: UIColor = UIColor.blackColor()
     
     @IBInspectable var viewColour: UIColor = UIColor.grayColor() {
         didSet {
@@ -24,8 +29,8 @@ import UIKit
         }
     }
     
-    @IBInspectable var StartColor: UIColor = UIColor.whiteColor()
-    @IBInspectable var EndColor: UIColor = UIColor.blackColor()
+
+
     @IBInspectable var isHorizontal: Bool = false {
         didSet{
             setupView()
@@ -33,6 +38,26 @@ import UIKit
     }
     
     @IBInspectable var roundness: CGFloat = 10.0
+    
+//    @IBInspectable var shadowColour: CGColor {
+//        didSet {
+//            layer.shadowColor = shadowColour
+//        }
+//    }
+//    @IBInspectable var shadowOffset: CGSize = CGSizeMake(0, 5) {
+//        didSet {
+//            layer.shadowOffset = shadowOffset
+//        }
+//    }
+//    
+//    
+//    @IBInspectable var shadowOpacity: Float = 0.5 {
+//        didSet {
+//            layer.shadowOpacity = shadowOpacity
+//        }
+//    }
+//    
+    
     
     // MARK: Internal functions *********************************
     
@@ -43,6 +68,8 @@ import UIKit
             let colors:Array = [StartColor.CGColor, EndColor.CGColor]
             gradientLayer.colors = colors
             gradientLayer.cornerRadius = roundness
+            gradientLayer.startPoint = startPoint
+            gradientLayer.endPoint = endPoint
             self.setNeedsDisplay()
         }
         
@@ -101,12 +128,22 @@ import UIKit
         setupView()
     }
     
+    // MARK: Drop Shadow **************************************
+//    func dropshadowStyle() {
+//        clipsToBounds = false
+//        layer.shadowColor = shadowColour
+//        layer.shadowOffset = shadowOffset
+//        layer.shadowOpacity = shadowOpacity
+//        layer.masksToBounds = true
+//    }
+    
     
     func viewStyle() {
         backgroundColor = viewColour
         layer.borderWidth = BorderWidth
         layer.borderColor = BorderColour?.CGColor
-        layer.cornerRadius = cornerRounding
+////        layer.cornerRadius = cornerRounding
+//        dropshadowStyle()
         setupView()
     }
     
