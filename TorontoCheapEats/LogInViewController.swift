@@ -18,8 +18,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var signupButton: UIButton!
     
+ 
     // keyboard movement upwards value
-    var kbHeight: CGFloat!
+    var kbHeight: CGFloat! = 60.0
+    
     var keyboardWasShown = false
     
     

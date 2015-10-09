@@ -13,14 +13,23 @@ import UIKit
     @IBInspectable var cornerRounding: CGFloat = 0 {
         didSet {
             layer.cornerRadius = cornerRounding
-            
         }
     }
+    
+    @IBInspectable var useBorder: Bool = false {
+        didSet {
+            setupBorders()
+        }
+    }
+    
+
+    
+    
+
     
     @IBInspectable var BorderWidth: CGFloat = 1 {
         didSet {
             layer.borderWidth = BorderWidth
-            
         }
     }
     
@@ -40,7 +49,5 @@ import UIKit
     
     func buttonStyle() {
         layer.cornerRadius = cornerRounding
-        layer.borderWidth = BorderWidth
-        layer.borderColor = BorderColour?.CGColor
     }
 }
