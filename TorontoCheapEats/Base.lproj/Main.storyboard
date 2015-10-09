@@ -472,7 +472,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundImage" destination="NEQ-WQ-mYn" id="i3a-KQ-s97"/>
                         <outlet property="badRating" destination="5ds-uf-eI8" id="orT-k0-UHn"/>
+                        <outlet property="bgroundView" destination="TiS-23-YjE" id="9Na-TA-rm5"/>
                         <outlet property="closeButton" destination="bhd-NJ-4wG" id="HMu-IP-q7y"/>
                         <outlet property="goodRating" destination="HbH-2F-g4N" id="JqI-FY-cPR"/>
                     </connections>
