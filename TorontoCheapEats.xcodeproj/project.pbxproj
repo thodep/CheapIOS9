@@ -228,17 +228,10 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		D1C0FF4F1BC70301009ADCD5 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				D1FEAF161BB471D8000F0F12 /* AppDelegate.swift */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
 		D1F6FA711BBF0FC800476BA7 /* ViewContollers */ = {
 			isa = PBXGroup;
 			children = (
+				D1FEAF161BB471D8000F0F12 /* AppDelegate.swift */,
 				D1B13CED1BB4F972006A546C /* BusinessViewController.swift */,
 				D1DF01FB1BB8FA3700C9290C /* DetailViewController.swift */,
 				D1F6FA6C1BBEEE6B00476BA7 /* MapViewController.swift */,
@@ -303,7 +296,6 @@
 		D1FEAF151BB471D8000F0F12 /* TorontoCheapEats */ = {
 			isa = PBXGroup;
 			children = (
-				D1C0FF4F1BC70301009ADCD5 /* Controllers */,
 				D18617F11BB59136001F03CF /* Models */,
 				D1F6FA721BBF0FE000476BA7 /* Storyboards */,
 				D1F6FA711BBF0FC800476BA7 /* ViewContollers */,

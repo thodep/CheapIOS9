@@ -64,7 +64,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             return
         } else {
             if let userInfo = notification.userInfo {
-                if let keyboardSize =  (userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+                if let _ =  (userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
                     kbHeight = 60.0
                     animateTextField(true)
                     keyboardWasShown = true
