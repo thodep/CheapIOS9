@@ -180,6 +180,7 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
             self.presentViewController(loginVC, animated: true, completion: nil)
         } else if loginButton.title == "Logout" {
             processSignOut()
+            loginButton.title = "Login"
         }
         
         
