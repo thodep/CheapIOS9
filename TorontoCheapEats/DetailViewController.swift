@@ -114,6 +114,9 @@ class DetailViewController: UIViewController,MKMapViewDelegate, CLLocationManage
         self.mapView.setRegion(regionToDisplay, animated: true)
 
     }
+    // Defining an Exit for the View Controller
+    @IBAction func close(segue:UIStoryboardSegue) {
+    }
     
     @IBAction func callForReservation(sender: AnyObject) {
     

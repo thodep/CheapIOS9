@@ -22,10 +22,29 @@ class ReviewViewController: UIViewController , UIAlertViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        backgroundImage.alpha = 0.4
+        bgroundView.alpha = 0.91
+        bgroundView.layer.cornerRadius = 12
+        bgroundView.layer.masksToBounds = true
+        
+        // Adding animation into bgroundView
+        let scale = CGAffineTransformMakeScale(0.0, 0.0)
+        let translate = CGAffineTransformMakeTranslation(0, 500)
+        bgroundView.transform = CGAffineTransformConcat(scale, translate)
+       
     }
-
+    override func viewDidAppear(animated: Bool) {
+        
+        UIView.animateWithDuration(0.7, delay: 0.0, usingSpringWithDamping: 0.6,
+        initialSpringVelocity: 0.5, options: [], animations: {
+        let scale = CGAffineTransformMakeScale(1, 1)
+        let translate = CGAffineTransformMakeTranslation(0, 0)
+        self.bgroundView.transform = CGAffineTransformConcat(scale, translate)
+        }, completion: nil)
+        
+        super.viewDidAppear(true)
+    }
     
     @IBAction func happButtonPressed(sender: AnyObject) {
         let uiAlert = UIAlertController(title: "Awesome", message: "Thanks for your good rating", preferredStyle: UIAlertControllerStyle.Alert)
