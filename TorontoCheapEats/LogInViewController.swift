@@ -26,8 +26,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         //
-        //        usernameField!.delegate = self
-        //        passwordField!.delegate = self
+                usernameField!.delegate = self
+                passwordField!.delegate = self
         
         if PFUser.currentUser()?.sessionToken != nil {
             print("sending user to the main app screen because he's a current user")
