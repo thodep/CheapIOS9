@@ -219,11 +219,8 @@
 		D18617F11BB59136001F03CF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D1F6FA6E1BBF0F8E00476BA7 /* BusinessController.swift */,
-				D1F6FA781BBF104900476BA7 /* CoreData */,
-				D18617F01BB5912B001F03CF /* API */,
-				9F22B42F1BC3169D00D9D33B /* Element Styling */,
 				D1B13CE81BB4F344006A546C /* Business.swift */,
+				D1F6FA6E1BBF0F8E00476BA7 /* BusinessController.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -296,6 +293,9 @@
 		D1FEAF151BB471D8000F0F12 /* TorontoCheapEats */ = {
 			isa = PBXGroup;
 			children = (
+				D18617F01BB5912B001F03CF /* API */,
+				D1F6FA781BBF104900476BA7 /* CoreData */,
+				9F22B42F1BC3169D00D9D33B /* Element Styling */,
 				D18617F11BB59136001F03CF /* Models */,
 				D1F6FA721BBF0FE000476BA7 /* Storyboards */,
 				D1F6FA711BBF0FC800476BA7 /* ViewContollers */,

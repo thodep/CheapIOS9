@@ -236,6 +236,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBAction func cancelButtonPressed(sender: UIBarButtonItem) {
         self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
+    
     // Sign the current user out of the app
     func processSignOut() {
         
@@ -243,9 +244,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         PFUser.logOut()
         
         // Display sign in / up view controller
-        let storyboard = UIStoryboard(name: "pushToMainPage", bundle: nil)
-        let loginViewController = storyboard.instantiateViewControllerWithIdentifier("Login") 
-        self.presentViewController(loginViewController, animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewControllerWithIdentifier("Login")
+        self.presentViewController(viewController, animated: true, completion: nil)
     }
 }
 

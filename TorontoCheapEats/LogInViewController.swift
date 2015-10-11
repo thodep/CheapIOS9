@@ -19,20 +19,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var signupButton: UIButton!
     
     // keyboard movement upwards value
-    var kbHeight: CGFloat!
+    var kbHeight: CGFloat! = 60.0
     var keyboardWasShown = false
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //
-                usernameField!.delegate = self
-                passwordField!.delegate = self
+        //        usernameField!.delegate = self
+        //        passwordField!.delegate = self
         
         if PFUser.currentUser()?.sessionToken != nil {
             print("sending user to the main app screen because he's a current user")
             
-            self.performSegueWithIdentifier("pushToMainPage", sender: self)
+        //    self.performSegueWithIdentifier("Main", sender: self)
             
         } else {
             // Show the signup or login screen
@@ -114,6 +115,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func loginButtonPressed(sender: AnyObject) {
         processFieldEntries()
         
+    }
+    
+    
+    @IBAction func cancelButtonPressed(sender: AnyObject) {
+         self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func processFieldEntries() {
