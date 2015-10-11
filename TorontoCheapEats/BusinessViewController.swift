@@ -13,16 +13,13 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
     var businesses: [Business]!
     var searchResults:[Business] = []
     var searchController: UISearchController!
+
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var loginButton: UIBarButtonItem!
-    
-    let numberOfElements = 20
-    var numberOfRestaurantsOffset:Int = 0 //the starting point for restaurants retrived in search starting zero
-   
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         configureSearchController()
         configureViewControllerForBusinessesAndInfiniteScrolling()
         self.tableView.backgroundColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue:240.0/255.0, alpha: 0.2)
@@ -31,49 +28,48 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain,
             target: nil, action: nil)
         // Yung Code
-        
-        if PFUser.currentUser()?.sessionToken != nil {
-            loginButton.title = "Logout"
-            
-        } else {
-            loginButton.title = "Login"
-        }
-        
-        if (FBSDKAccessToken.currentAccessToken() != nil) {
-            print("User is already logged in go to the next viewcontroller")
-            
-        }
+//        
+//        if PFUser.currentUser()?.sessionToken != nil {
+//            loginButton.title = "Logout"
+//            
+//        } else {
+//            loginButton.title = "Login"
+//        }
+//        
+//        if (FBSDKAccessToken.currentAccessToken() != nil) {
+//            print("User is already logged in go to the next viewcontroller")
+//            
+//        }
+    
     }
     //----Adding Search Bar & implement Search Methods-------------
+// http://stackoverflow.com/questions/24593599/how-to-animate-add-uisearchbar-on-top-of-uinavigationbar
+    
     func configureSearchController() {
+        //  instanciate our searchController (it will display the result
         searchController = UISearchController(searchResultsController: nil)
+        // Self is responsible for updating the contents of the search results controller
         searchController.searchResultsUpdater = self
+        // Dim the current view when you sélect search bar ( will be hidden when the user type something)
         searchController.dimsBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search Here..."
         searchController.searchBar.delegate = self
         searchController.searchBar.sizeToFit()
-
+        // Prevent the searchbar to disapear during search
+        searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.barTintColor = UIColor(red: 231.0/255.0, green: 95.0/255.0, blue:
             53.0/255.0, alpha: 0.3)
         // Set cancel button in white
         searchController.searchBar.tintColor = UIColor.whiteColor()
-
-        tableView.tableHeaderView = searchController.searchBar
+        
+         // Include the search controller's search bar within the table's header view
+        navigationItem.titleView = searchController.searchBar
+        //tableView.tableHeaderView = searchController.searchBar
         
         self.definesPresentationContext = true
     }
-    //http://stackoverflow.com/questions/30752638/ios-swift-how-to-make-a-floating-search-bar-with-drop-down-list-like-this-i
-    // http://stackoverflow.com/questions/24796274/ios-fix-search-bar-on-top-of-the-uitableviewcontroller
-//    
-//   func scrollViewDidScroll(scrollView: UIScrollView) {
-//    
-////    
-////       let  tableBound :CGRect = tableView.bounds
-//   //   let searchBarFrame : CGRect = self.searchController.searchBar.frame
-////self.tableView.scrollRectToVisible(searchBarFrame, animated: true)
-//
-//    
-//    }
+    
+
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         let searchText = searchController.searchBar.text
@@ -101,7 +97,7 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
             return true
         }
     }
-    
+   
     //---------------------
     func configureViewControllerForBusinessesAndInfiniteScrolling () {
         searchForRestaurants(true)
@@ -172,29 +168,29 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
     }
     
     // Yung Code
-    @IBAction func loginButtonPressed(sender: AnyObject) {
-        
-        
-        if loginButton.title == "Login" {
-            let loginVC : UIViewController = (storyboard?.instantiateViewControllerWithIdentifier("Login"))!
-            self.presentViewController(loginVC, animated: true, completion: nil)
-        } else if loginButton.title == "Logout" {
-            processSignOut()
-            loginButton.title = "Login"
-        }
-        
-        
-    }
-    
-    
-    // Sign the current user out of the app
-    func processSignOut() {
-        
-        // // Sign out
-        PFUser.logOut()
-        print("User logged out")
-        
-    }
+//    @IBAction func loginButtonPressed(sender: AnyObject) {
+//        
+//        
+//        if loginButton.title == "Login" {
+//            let loginVC : UIViewController = (storyboard?.instantiateViewControllerWithIdentifier("Login"))!
+//            self.presentViewController(loginVC, animated: true, completion: nil)
+//        } else if loginButton.title == "Logout" {
+//            processSignOut()
+//            loginButton.title = "Login"
+//        }
+//        
+//        
+//    }
+//    
+//    
+//    // Sign the current user out of the app
+//    func processSignOut() {
+//        
+//        // // Sign out
+//        PFUser.logOut()
+//        print("User logged out")
+//        
+//    }
 }
 
 

@@ -6,7 +6,7 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--CHEAP EATS-->
+        <!--Business View Controller-->
         <scene sceneID="bza-yU-zoU">
             <objects>
                 <viewController storyboardIdentifier="Main" id="ZNc-wM-oSX" customClass="BusinessViewController" customModule="TorontoCheapEats" customModuleProvider="target" sceneMemberID="viewController">
@@ -134,16 +134,8 @@
                             <constraint firstItem="rg7-Ez-Ail" firstAttribute="leading" secondItem="9AQ-tg-Duh" secondAttribute="leading" id="zxK-CG-VvS"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="CHEAP EATS" id="hrk-5U-rX1">
-                        <barButtonItem key="rightBarButtonItem" title="Login" id="ll5-Vq-sN8">
-                            <connections>
-                                <action selector="loginButtonPressed:" destination="ZNc-wM-oSX" id="q3E-Ns-ITX"/>
-                                <segue destination="N0m-Xb-D3p" kind="show" id="rB9-47-TDm"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="hrk-5U-rX1"/>
                     <connections>
-                        <outlet property="loginButton" destination="ll5-Vq-sN8" id="Tjc-aT-QT6"/>
                         <outlet property="tableView" destination="rg7-Ez-Ail" id="sKS-nK-9nm"/>
                     </connections>
                 </viewController>
@@ -488,11 +480,11 @@
             </objects>
             <point key="canvasLocation" x="4665" y="885"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Search-->
         <scene sceneID="1Aw-P0-WiG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XnK-mZ-3iR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="I7m-g9-CN6"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="find" id="I7m-g9-CN6"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ToQ-ZK-RBz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1201,6 +1193,7 @@
         <image name="bad" width="64" height="64"/>
         <image name="close" width="64" height="64"/>
         <image name="facebook" width="202" height="46"/>
+        <image name="find" width="32" height="32"/>
         <image name="great" width="64" height="64"/>
         <image name="map" width="32" height="32"/>
         <image name="user(1)" width="32" height="32"/>
