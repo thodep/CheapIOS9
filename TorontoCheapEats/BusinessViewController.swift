@@ -64,16 +64,16 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
     }
     //http://stackoverflow.com/questions/30752638/ios-swift-how-to-make-a-floating-search-bar-with-drop-down-list-like-this-i
     // http://stackoverflow.com/questions/24796274/ios-fix-search-bar-on-top-of-the-uitableviewcontroller
-    
-   func scrollViewDidScroll(scrollView: UIScrollView) {
-    
 //    
-//       let  tableBound :CGRect = tableView.bounds
-      let searchBarFrame : CGRect = self.searchController.searchBar.frame
-//self.tableView.scrollRectToVisible(searchBarFrame, animated: true)
-
-    
-    }
+//   func scrollViewDidScroll(scrollView: UIScrollView) {
+//    
+////    
+////       let  tableBound :CGRect = tableView.bounds
+//   //   let searchBarFrame : CGRect = self.searchController.searchBar.frame
+////self.tableView.scrollRectToVisible(searchBarFrame, animated: true)
+//
+//    
+//    }
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         let searchText = searchController.searchBar.text

@@ -547,6 +547,25 @@
             </objects>
             <point key="canvasLocation" x="3235" y="885"/>
         </scene>
+        <!--User Page View Controller-->
+        <scene sceneID="idx-No-7tD">
+            <objects>
+                <viewController id="5Ml-LJ-5kR" customClass="UserPageViewController" customModule="TorontoCheapEats" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tb5-Mj-L5r"/>
+                        <viewControllerLayoutGuide type="bottom" id="esJ-ge-gOL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="avR-zd-9Dn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KHr-qj-GaD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VWJ-Md-zip" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2380" y="-744"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="nQp-dI-MNF">
             <objects>
@@ -560,11 +579,12 @@
                     <connections>
                         <segue destination="XnK-mZ-3iR" kind="relationship" relationship="viewControllers" id="k6b-df-OFa"/>
                         <segue destination="rAY-Vr-2uc" kind="relationship" relationship="viewControllers" id="2b2-Ok-Hlm"/>
+                        <segue destination="uMe-Lf-FbC" kind="relationship" relationship="viewControllers" id="XYF-Rp-1N1"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V3W-yj-tCy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1475" y="106"/>
+            <point key="canvasLocation" x="1481" y="122"/>
         </scene>
         <!--Map-->
         <scene sceneID="z82-Ht-QQB">
@@ -1156,6 +1176,25 @@
             </objects>
             <point key="canvasLocation" x="4036" y="76"/>
         </scene>
+        <!--About Me-->
+        <scene sceneID="KSu-Yi-eI6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uMe-Lf-FbC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="About Me" image="user(1)" id="eor-CJ-E3X"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dnz-eg-WVW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5Ml-LJ-5kR" kind="relationship" relationship="rootViewController" id="MP0-tx-jDD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ct8-dI-bl9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1568" y="-744"/>
+        </scene>
     </scenes>
     <resources>
         <image name="05" width="1300" height="1668"/>
@@ -1164,6 +1203,7 @@
         <image name="facebook" width="202" height="46"/>
         <image name="great" width="64" height="64"/>
         <image name="map" width="32" height="32"/>
+        <image name="user(1)" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="YCR-5E-yJ3"/>

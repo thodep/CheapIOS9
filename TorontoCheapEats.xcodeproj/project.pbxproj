@@ -35,6 +35,7 @@
 		D1BF08901BC43BCF000936E0 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BF088F1BC43BCF000936E0 /* libstdc++.6.tbd */; };
 		D1DF01FC1BB8FA3700C9290C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DF01FB1BB8FA3700C9290C /* DetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D1DF01FE1BB8FAE000C9290C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1DF01FD1BB8FAE000C9290C /* CoreLocation.framework */; };
+		D1EA49D51BCA0ECF0093E6DD /* UserPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EA49D41BCA0ECF0093E6DD /* UserPageViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D1F6FA6D1BBEEE6B00476BA7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F6FA6C1BBEEE6B00476BA7 /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D1F6FA6F1BBF0F8E00476BA7 /* BusinessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F6FA6E1BBF0F8E00476BA7 /* BusinessController.swift */; settings = {ASSET_TAGS = (); }; };
 		D1FEAF171BB471D8000F0F12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FEAF161BB471D8000F0F12 /* AppDelegate.swift */; };
@@ -97,6 +98,7 @@
 		D1BF088F1BC43BCF000936E0 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
 		D1DF01FB1BB8FA3700C9290C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D1DF01FD1BB8FAE000C9290C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D1EA49D41BCA0ECF0093E6DD /* UserPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPageViewController.swift; sourceTree = "<group>"; };
 		D1F6FA6C1BBEEE6B00476BA7 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D1F6FA6E1BBF0F8E00476BA7 /* BusinessController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessController.swift; sourceTree = "<group>"; };
 		D1FEAF131BB471D8000F0F12 /* TorontoCheapEats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TorontoCheapEats.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -235,6 +237,7 @@
 				D1561BEB1BC44D05007B72A3 /* ReviewViewController.swift */,
 				D1561BE91BC43DDD007B72A3 /* LogInViewController.swift */,
 				9FA753631BC5B378003AEA78 /* SignUpViewController.swift */,
+				D1EA49D41BCA0ECF0093E6DD /* UserPageViewController.swift */,
 			);
 			name = ViewContollers;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				D1FEAF171BB471D8000F0F12 /* AppDelegate.swift in Sources */,
 				9FA753681BC5B468003AEA78 /* TextFieldStyle.swift in Sources */,
 				9FA753641BC5B378003AEA78 /* SignUpViewController.swift in Sources */,
+				D1EA49D51BCA0ECF0093E6DD /* UserPageViewController.swift in Sources */,
 				D1B13CE91BB4F344006A546C /* Business.swift in Sources */,
 				D1561BEA1BC43DDD007B72A3 /* LogInViewController.swift in Sources */,
 				D1FEAF1F1BB471D9000F0F12 /* TorontoCheapEats.xcdatamodeld in Sources */,
