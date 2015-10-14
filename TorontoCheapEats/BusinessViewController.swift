@@ -43,7 +43,7 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
     
     }
     //----Adding Search Bar & implement Search Methods-------------
-// http://stackoverflow.com/questions/24593599/how-to-animate-add-uisearchbar-on-top-of-uinavigationbar
+//http://stackoverflow.com/questions/31776376/instagram-explorer-searchbar-and-tableview
     
     func configureSearchController() {
         //  instanciate our searchController (it will display the result
@@ -54,17 +54,20 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
         searchController.dimsBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search Here..."
         searchController.searchBar.delegate = self
+       
         searchController.searchBar.sizeToFit()
+       
         // Prevent the searchbar to disapear during search
-        searchController.hidesNavigationBarDuringPresentation = false
+       searchController.hidesNavigationBarDuringPresentation =   false
         searchController.searchBar.barTintColor = UIColor(red: 231.0/255.0, green: 95.0/255.0, blue:
             53.0/255.0, alpha: 0.3)
-        // Set cancel button in white
-        searchController.searchBar.tintColor = UIColor.whiteColor()
+        // Set cancel button and search cursor in black 
+        searchController.searchBar.tintColor = UIColor.blackColor()
+       
         
          // Include the search controller's search bar within the table's header view
         navigationItem.titleView = searchController.searchBar
-        //tableView.tableHeaderView = searchController.searchBar
+       // tableView.tableHeaderView = searchController.searchBar
         
         self.definesPresentationContext = true
     }
@@ -97,7 +100,7 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
             return true
         }
     }
-   
+
     //---------------------
     func configureViewControllerForBusinessesAndInfiniteScrolling () {
         searchForRestaurants(true)
