@@ -8,17 +8,76 @@
 
 
 import UIKit
+import CoreData
 
 class BusinessViewController: UIViewController , UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, UISearchResultsUpdating , UISearchBarDelegate{
+    
     var businesses: [Business]!
     var searchResults:[Business] = []
     var searchController: UISearchController!
-
     
     @IBOutlet weak var tableView: UITableView!
     
+    var restaurantsFromCD = [Restaurant]()
+    
+    
+    // Working With Coredata
+    func saveRestaurant(restaurant: Business){
+    let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    let context = delegate.managedObjectContext
+
+    let restaurantCD = NSEntityDescription.insertNewObjectForEntityForName("Restaurant", inManagedObjectContext: context) as! Restaurant
+        
+        restaurantCD.setValue(restaurant.name, forKey: "restaurantName")
+        restaurantCD.setValue(restaurant.address, forKey: "restaurantAddress")
+        restaurantCD.setValue(restaurant.distance, forKey: "restaurantDistance")
+        restaurantCD.setValue(restaurant.categories, forKey: "restaurantCategories")
+        
+        // Convert NSURL to NSData???
+        // http://stackoverflow.com/questions/22951791/click-to-add-image-to-core-data
+       // restaurantCD.setValue(restaurant.imageURL, forKey: "restaurantImage")
+        
+        // add info to the Entity
+        var err: NSError?
+        do {
+        try context.save()
+            self.restaurantsFromCD.append(restaurantCD)
+        } catch let err1 as NSError {
+        err = err1
+        }
+        if err != nil {
+        print("There was an error saving data into coredata")
+        }
+    
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //---- Working with CoreData-------
+   
+        // Reference to Manage Context to retrieve data from CoreData
+        let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context = delegate.managedObjectContext
+        let request = NSFetchRequest(entityName: "Restaurant")
+        
+        
+        print(request)
+
+        var err : NSError?
+        do {
+        restaurantsFromCD = try context.executeFetchRequest(request) as! [Restaurant]
+        } catch let err1  as NSError {
+        err = err1
+        
+        }
+        if err != nil{
+        print("problem with coredata")
+        }
+     
+      
+        //---- End working with CoreData------
         
         configureSearchController()
         configureViewControllerForBusinessesAndInfiniteScrolling()
@@ -40,6 +99,7 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
 //            print("User is already logged in go to the next viewcontroller")
 //            
 //        }
+
     
     }
     //----Adding Search Bar & implement Search Methods-------------
@@ -54,18 +114,14 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
         searchController.dimsBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search Here..."
         searchController.searchBar.delegate = self
-       
         searchController.searchBar.sizeToFit()
-       
         // Prevent the searchbar to disapear during search
        searchController.hidesNavigationBarDuringPresentation =   false
         searchController.searchBar.barTintColor = UIColor(red: 231.0/255.0, green: 95.0/255.0, blue:
             53.0/255.0, alpha: 0.3)
-        // Set cancel button and search cursor in black 
+        // Set cancel button and search cursor in gray
         searchController.searchBar.tintColor = UIColor.blackColor()
-       
-        
-         // Include the search controller's search bar within the table's header view
+         // Include the search controller's search bar on Navigation Bar
         navigationItem.titleView = searchController.searchBar
        // tableView.tableHeaderView = searchController.searchBar
         
@@ -101,7 +157,8 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
         }
     }
 
-    //---------------------
+    //--------------------- end working with Search Bar ------------------------
+    
     func configureViewControllerForBusinessesAndInfiniteScrolling () {
         searchForRestaurants(true)
         tableView.addInfiniteScrollingWithActionHandler { () -> Void in
@@ -127,13 +184,26 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
         if let rests = self.businesses{
             //let rest = rests[indexPath.row]
             let rest = (searchController.active) ? searchResults[indexPath.row] : rests[indexPath.row]
+            
+            // Call CoreData
+            saveRestaurant(rest)
+
+//            cell.nameLabel.text = restaurantsFromCD[indexPath.row].restaurantName
+//            cell.addressLabel.text = restaurantsFromCD[indexPath.row].restaurantAddress
+//            cell.distanceLabel.text = restaurantsFromCD[indexPath.row].restaurantDistance
+//            cell.typeLabel.text = restaurantsFromCD[indexPath.row].restaurantCategories
+            
+            // http://stackoverflow.com/questions/14133366/convert-uiimage-to-nsdata-and-save-with-core-data
+            
+      
             cell.nameLabel.text = rest.name
             cell.addressLabel.text = rest.address
             cell.typeLabel.text = rest.categories
+            cell.distanceLabel.text = rest.distance
             
             cell.restaurantImage.setImageWithURL(rest.imageURL)
             cell.ratingImage.setImageWithURL(rest.ratingImageURL)
-            cell.distanceLabel.text = rest.distance
+           
             cell.restaurantImage.layer.cornerRadius = 10
             cell.restaurantImage.layer.masksToBounds = true
             cell.backgroundColor = UIColor.clearColor()
@@ -155,8 +225,7 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
         }
         
     }
-    
-    
+    // Search for restaurants
     func searchForRestaurants(shouldReload:Bool = true) {
         guard let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {return}
         appDelegate.businessController.searchForRestaurants(shouldReload) { (businesses) -> Void in
