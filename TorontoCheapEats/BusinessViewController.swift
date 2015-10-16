@@ -18,38 +18,38 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
     
     @IBOutlet weak var tableView: UITableView!
     
-    var restaurantsFromCD = [Restaurant]()
+  //  var restaurantsFromCD = [Restaurant]()
     
     
     // Working With Coredata
-    func saveRestaurant(restaurant: Business){
-    let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
-    let context = delegate.managedObjectContext
-
-    let restaurantCD = NSEntityDescription.insertNewObjectForEntityForName("Restaurant", inManagedObjectContext: context) as! Restaurant
-        
-        restaurantCD.setValue(restaurant.name, forKey: "restaurantName")
-        restaurantCD.setValue(restaurant.address, forKey: "restaurantAddress")
-        restaurantCD.setValue(restaurant.distance, forKey: "restaurantDistance")
-        restaurantCD.setValue(restaurant.categories, forKey: "restaurantCategories")
-        
-        // Convert NSURL to NSData???
-        // http://stackoverflow.com/questions/22951791/click-to-add-image-to-core-data
-       // restaurantCD.setValue(restaurant.imageURL, forKey: "restaurantImage")
-        
-        // add info to the Entity
-        var err: NSError?
-        do {
-        try context.save()
-            self.restaurantsFromCD.append(restaurantCD)
-        } catch let err1 as NSError {
-        err = err1
-        }
-        if err != nil {
-        print("There was an error saving data into coredata")
-        }
-    
-    }
+//    func saveRestaurant(restaurant: Business){
+//    let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//    let context = delegate.managedObjectContext
+//
+//    let restaurantCD = NSEntityDescription.insertNewObjectForEntityForName("Restaurant", inManagedObjectContext: context) as! Restaurant
+//        
+//        restaurantCD.setValue(restaurant.name, forKey: "restaurantName")
+//        restaurantCD.setValue(restaurant.address, forKey: "restaurantAddress")
+//        restaurantCD.setValue(restaurant.distance, forKey: "restaurantDistance")
+//        restaurantCD.setValue(restaurant.categories, forKey: "restaurantCategories")
+//        
+//        // Convert NSURL to NSData???
+//        // http://stackoverflow.com/questions/22951791/click-to-add-image-to-core-data
+//       // restaurantCD.setValue(restaurant.imageURL, forKey: "restaurantImage")
+//        
+//        // add info to the Entity
+//        var err: NSError?
+//        do {
+//        try context.save()
+//            self.restaurantsFromCD.append(restaurantCD)
+//        } catch let err1 as NSError {
+//        err = err1
+//        }
+//        if err != nil {
+//        print("There was an error saving data into coredata")
+//        }
+//    
+//    }
     
     
     override func viewDidLoad() {
@@ -58,24 +58,24 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
         //---- Working with CoreData-------
    
         // Reference to Manage Context to retrieve data from CoreData
-        let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let context = delegate.managedObjectContext
-        let request = NSFetchRequest(entityName: "Restaurant")
-        
-        
-        print(request)
-
-        var err : NSError?
-        do {
-        restaurantsFromCD = try context.executeFetchRequest(request) as! [Restaurant]
-        } catch let err1  as NSError {
-        err = err1
-        
-        }
-        if err != nil{
-        print("problem with coredata")
-        }
-     
+//        let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//        let context = delegate.managedObjectContext
+//        let request = NSFetchRequest(entityName: "Restaurant")
+//        
+//        
+//        print(request)
+//
+//        var err : NSError?
+//        do {
+//        restaurantsFromCD = try context.executeFetchRequest(request) as! [Restaurant]
+//        } catch let err1  as NSError {
+//        err = err1
+//        
+//        }
+//        if err != nil{
+//        print("problem with coredata")
+//        }
+//     
       
         //---- End working with CoreData------
         
@@ -177,16 +177,26 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
         }
         return 0
     }
-    
-    
+    // animation for cell
+//     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+//        
+//        let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -200, 10, 0)
+//        cell.layer.transform = rotationTransform
+//        UIView.animateWithDuration(0.5, animations: { () -> Void in
+//            cell.layer.transform = CATransform3DIdentity
+//            
+//        })
+//        
+//    }
+    // Display API data on tableView
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! BusinessTableViewCell
         if let rests = self.businesses{
             //let rest = rests[indexPath.row]
             let rest = (searchController.active) ? searchResults[indexPath.row] : rests[indexPath.row]
             
-            // Call CoreData
-            saveRestaurant(rest)
+            // Call CoreData Global Function
+            //saveRestaurant(rest)
 
 //            cell.nameLabel.text = restaurantsFromCD[indexPath.row].restaurantName
 //            cell.addressLabel.text = restaurantsFromCD[indexPath.row].restaurantAddress

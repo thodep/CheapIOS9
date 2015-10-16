@@ -39,24 +39,25 @@ import UIKit
     
     @IBInspectable var roundness: CGFloat = 10.0
     
-    //    @IBInspectable var shadowColour: CGColor {
-    //        didSet {
-    //            layer.shadowColor = shadowColour
-    //        }
-    //    }
-    //    @IBInspectable var shadowOffset: CGSize = CGSizeMake(0, 5) {
-    //        didSet {
-    //            layer.shadowOffset = shadowOffset
-    //        }
-    //    }
-    //
-    //
-    //    @IBInspectable var shadowOpacity: Float = 0.5 {
-    //        didSet {
-    //            layer.shadowOpacity = shadowOpacity
-    //        }
-    //    }
-    //
+//    @IBInspectable var shadowColour: CGColor {
+//        didSet {
+//            layer.shadowColor = shadowColour
+//        }
+//    }
+//    
+//    @IBInspectable var shadowOffset: CGSize = CGSizeMake(0, 5) {
+//        didSet {
+//            layer.shadowOffset = shadowOffset
+//        }
+//    }
+//    
+//    
+//    @IBInspectable var shadowOpacity: Float = 0.5 {
+//        didSet {
+//            layer.shadowOpacity = shadowOpacity
+//        }
+//    }
+    
     
     
     // MARK: Internal functions *********************************

@@ -22,7 +22,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     // keyboard movement upwards value
     var kbHeight: CGFloat!
-    var keyboardWasShown = false
+   // var keyboardWasShown = false
 
     @IBOutlet weak var errorMessageLabel: UILabel!
 
@@ -48,48 +48,48 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     // keyboard pushing code
     
-    override func viewWillAppear(animated:Bool) {
-        super.viewWillAppear(animated)
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
-    }
+//    override func viewWillAppear(animated:Bool) {
+//        super.viewWillAppear(animated)
+//        
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
+//    }
+//    
+//    override func viewWillDisappear(animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        
+//        NSNotificationCenter.defaultCenter().removeObserver(self)
+//    }
+//
+//    func keyboardWillShow(notification: NSNotification) {
+//        if keyboardWasShown {
+//            return
+//        } else {
+//            if let userInfo = notification.userInfo {
+//                if let keyboardSize =  (userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+//                    kbHeight = 20.0
+//                  //  animateTextField(true)
+//                   // keyboardWasShown = true
+//                    
+//                }
+//            }
+//        }
+//    }
     
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        NSNotificationCenter.defaultCenter().removeObserver(self)
-    }
+//    func keyboardWillHide(notification: NSNotification) {
+//        self.animateTextField(false)
+//    
+//        // reset the state of the keyboard
+//        keyboardWasShown = false
+//    }
     
-    func keyboardWillShow(notification: NSNotification) {
-        if keyboardWasShown {
-            return
-        } else {
-            if let userInfo = notification.userInfo {
-                if let keyboardSize =  (userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-                    kbHeight = 20.0
-                    animateTextField(true)
-                    keyboardWasShown = true
-                    
-                }
-            }
-        }
-    }
-    
-    func keyboardWillHide(notification: NSNotification) {
-        self.animateTextField(false)
-    
-        // reset the state of the keyboard
-        keyboardWasShown = false
-    }
-    
-    func animateTextField(up: Bool) {
-        let movement = (up ? -kbHeight : kbHeight)
-        
-        UIView.animateWithDuration(0.3, animations: {
-            self.view.frame = CGRectOffset(self.view.frame, 0, movement)
-        })
-    }
+//    func animateTextField(up: Bool) {
+//        let movement = (up ? -kbHeight : kbHeight)
+//        
+//        UIView.animateWithDuration(0.3, animations: {
+//            self.view.frame = CGRectOffset(self.view.frame, 0, movement)
+//        })
+//    }
     
     // if you press the return button the keyboard will dissappear
     func textFieldShouldReturn(textField: UITextField) -> Bool {

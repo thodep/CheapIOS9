@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6gr-Jo-Kon">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -134,7 +133,7 @@
         <!--More Information-->
         <scene sceneID="nFZ-9S-oFb">
             <objects>
-                <viewController autoresizesArchivedViewToFullSize="NO" id="jn6-Gy-UNc" userLabel="More Information" customClass="DetailViewController" customModule="TorontoCheapEats" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailVC" autoresizesArchivedViewToFullSize="NO" id="jn6-Gy-UNc" userLabel="More Information" customClass="DetailViewController" customModule="TorontoCheapEats" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jWc-3I-gl0"/>
                         <viewControllerLayoutGuide type="bottom" id="8bz-mi-FxL"/>
@@ -217,7 +216,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="2It-Zs-Uw0" kind="presentation" identifier="reviewSegue" id="XMV-yt-a5L"/>
+                                                    <action selector="reviewButtonPressed:" destination="jn6-Gy-UNc" eventType="touchUpInside" id="czm-3T-S1f"/>
                                                 </connections>
                                             </button>
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="FI5-FF-tXa">
@@ -351,6 +350,8 @@
                         <outlet property="mapView" destination="FI5-FF-tXa" id="KSS-L5-Fdz"/>
                         <outlet property="phoneNumber" destination="scO-XY-h7L" id="lDw-54-00x"/>
                         <outlet property="reviewButton" destination="dws-hv-TEg" id="PbI-dy-kCS"/>
+                        <segue destination="2It-Zs-Uw0" kind="presentation" identifier="ShowReview" id="zAl-Ns-EKk"/>
+                        <segue destination="N0m-Xb-D3p" kind="presentation" identifier="pushToLogInView" id="Pfr-un-jtM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fxp-aE-0Pq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -360,7 +361,7 @@
         <!--Review View Controller-->
         <scene sceneID="mgD-vt-KIA">
             <objects>
-                <viewController id="2It-Zs-Uw0" customClass="ReviewViewController" customModule="TorontoCheapEats" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="reviewVC" id="2It-Zs-Uw0" customClass="ReviewViewController" customModule="TorontoCheapEats" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="O8k-He-mnN"/>
                         <viewControllerLayoutGuide type="bottom" id="5XT-nx-Cpj"/>
@@ -599,16 +600,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QnQ-uL-bMk" userLabel="Login Page Stack">
-                                <rect key="frame" x="15" y="84" width="570" height="450"/>
+                                <rect key="frame" x="75" y="84" width="450" height="450"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="vNd-EC-WUa">
-                                        <rect key="frame" x="0.0" y="0.0" width="570" height="90"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="450" height="45"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The most fullfilling eating experience" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Bhp-Cz-3bl">
-                                        <rect key="frame" x="0.0" y="95" width="570" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="50" width="450" height="0.0"/>
                                         <constraints>
                                             <constraint firstAttribute="height" id="2UU-KZ-T72"/>
                                             <constraint firstAttribute="height" constant="21" id="hp7-Ux-Df4"/>
@@ -623,24 +624,15 @@
                                         </variation>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MsK-Wp-ep6" userLabel="Username Background" customClass="BackgroundView" customModule="TorontoCheapEats" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="100" width="570" height="45"/>
+                                        <rect key="frame" x="0.0" y="55" width="450" height="45"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fxz-Pm-CtH" userLabel="Username">
-                                                <rect key="frame" x="15" y="14" width="542" height="17"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fxz-Pm-CtH" userLabel="Username">
+                                                <rect key="frame" x="11" y="12" width="428" height="21"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="BorderWidth">
-                                                        <real key="value" value="0.0"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
-                                                        <real key="value" value="0.0"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="useBorder" value="NO"/>
-                                                </userDefinedRuntimeAttributes>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="Fxz-Pm-CtH" firstAttribute="centerY" secondItem="MsK-Wp-ep6" secondAttribute="centerY" id="72V-TY-zPD"/>
                                             <constraint firstItem="Fxz-Pm-CtH" firstAttribute="width" secondItem="MsK-Wp-ep6" secondAttribute="width" multiplier="0.95" id="7fd-kA-wJ5"/>
@@ -648,10 +640,10 @@
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
-                                                <real key="value" value="10"/>
+                                                <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="BorderWidth">
-                                                <real key="value" value="1"/>
+                                                <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="BorderColour">
                                                 <color key="value" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
@@ -669,32 +661,18 @@
                                                 <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="useGradient" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                <real key="value" value="0.5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                <size key="value" width="0.0" height="5"/>
-                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ah-BJ-aK0" userLabel="Password Background" customClass="BackgroundView" customModule="TorontoCheapEats" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="150" width="570" height="45"/>
+                                        <rect key="frame" x="0.0" y="105" width="450" height="45"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lyq-W6-33C" userLabel="Password">
-                                                <rect key="frame" x="14" y="14" width="542" height="17"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <rect key="frame" x="11" y="12" width="428" height="21"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="BorderWidth">
-                                                        <real key="value" value="0.0"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
-                                                        <real key="value" value="0.0"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="lyq-W6-33C" firstAttribute="centerY" secondItem="2ah-BJ-aK0" secondAttribute="centerY" id="JC0-uJ-xgU"/>
                                             <constraint firstItem="lyq-W6-33C" firstAttribute="centerX" secondItem="2ah-BJ-aK0" secondAttribute="centerX" id="JqB-U5-tgc"/>
@@ -702,42 +680,42 @@
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
-                                                <real key="value" value="10"/>
+                                                <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="BorderColour">
                                                 <color key="value" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="BorderWidth">
-                                                <real key="value" value="1"/>
+                                                <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGk-3j-LQv">
-                                        <rect key="frame" x="277" y="200" width="16" height="13"/>
+                                        <rect key="frame" x="219.5" y="155" width="11" height="13"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="13" id="6Rk-o5-qlN"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="11"/>
+                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTV-CZ-SmF" customClass="ButtonStyle" customModule="TorontoCheapEats" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="218" width="570" height="45"/>
-                                        <color key="backgroundColor" red="1" green="0.21207259480000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <rect key="frame" x="0.0" y="173" width="450" height="45"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                         <state key="normal" title="Login">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
-                                                <real key="value" value="10"/>
+                                                <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="useBorder" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="BorderColour">
-                                                <color key="value" red="0.1908926729" green="0.24981940150000001" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="BorderWidth">
-                                                <real key="value" value="1"/>
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="BorderColour">
+                                                <color key="value" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -745,21 +723,18 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cuf-2Z-8KG" customClass="ButtonStyle" customModule="TorontoCheapEats" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="268" width="570" height="45"/>
-                                        <color key="backgroundColor" red="1" green="0.21207259480000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <rect key="frame" x="0.0" y="223" width="450" height="45"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                         <state key="normal" title="Sign Up">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
-                                                <real key="value" value="10"/>
+                                                <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="BorderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="BorderColour">
-                                                <color key="value" red="0.070976476740000002" green="0.16157963389999999" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -767,13 +742,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login or Sign up with Facebook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tR-pn-Rww">
-                                        <rect key="frame" x="0.0" y="318" width="570" height="45"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="frame" x="0.0" y="273" width="450" height="45"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="11"/>
+                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ggg-wQ-DKb" userLabel="Login" customClass="ButtonStyle" customModule="TorontoCheapEats" customModuleProvider="target">
-                                        <rect key="frame" x="184" y="368" width="202" height="82"/>
+                                        <rect key="frame" x="124" y="323" width="202" height="127"/>
                                         <state key="normal" image="facebook"/>
                                         <connections>
                                             <action selector="facebookButton:" destination="AUU-bb-PHW" eventType="touchUpInside" id="W8g-IF-fdb"/>
@@ -788,7 +763,7 @@
                                     <constraint firstItem="tTV-CZ-SmF" firstAttribute="width" secondItem="QnQ-uL-bMk" secondAttribute="width" id="EZE-zJ-lvE"/>
                                     <constraint firstItem="tTV-CZ-SmF" firstAttribute="height" secondItem="QnQ-uL-bMk" secondAttribute="height" multiplier="0.1" id="HSJ-vb-sFM"/>
                                     <constraint firstItem="7tR-pn-Rww" firstAttribute="width" secondItem="QnQ-uL-bMk" secondAttribute="width" id="K0V-e1-gas"/>
-                                    <constraint firstItem="vNd-EC-WUa" firstAttribute="height" secondItem="QnQ-uL-bMk" secondAttribute="height" multiplier="0.2" id="LLH-k7-Lb1"/>
+                                    <constraint firstItem="vNd-EC-WUa" firstAttribute="height" secondItem="QnQ-uL-bMk" secondAttribute="height" multiplier="0.1" id="LLH-k7-Lb1"/>
                                     <constraint firstItem="MsK-Wp-ep6" firstAttribute="height" secondItem="QnQ-uL-bMk" secondAttribute="height" multiplier="0.1" id="bWT-kf-HmY"/>
                                     <constraint firstItem="uGk-3j-LQv" firstAttribute="centerX" secondItem="QnQ-uL-bMk" secondAttribute="centerX" id="clY-Uz-tlu"/>
                                     <constraint firstItem="2ah-BJ-aK0" firstAttribute="height" secondItem="QnQ-uL-bMk" secondAttribute="height" multiplier="0.1" id="dRj-4n-cHj"/>
@@ -797,14 +772,18 @@
                                     <constraint firstItem="7tR-pn-Rww" firstAttribute="centerX" secondItem="QnQ-uL-bMk" secondAttribute="centerX" id="oa0-wt-JyD"/>
                                     <constraint firstItem="7tR-pn-Rww" firstAttribute="height" secondItem="QnQ-uL-bMk" secondAttribute="height" multiplier="0.1" id="tDT-fi-1sp"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="clY-Uz-tlu"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="QnQ-uL-bMk" firstAttribute="top" secondItem="XIX-iw-NtB" secondAttribute="bottom" constant="20" id="06q-Z3-p98"/>
                             <constraint firstItem="QnQ-uL-bMk" firstAttribute="centerX" secondItem="tzM-Be-L2c" secondAttribute="centerX" id="1pX-vQ-Ueu"/>
                             <constraint firstItem="QnQ-uL-bMk" firstAttribute="height" secondItem="tzM-Be-L2c" secondAttribute="height" multiplier="0.75" id="Bcc-Lp-jZ4"/>
-                            <constraint firstItem="QnQ-uL-bMk" firstAttribute="width" secondItem="tzM-Be-L2c" secondAttribute="width" multiplier="0.95" id="Rbf-Qh-wSe"/>
+                            <constraint firstItem="QnQ-uL-bMk" firstAttribute="width" secondItem="tzM-Be-L2c" secondAttribute="width" multiplier="0.75" id="Rbf-Qh-wSe"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
@@ -823,10 +802,14 @@
                             <userDefinedRuntimeAttribute type="number" keyPath="BorderWidth">
                                 <real key="value" value="0.0"/>
                             </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="viewColour">
+                                <color key="value" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="wxe-zA-klr">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="wsx-Gf-qDx">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="cancelButtonPressed:" destination="AUU-bb-PHW" id="GcR-mz-8yp"/>
                             </connections>
@@ -838,7 +821,7 @@
                         <outlet property="passwordField" destination="lyq-W6-33C" id="pIf-mJ-xm7"/>
                         <outlet property="signupButton" destination="Cuf-2Z-8KG" id="LhF-Cd-dRw"/>
                         <outlet property="usernameField" destination="Fxz-Pm-CtH" id="hWr-TN-Wf9"/>
-                        <segue destination="SNB-hq-ZLb" kind="presentation" id="7Uu-YT-UTb"/>
+                        <segue destination="SNB-hq-ZLb" kind="presentation" identifier="pushToSignUp" id="7Uu-YT-UTb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Rn-Ls-1Ef" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -857,15 +840,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gDF-nL-iAI">
-                                <rect key="frame" x="30" y="146" width="540" height="350"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gDF-nL-iAI">
+                                <rect key="frame" x="75" y="150" width="450" height="350"/>
                                 <subviews>
                                     <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PWo-UT-3fV" userLabel="Username Background" customClass="BackgroundView" customModule="TorontoCheapEats" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="540" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="450" height="50"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ntC-gW-89V">
-                                                <rect key="frame" x="0.0" y="0.0" width="540" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="450" height="50"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
@@ -878,7 +861,7 @@
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
-                                                <real key="value" value="10"/>
+                                                <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="widthClass=compact" misplaced="YES">
@@ -886,14 +869,14 @@
                                         </variation>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="x1n-t3-YhN">
-                                        <rect key="frame" x="0.0" y="60" width="540" height="50"/>
+                                        <rect key="frame" x="0.0" y="60" width="450" height="50"/>
                                         <subviews>
                                             <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UWR-GI-ZMP" userLabel="Firstname Background" customClass="BackgroundView" customModule="TorontoCheapEats" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="265" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="220" height="50"/>
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uuR-Bz-rKw">
-                                                        <rect key="frame" x="0.0" y="0.0" width="265" height="50"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="220" height="50"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
@@ -905,7 +888,7 @@
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
-                                                        <real key="value" value="10"/>
+                                                        <real key="value" value="3"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <variation key="widthClass=compact" misplaced="YES">
@@ -913,11 +896,11 @@
                                                 </variation>
                                             </view>
                                             <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XKh-dg-rCi" userLabel="Lastname Background" customClass="BackgroundView" customModule="TorontoCheapEats" customModuleProvider="target">
-                                                <rect key="frame" x="275" y="0.0" width="265" height="50"/>
+                                                <rect key="frame" x="230" y="0.0" width="220" height="50"/>
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lnX-fA-Lgd">
-                                                        <rect key="frame" x="0.0" y="0.0" width="265" height="50"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="220" height="50"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
@@ -929,7 +912,7 @@
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
-                                                        <real key="value" value="10"/>
+                                                        <real key="value" value="3"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <variation key="widthClass=compact" misplaced="YES">
@@ -942,11 +925,11 @@
                                         </variation>
                                     </stackView>
                                     <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KiW-og-Kdh" userLabel="Email Address Background" customClass="BackgroundView" customModule="TorontoCheapEats" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="120" width="540" height="50"/>
+                                        <rect key="frame" x="0.0" y="120" width="450" height="50"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qqh-zq-G1k">
-                                                <rect key="frame" x="0.0" y="0.0" width="540" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="450" height="50"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
@@ -958,7 +941,7 @@
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
-                                                <real key="value" value="10"/>
+                                                <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="widthClass=compact" misplaced="YES">
@@ -966,11 +949,11 @@
                                         </variation>
                                     </view>
                                     <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQL-1W-0op" userLabel="Password Background" customClass="BackgroundView" customModule="TorontoCheapEats" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="180" width="540" height="50"/>
+                                        <rect key="frame" x="0.0" y="180" width="450" height="50"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="39f-O2-e6u">
-                                                <rect key="frame" x="0.0" y="0.0" width="540" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="450" height="50"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
@@ -982,7 +965,7 @@
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
-                                                <real key="value" value="10"/>
+                                                <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="widthClass=compact" misplaced="YES">
@@ -990,11 +973,11 @@
                                         </variation>
                                     </view>
                                     <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TK7-Zg-VmR" userLabel="Password Confirmation Background" customClass="BackgroundView" customModule="TorontoCheapEats" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="240" width="540" height="50"/>
+                                        <rect key="frame" x="0.0" y="240" width="450" height="50"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password Confirmation" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3AW-Rb-dPX">
-                                                <rect key="frame" x="0.0" y="0.0" width="540" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="450" height="50"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
@@ -1007,7 +990,7 @@
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
-                                                <real key="value" value="10"/>
+                                                <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="widthClass=compact" misplaced="YES">
@@ -1015,15 +998,15 @@
                                         </variation>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBN-NU-XIi" customClass="ButtonStyle" customModule="TorontoCheapEats" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="300" width="540" height="50"/>
-                                        <color key="backgroundColor" red="1" green="0.21207259480000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <rect key="frame" x="0.0" y="300" width="450" height="50"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                         <state key="normal" title="Create Account">
                                             <color key="titleColor" red="0.99056603769999996" green="0.99056603769999996" blue="0.99056603769999996" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
-                                                <real key="value" value="10"/>
+                                                <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="useBorder" value="NO"/>
                                         </userDefinedRuntimeAttributes>
@@ -1058,8 +1041,8 @@
                                     <rect key="frame" x="20" y="136" width="360" height="330"/>
                                 </variation>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEC-ZJ-S1q" userLabel="Error Label">
-                                <rect key="frame" x="0.0" y="70" width="600" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEC-ZJ-S1q" userLabel="Error Label">
+                                <rect key="frame" x="0.0" y="74" width="600" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="s8s-Qg-3td"/>
                                 </constraints>
@@ -1070,9 +1053,9 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gDF-nL-iAI" firstAttribute="width" secondItem="awJ-gF-Xa4" secondAttribute="width" multiplier="0.9" id="CtP-Gn-FzC"/>
+                            <constraint firstItem="gDF-nL-iAI" firstAttribute="width" secondItem="awJ-gF-Xa4" secondAttribute="width" multiplier="0.75" id="CtP-Gn-FzC"/>
                             <constraint firstItem="gDF-nL-iAI" firstAttribute="centerX" secondItem="awJ-gF-Xa4" secondAttribute="centerX" id="DKg-zZ-5nG"/>
-                            <constraint firstItem="sEC-ZJ-S1q" firstAttribute="top" secondItem="ePz-ph-Ahp" secondAttribute="bottom" constant="50" id="LLs-zC-uoh"/>
+                            <constraint firstItem="sEC-ZJ-S1q" firstAttribute="top" secondItem="ePz-ph-Ahp" secondAttribute="bottom" constant="10" id="LLs-zC-uoh"/>
                             <constraint firstItem="gDF-nL-iAI" firstAttribute="top" secondItem="sEC-ZJ-S1q" secondAttribute="bottom" constant="52" id="XRM-dt-jvf"/>
                             <constraint firstItem="sEC-ZJ-S1q" firstAttribute="centerX" secondItem="awJ-gF-Xa4" secondAttribute="centerX" id="fzI-LC-tCy"/>
                             <constraint firstItem="sEC-ZJ-S1q" firstAttribute="width" secondItem="awJ-gF-Xa4" secondAttribute="width" id="nKP-Hi-Bdq"/>
@@ -1101,6 +1084,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="h36-Jc-B8C">
                         <barButtonItem key="leftBarButtonItem" style="done" systemItem="cancel" id="XAr-gB-5dT">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="cancelButtonPressed:" destination="0OG-UI-9TD" id="ack-o8-GMo"/>
                             </connections>

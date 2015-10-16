@@ -13,7 +13,6 @@
 		9FA753681BC5B468003AEA78 /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA753671BC5B468003AEA78 /* TextFieldStyle.swift */; settings = {ASSET_TAGS = (); }; };
 		9FA7536A1BC5B48D003AEA78 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA753691BC5B48D003AEA78 /* ButtonStyle.swift */; settings = {ASSET_TAGS = (); }; };
 		D14F49251BCF2F53009DA152 /* Restaurant+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14F49231BCF2F53009DA152 /* Restaurant+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
-		D14F49261BCF2F53009DA152 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14F49241BCF2F53009DA152 /* Restaurant.swift */; settings = {ASSET_TAGS = (); }; };
 		D1561BEA1BC43DDD007B72A3 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1561BE91BC43DDD007B72A3 /* LogInViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D1561BEC1BC44D05007B72A3 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1561BEB1BC44D05007B72A3 /* ReviewViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D16DD89D1BB473D20058EE3D /* YelpAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DD89C1BB473D20058EE3D /* YelpAPI.swift */; settings = {ASSET_TAGS = (); }; };
@@ -37,13 +36,14 @@
 		D1BF08901BC43BCF000936E0 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BF088F1BC43BCF000936E0 /* libstdc++.6.tbd */; };
 		D1DF01FC1BB8FA3700C9290C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DF01FB1BB8FA3700C9290C /* DetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D1DF01FE1BB8FAE000C9290C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1DF01FD1BB8FAE000C9290C /* CoreLocation.framework */; };
+		D1E667451BD00B0100182B0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1E667441BD00B0100182B0F /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
+		D1E667491BD00E4A00182B0F /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E667481BD00E4A00182B0F /* Restaurant.swift */; settings = {ASSET_TAGS = (); }; };
 		D1EA49D51BCA0ECF0093E6DD /* UserPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EA49D41BCA0ECF0093E6DD /* UserPageViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D1F6FA6D1BBEEE6B00476BA7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F6FA6C1BBEEE6B00476BA7 /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D1F6FA6F1BBF0F8E00476BA7 /* BusinessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F6FA6E1BBF0F8E00476BA7 /* BusinessController.swift */; settings = {ASSET_TAGS = (); }; };
 		D1FEAF171BB471D8000F0F12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FEAF161BB471D8000F0F12 /* AppDelegate.swift */; };
 		D1FEAF1C1BB471D9000F0F12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1FEAF1A1BB471D8000F0F12 /* Main.storyboard */; };
 		D1FEAF1F1BB471D9000F0F12 /* TorontoCheapEats.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1FEAF1D1BB471D9000F0F12 /* TorontoCheapEats.xcdatamodeld */; };
-		D1FEAF211BB471D9000F0F12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1FEAF201BB471D9000F0F12 /* Assets.xcassets */; };
 		D1FEAF241BB471D9000F0F12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1FEAF221BB471D9000F0F12 /* LaunchScreen.storyboard */; };
 		D1FEAF2F1BB471D9000F0F12 /* TorontoCheapEatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FEAF2E1BB471D9000F0F12 /* TorontoCheapEatsTests.swift */; };
 		D1FEAF3A1BB471D9000F0F12 /* TorontoCheapEatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FEAF391BB471D9000F0F12 /* TorontoCheapEatsUITests.swift */; };
@@ -75,7 +75,6 @@
 		9FA753671BC5B468003AEA78 /* TextFieldStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = "<group>"; };
 		9FA753691BC5B48D003AEA78 /* ButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		D14F49231BCF2F53009DA152 /* Restaurant+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Restaurant+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		D14F49241BCF2F53009DA152 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		D1561BE91BC43DDD007B72A3 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		D1561BEB1BC44D05007B72A3 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		D16DD89C1BB473D20058EE3D /* YelpAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpAPI.swift; sourceTree = "<group>"; };
@@ -102,6 +101,8 @@
 		D1BF088F1BC43BCF000936E0 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
 		D1DF01FB1BB8FA3700C9290C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D1DF01FD1BB8FAE000C9290C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D1E667441BD00B0100182B0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D1E667481BD00E4A00182B0F /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Restaurant.swift; path = ../../../../.Trash/Restaurant.swift; sourceTree = "<group>"; };
 		D1EA49D41BCA0ECF0093E6DD /* UserPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPageViewController.swift; sourceTree = "<group>"; };
 		D1F6FA6C1BBEEE6B00476BA7 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D1F6FA6E1BBF0F8E00476BA7 /* BusinessController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessController.swift; sourceTree = "<group>"; };
@@ -109,7 +110,6 @@
 		D1FEAF161BB471D8000F0F12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1FEAF1B1BB471D8000F0F12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D1FEAF1E1BB471D9000F0F12 /* TorontoCheapEats.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TorontoCheapEats.xcdatamodel; sourceTree = "<group>"; };
-		D1FEAF201BB471D9000F0F12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1FEAF231BB471D9000F0F12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1FEAF251BB471D9000F0F12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1FEAF2A1BB471D9000F0F12 /* TorontoCheapEatsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TorontoCheapEatsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -259,7 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				D14F49231BCF2F53009DA152 /* Restaurant+CoreDataProperties.swift */,
-				D14F49241BCF2F53009DA152 /* Restaurant.swift */,
+				D1E667481BD00E4A00182B0F /* Restaurant.swift */,
 				D1FEAF1D1BB471D9000F0F12 /* TorontoCheapEats.xcdatamodeld */,
 			);
 			name = CoreData;
@@ -268,8 +268,8 @@
 		D1F6FA791BBF105C00476BA7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D1E667441BD00B0100182B0F /* Assets.xcassets */,
 				D11529B21BBA29A100A55C22 /* ObjectiveCFile */,
-				D1FEAF201BB471D9000F0F12 /* Assets.xcassets */,
 				D1FEAF251BB471D9000F0F12 /* Info.plist */,
 			);
 			name = Resources;
@@ -438,7 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1FEAF241BB471D9000F0F12 /* LaunchScreen.storyboard in Resources */,
-				D1FEAF211BB471D9000F0F12 /* Assets.xcassets in Resources */,
+				D1E667451BD00B0100182B0F /* Assets.xcassets in Resources */,
 				D1FEAF1C1BB471D9000F0F12 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,7 +497,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D14F49261BCF2F53009DA152 /* Restaurant.swift in Sources */,
 				9FA753661BC5B45B003AEA78 /* BackgroundView.swift in Sources */,
 				D1B13CEE1BB4F972006A546C /* BusinessViewController.swift in Sources */,
 				D1B13CF01BB50003006A546C /* BusinessTableViewCell.swift in Sources */,
@@ -514,6 +513,7 @@
 				D1EA49D51BCA0ECF0093E6DD /* UserPageViewController.swift in Sources */,
 				D1B13CE91BB4F344006A546C /* Business.swift in Sources */,
 				D1561BEA1BC43DDD007B72A3 /* LogInViewController.swift in Sources */,
+				D1E667491BD00E4A00182B0F /* Restaurant.swift in Sources */,
 				D1FEAF1F1BB471D9000F0F12 /* TorontoCheapEats.xcdatamodeld in Sources */,
 				D16DD8A11BB47F640058EE3D /* Yelp-Bridging-Header.m in Sources */,
 				D1DF01FC1BB8FA3700C9290C /* DetailViewController.swift in Sources */,

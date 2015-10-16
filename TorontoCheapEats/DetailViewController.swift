@@ -10,7 +10,8 @@ import UIKit
 import MapKit
 import CoreLocation
 import AddressBook
-
+import Parse
+import ParseFacebookUtilsV4
 class DetailViewController: UIViewController,MKMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var detailRestaurantName: UILabel!
@@ -42,7 +43,7 @@ class DetailViewController: UIViewController,MKMapViewDelegate, CLLocationManage
     var destination: MKMapItem?
     var region:MKCoordinateRegion?
     var userLocation:CLLocationCoordinate2D?
-   
+    //var logInVC = LoginViewController()
     
     
     override func viewDidLoad() {
@@ -124,8 +125,7 @@ class DetailViewController: UIViewController,MKMapViewDelegate, CLLocationManage
             print("there is no phone number")
         
         } else {
-            // use stringByReplacingOccurrencesOfString / stringWithFormat to modify phone number
-            // http://stackoverflow.com/questions/26759768/string-replace-phone-number-ios-swift
+        
 
             if let phoneNum = resturant?.phoneNumber1 {
                 phoneNumber.text = phoneNum
@@ -191,7 +191,7 @@ class DetailViewController: UIViewController,MKMapViewDelegate, CLLocationManage
             renderer.lineWidth = 5.0
             return renderer
     }
-    //--------------------------------------------------
+    //---------------------done working with Map View---------
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated);
@@ -217,7 +217,25 @@ class DetailViewController: UIViewController,MKMapViewDelegate, CLLocationManage
             mapView.addAnnotation(annotation)
         }
     }
-
+    
+    @IBAction func reviewButtonPressed(sender: UIButton!) {
+   
+  
+        
+        if PFUser.currentUser()?.sessionToken != nil {
+            print("sending user to the review screen because he's a current user")
+            
+            performSegueWithIdentifier("ShowReview", sender: self)
+            
+        } else {
+           performSegueWithIdentifier("pushToLogInView", sender: self)
+        }
+        
+        if (FBSDKAccessToken.currentAccessToken() != nil) {
+           
+             performSegueWithIdentifier("ShowReview", sender: self)
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -5,7 +5,7 @@
       location = "group:TorontoCheapEats/Restaurant+CoreDataProperties.swift">
    </FileRef>
    <FileRef
-      location = "group:TorontoCheapEats/Restaurant.swift">
+      location = "group:Restaurant.swift">
    </FileRef>
    <FileRef
       location = "group:TorontoCheapEats.xcodeproj">
