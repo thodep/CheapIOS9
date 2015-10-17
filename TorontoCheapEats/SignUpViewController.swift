@@ -16,13 +16,13 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var firstNameField: UITextField!
     @IBOutlet weak var lastNameField: UITextField!
 
-    
+    let reviewVC = ReviewViewController()
     
     var activityIndicator = UIActivityIndicatorView()
     
     // keyboard movement upwards value
     var kbHeight: CGFloat!
-   // var keyboardWasShown = false
+   var keyboardWasShown = false
 
     @IBOutlet weak var errorMessageLabel: UILabel!
 
@@ -43,53 +43,53 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
         
 
-        // Do any additional setup after loading the view.
+        navigationItem.titleView = UIImageView(image: UIImage(named: "linecons_e026(0)_55"))
     }
     
     // keyboard pushing code
     
-//    override func viewWillAppear(animated:Bool) {
-//        super.viewWillAppear(animated)
-//        
-//        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
-//        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
-//    }
-//    
-//    override func viewWillDisappear(animated: Bool) {
-//        super.viewWillDisappear(animated)
-//        
-//        NSNotificationCenter.defaultCenter().removeObserver(self)
-//    }
-//
-//    func keyboardWillShow(notification: NSNotification) {
-//        if keyboardWasShown {
-//            return
-//        } else {
-//            if let userInfo = notification.userInfo {
-//                if let keyboardSize =  (userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-//                    kbHeight = 20.0
-//                  //  animateTextField(true)
-//                   // keyboardWasShown = true
-//                    
-//                }
-//            }
-//        }
-//    }
+    override func viewWillAppear(animated:Bool) {
+        super.viewWillAppear(animated)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
+    }
     
-//    func keyboardWillHide(notification: NSNotification) {
-//        self.animateTextField(false)
-//    
-//        // reset the state of the keyboard
-//        keyboardWasShown = false
-//    }
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+
+    func keyboardWillShow(notification: NSNotification) {
+        if keyboardWasShown {
+            return
+        } else {
+            if let userInfo = notification.userInfo {
+                if let keyboardSize =  (userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+                    kbHeight = 20.0
+                    animateTextField(true)
+                    keyboardWasShown = true
+                    
+                }
+            }
+        }
+    }
     
-//    func animateTextField(up: Bool) {
-//        let movement = (up ? -kbHeight : kbHeight)
-//        
-//        UIView.animateWithDuration(0.3, animations: {
-//            self.view.frame = CGRectOffset(self.view.frame, 0, movement)
-//        })
-//    }
+    func keyboardWillHide(notification: NSNotification) {
+        self.animateTextField(false)
+    
+        // reset the state of the keyboard
+        keyboardWasShown = false
+    }
+    
+    func animateTextField(up: Bool) {
+        let movement = (up ? -kbHeight : kbHeight)
+        
+        UIView.animateWithDuration(0.3, animations: {
+          //  self.view.frame = CGRectOffset(self.view.frame, 0, movement)
+        })
+    }
     
     // if you press the return button the keyboard will dissappear
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -127,13 +127,13 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
         
         var errorText = "Please "
-        let usernameBlankText = "enter a username"
-        let firstNameBlankText = "enter a first name"
-        let lastNameBlankText = "enter a last name"
-        let passwordBlankText = "enter a password"
-        let emailBlankText = "enter an email address"
+        let usernameBlankText = "Enter a username."
+        let firstNameBlankText = "Enter a first name."
+        let lastNameBlankText = "Enter a last name."
+        let passwordBlankText = "Enter a password."
+        let emailBlankText = "Enter an email address."
         let jointText = ", and "
-        let passwordMismatchText = "enter the same password twice"
+        let passwordMismatchText = "Enter the same password twice."
         
         var textError = false
         
@@ -192,9 +192,21 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         // present a popup if there was an error
         if textError {
             let alert = UIAlertController(title: "Alert", message: errorText, preferredStyle: UIAlertControllerStyle.Alert)
+            
             self.presentViewController(alert, animated: true, completion: nil)
+            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
+                print("Click of default button")
+                
+            }))
+            
+            alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { action in
+                print("Click of cancel button")
+            }))
+
+            
             return
         }
+
         
         // if those conditions clear you will create a new user and log in
         let parseUser = PFUser()
@@ -208,19 +220,27 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             
             if error == nil {
                 print("signed up user to Parse")
-                // send them over to the main app
-                // User needs to verify email address before continuing
-                let alertController = UIAlertController(title: "Email address verification",
-                    message: "We have sent you an email that contains a link - you must click this link before you can continue.",
-                    preferredStyle: UIAlertControllerStyle.Alert
-                )
-                alertController.addAction(UIAlertAction(title: "OKAY",
-                    style: UIAlertActionStyle.Default,
-                    handler: { alertController in self.processSignOut()})
-                )
-                // Display alert
-                self.presentViewController(alertController, animated: true, completion: nil)
+              
                 
+                let uiAlert = UIAlertController(title: "Email address verification", message: "We have sent you an email that contains a link - you must click this link before you can continue.", preferredStyle: UIAlertControllerStyle.Alert)
+                self.presentViewController(uiAlert, animated: true, completion: nil)
+                
+                uiAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: {
+                    //action in
+                    
+                    uiAlert in self.processSignOut()
+                    
+                    print("Click of default button")
+                    print("Saved on Parse")
+                    
+                    // When user done w/ sign up , view should return to ReviewVC so she can do her review
+                    
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                  
+                }))
+               
+              
+                //------end
             } else {
                 
                 self.activityIndicator.stopAnimating()
@@ -232,6 +252,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             }
         })
     }
+    
+ 
     
     @IBAction func cancelButtonPressed(sender: UIBarButtonItem) {
         self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)

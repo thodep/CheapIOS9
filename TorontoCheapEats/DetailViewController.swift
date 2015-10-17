@@ -219,8 +219,6 @@ class DetailViewController: UIViewController,MKMapViewDelegate, CLLocationManage
     }
     
     @IBAction func reviewButtonPressed(sender: UIButton!) {
-   
-  
         
         if PFUser.currentUser()?.sessionToken != nil {
             print("sending user to the review screen because he's a current user")
@@ -236,6 +234,23 @@ class DetailViewController: UIViewController,MKMapViewDelegate, CLLocationManage
              performSegueWithIdentifier("ShowReview", sender: self)
         }
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "ShowReview"){
+            
+            //  that instanciate the review VC as a destination VC
+            let reviewVC = segue.destinationViewController as? ReviewViewController
+                // Create an variable which inherited restaurant data (from Business Class) in
+                // this current VC
+            if let biz = self.resturant{
+               // then pass currentResturant data (from Business Class) to review VC
+              reviewVC?.currentResturant = biz
+                
+            }
+        }
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

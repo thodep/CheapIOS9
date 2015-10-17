@@ -15,6 +15,9 @@
 		D14F49251BCF2F53009DA152 /* Restaurant+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14F49231BCF2F53009DA152 /* Restaurant+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
 		D1561BEA1BC43DDD007B72A3 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1561BE91BC43DDD007B72A3 /* LogInViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D1561BEC1BC44D05007B72A3 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1561BEB1BC44D05007B72A3 /* ReviewViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		D16C7CDD1BD18085000061A8 /* PictureImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16C7CDC1BD18085000061A8 /* PictureImageView.swift */; settings = {ASSET_TAGS = (); }; };
+		D16C7CDF1BD1816E000061A8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16C7CDE1BD1816E000061A8 /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		D16C7CE11BD181BF000061A8 /* ImageAsyncFromURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16C7CE01BD181BF000061A8 /* ImageAsyncFromURL.swift */; settings = {ASSET_TAGS = (); }; };
 		D16DD89D1BB473D20058EE3D /* YelpAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DD89C1BB473D20058EE3D /* YelpAPI.swift */; settings = {ASSET_TAGS = (); }; };
 		D16DD8A11BB47F640058EE3D /* Yelp-Bridging-Header.m in Sources */ = {isa = PBXBuildFile; fileRef = D16DD8A01BB47F640058EE3D /* Yelp-Bridging-Header.m */; settings = {ASSET_TAGS = (); }; };
 		D17AC4591BBD7D610039E5F1 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17AC4581BBD7D610039E5F1 /* AddressBook.framework */; };
@@ -38,7 +41,6 @@
 		D1DF01FE1BB8FAE000C9290C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1DF01FD1BB8FAE000C9290C /* CoreLocation.framework */; };
 		D1E667451BD00B0100182B0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1E667441BD00B0100182B0F /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
 		D1E667491BD00E4A00182B0F /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E667481BD00E4A00182B0F /* Restaurant.swift */; settings = {ASSET_TAGS = (); }; };
-		D1EA49D51BCA0ECF0093E6DD /* UserPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EA49D41BCA0ECF0093E6DD /* UserPageViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D1F6FA6D1BBEEE6B00476BA7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F6FA6C1BBEEE6B00476BA7 /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D1F6FA6F1BBF0F8E00476BA7 /* BusinessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F6FA6E1BBF0F8E00476BA7 /* BusinessController.swift */; settings = {ASSET_TAGS = (); }; };
 		D1FEAF171BB471D8000F0F12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FEAF161BB471D8000F0F12 /* AppDelegate.swift */; };
@@ -77,6 +79,9 @@
 		D14F49231BCF2F53009DA152 /* Restaurant+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Restaurant+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D1561BE91BC43DDD007B72A3 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		D1561BEB1BC44D05007B72A3 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		D16C7CDC1BD18085000061A8 /* PictureImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureImageView.swift; sourceTree = "<group>"; };
+		D16C7CDE1BD1816E000061A8 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D16C7CE01BD181BF000061A8 /* ImageAsyncFromURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAsyncFromURL.swift; sourceTree = "<group>"; };
 		D16DD89C1BB473D20058EE3D /* YelpAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpAPI.swift; sourceTree = "<group>"; };
 		D16DD89E1BB47F640058EE3D /* TorontoCheapEats-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TorontoCheapEats-Bridging-Header.h"; sourceTree = "<group>"; };
 		D16DD89F1BB47F640058EE3D /* Yelp-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Yelp-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -103,7 +108,6 @@
 		D1DF01FD1BB8FAE000C9290C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D1E667441BD00B0100182B0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1E667481BD00E4A00182B0F /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Restaurant.swift; path = ../../../../.Trash/Restaurant.swift; sourceTree = "<group>"; };
-		D1EA49D41BCA0ECF0093E6DD /* UserPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPageViewController.swift; sourceTree = "<group>"; };
 		D1F6FA6C1BBEEE6B00476BA7 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D1F6FA6E1BBF0F8E00476BA7 /* BusinessController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessController.swift; sourceTree = "<group>"; };
 		D1FEAF131BB471D8000F0F12 /* TorontoCheapEats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TorontoCheapEats.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +189,8 @@
 		9F22B42F1BC3169D00D9D33B /* Element Styling */ = {
 			isa = PBXGroup;
 			children = (
+				D16C7CE01BD181BF000061A8 /* ImageAsyncFromURL.swift */,
+				D16C7CDC1BD18085000061A8 /* PictureImageView.swift */,
 				D1B13CEF1BB50003006A546C /* BusinessTableViewCell.swift */,
 				9FA753671BC5B468003AEA78 /* TextFieldStyle.swift */,
 				9FA753651BC5B45B003AEA78 /* BackgroundView.swift */,
@@ -241,7 +247,7 @@
 				D1561BEB1BC44D05007B72A3 /* ReviewViewController.swift */,
 				D1561BE91BC43DDD007B72A3 /* LogInViewController.swift */,
 				9FA753631BC5B378003AEA78 /* SignUpViewController.swift */,
-				D1EA49D41BCA0ECF0093E6DD /* UserPageViewController.swift */,
+				D16C7CDE1BD1816E000061A8 /* SettingsViewController.swift */,
 			);
 			name = ViewContollers;
 			sourceTree = "<group>";
@@ -306,8 +312,8 @@
 				D1F6FA781BBF104900476BA7 /* CoreData */,
 				9F22B42F1BC3169D00D9D33B /* Element Styling */,
 				D18617F11BB59136001F03CF /* Models */,
-				D1F6FA721BBF0FE000476BA7 /* Storyboards */,
 				D1F6FA711BBF0FC800476BA7 /* ViewContollers */,
+				D1F6FA721BBF0FE000476BA7 /* Storyboards */,
 			);
 			path = TorontoCheapEats;
 			sourceTree = "<group>";
@@ -505,14 +511,16 @@
 				D1F6FA6F1BBF0F8E00476BA7 /* BusinessController.swift in Sources */,
 				D1F6FA6D1BBEEE6B00476BA7 /* MapViewController.swift in Sources */,
 				9FA7536A1BC5B48D003AEA78 /* ButtonStyle.swift in Sources */,
+				D16C7CDD1BD18085000061A8 /* PictureImageView.swift in Sources */,
 				D16DD89D1BB473D20058EE3D /* YelpAPI.swift in Sources */,
 				D1FEAF171BB471D8000F0F12 /* AppDelegate.swift in Sources */,
 				9FA753681BC5B468003AEA78 /* TextFieldStyle.swift in Sources */,
 				9FA753641BC5B378003AEA78 /* SignUpViewController.swift in Sources */,
+				D16C7CDF1BD1816E000061A8 /* SettingsViewController.swift in Sources */,
 				D14F49251BCF2F53009DA152 /* Restaurant+CoreDataProperties.swift in Sources */,
-				D1EA49D51BCA0ECF0093E6DD /* UserPageViewController.swift in Sources */,
 				D1B13CE91BB4F344006A546C /* Business.swift in Sources */,
 				D1561BEA1BC43DDD007B72A3 /* LogInViewController.swift in Sources */,
+				D16C7CE11BD181BF000061A8 /* ImageAsyncFromURL.swift in Sources */,
 				D1E667491BD00E4A00182B0F /* Restaurant.swift in Sources */,
 				D1FEAF1F1BB471D9000F0F12 /* TorontoCheapEats.xcdatamodeld in Sources */,
 				D16DD8A11BB47F640058EE3D /* Yelp-Bridging-Header.m in Sources */,

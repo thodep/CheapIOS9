@@ -225,9 +225,14 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "showDetail"){
+            
+            //  that instanciate the detail VC as a destination VC
             let detailView = segue.destinationViewController as? DetailViewController
+            // then get selected row from table view
             let selectedRow = self.tableView.indexPathForSelectedRow!.row
+            
             if let biz = self.businesses {
+                
                 //detailView?.resturant = biz[selectedRow]
                 detailView?.resturant = (searchController.active) ? searchResults[selectedRow] :
                     biz[selectedRow]

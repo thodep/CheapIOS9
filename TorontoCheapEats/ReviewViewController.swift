@@ -9,7 +9,7 @@
 import UIKit
 import Parse // to save rating on Parse
 
-class ReviewViewController: UIViewController , UIAlertViewDelegate{
+class ReviewViewController: UIViewController , UIAlertViewDelegate {
 
     @IBOutlet weak var badRating: ButtonStyle!
     
@@ -21,6 +21,9 @@ class ReviewViewController: UIViewController , UIAlertViewDelegate{
     
     @IBOutlet weak var backgroundImage: UIImageView!
     
+    var activities: [PFObject]?
+    var currentResturant: Business?
+    var isItCheap : Bool?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -61,6 +64,8 @@ class ReviewViewController: UIViewController , UIAlertViewDelegate{
         uiAlert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { action in
             print("Click of cancel button")
         }))
+        isItCheap = true
+        cheapOrNot()
     }
     
     
@@ -78,8 +83,30 @@ class ReviewViewController: UIViewController , UIAlertViewDelegate{
         uiAlert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { action in
             print("Click of cancel button")
         }))
+        isItCheap = false
+        cheapOrNot()
     }
+    // Function to save customer rating on Parse
+    func cheapOrNot(){
+        if let currentRest = currentResturant {
+            // Create a PF Class Object called CheapOrNotReview
+        let review = PFObject(className: "CheapOrNotReview")
     
+          // We create cheap and userID objects into the CheapOrNotReview Class
+        review["cheap"] = isItCheap
+        review["userID"] =  PFUser.currentUser()
+           // Save the PFObject in background
+            review.saveInBackgroundWithBlock({ (success, error: NSError?) -> Void in
+                if (error != nil ){
+                 print(error)
+                
+                } else {
+                    print("review added ")
+                }
+          })
+        }
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -99,6 +99,8 @@ class MapViewController: UIViewController ,  CLLocationManagerDelegate, MKMapVie
        // self.navigationController?.pushViewController(self.detailVC, animated: true)
     }
 
+    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
