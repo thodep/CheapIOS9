@@ -12,10 +12,12 @@ class SettingsViewController: UIViewController,UIImagePickerControllerDelegate, 
 
     
     @IBOutlet weak var firstNameTextField: UITextField!
-    @IBOutlet var lastNameTextField: UITextField!
+    
+    @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet var emailAddressTextField: UITextField!
     
     @IBOutlet var userImageView: PictureImageView!
+   
     
     // image picker variables
     let imagePicker = UIImagePickerController()
@@ -107,16 +109,46 @@ class SettingsViewController: UIViewController,UIImagePickerControllerDelegate, 
                     // TODO: give response for saved data
                     print("saved")
                     
+                    let uiAlert = UIAlertController(title: "Bye", message: "Thanks for using our app", preferredStyle: UIAlertControllerStyle.Alert)
+                    self.presentViewController(uiAlert, animated: true, completion: nil)
+                    
+                    uiAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
+                        print("Click of default button")
+                        
+                        // to go back to main App
+                       self.performSegueWithIdentifier("goBacktoMain", sender: self)
+
+                        
+                        
+                    }))
+                    
                 }
             })
             
         }
-
         
     }
-
     
-    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        let uiAlert = UIAlertController(title: "Bye", message: "Thanks for using our app", preferredStyle: UIAlertControllerStyle.Alert)
+//        self.presentViewController(uiAlert, animated: true, completion: nil)
+//        
+//        uiAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
+//            print("Click of default button")
+//    
+//            // to go back to main App
+//             self.dismissViewControllerAnimated(true, completion: nil)
+//            if (segue.identifier == "goBacktoMain") {
+//                let businessVC = segue.destinationViewController as? BusinessViewController
+//               
+//                print("hey")
+//            
+//            }
+//
+//           
+//        }))
+//
+//    }
     // choose from the library of photos
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
@@ -166,8 +198,6 @@ class SettingsViewController: UIViewController,UIImagePickerControllerDelegate, 
         presentViewController(optionMenu, animated: true, completion: nil)
         
     }
-    
-    
     
     // resign they keyboard
     func resign() {

@@ -86,24 +86,10 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
         // Empty back button title
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain,
             target: nil, action: nil)
-        // Yung Code
-//        
-//        if PFUser.currentUser()?.sessionToken != nil {
-//            loginButton.title = "Logout"
-//            
-//        } else {
-//            loginButton.title = "Login"
-//        }
-//        
-//        if (FBSDKAccessToken.currentAccessToken() != nil) {
-//            print("User is already logged in go to the next viewcontroller")
-//            
-//        }
-
-    
+           
     }
     //----Adding Search Bar & implement Search Methods-------------
-//http://stackoverflow.com/questions/31776376/instagram-explorer-searchbar-and-tableview
+
     
     func configureSearchController() {
         //  instanciate our searchController (it will display the result
@@ -123,7 +109,6 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
         searchController.searchBar.tintColor = UIColor.blackColor()
          // Include the search controller's search bar on Navigation Bar
         navigationItem.titleView = searchController.searchBar
-       // tableView.tableHeaderView = searchController.searchBar
         
         self.definesPresentationContext = true
     }
@@ -177,17 +162,7 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
         }
         return 0
     }
-    // animation for cell
-//     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-//        
-//        let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -200, 10, 0)
-//        cell.layer.transform = rotationTransform
-//        UIView.animateWithDuration(0.5, animations: { () -> Void in
-//            cell.layer.transform = CATransform3DIdentity
-//            
-//        })
-//        
-//    }
+
     // Display API data on tableView
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! BusinessTableViewCell
@@ -253,31 +228,8 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    // Yung Code
-//    @IBAction func loginButtonPressed(sender: AnyObject) {
-//        
-//        
-//        if loginButton.title == "Login" {
-//            let loginVC : UIViewController = (storyboard?.instantiateViewControllerWithIdentifier("Login"))!
-//            self.presentViewController(loginVC, animated: true, completion: nil)
-//        } else if loginButton.title == "Logout" {
-//            processSignOut()
-//            loginButton.title = "Login"
-//        }
-//        
-//        
-//    }
-//    
-//    
-//    // Sign the current user out of the app
-//    func processSignOut() {
-//        
-//        // // Sign out
-//        PFUser.logOut()
-//        print("User logged out")
-//        
-//    }
+ 
+
 }
 
 

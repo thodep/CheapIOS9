@@ -1274,7 +1274,7 @@
                     <connections>
                         <outlet property="emailAddressTextField" destination="gzJ-IG-o6U" id="q8B-oT-9IE"/>
                         <outlet property="firstNameTextField" destination="pBB-FP-8fy" id="W6u-2e-0oR"/>
-                        <outlet property="lastNameTextField" destination="wtQ-2G-dkM" id="LiC-IU-49B"/>
+                        <outlet property="lastNameTextField" destination="wtQ-2G-dkM" id="e6b-8e-rMe"/>
                         <outlet property="userImageView" destination="CEe-Xj-ibU" id="fgA-Jl-MLQ"/>
                     </connections>
                 </viewController>

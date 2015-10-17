@@ -141,6 +141,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
             // set up the keyboard for the first field missing input
             if password!.characters.count == 0 {
+                passwordField.secureTextEntry = true
                 passwordField.becomeFirstResponder()
             }
             

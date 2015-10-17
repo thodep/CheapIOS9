@@ -21,7 +21,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     var activityIndicator = UIActivityIndicatorView()
     
     // keyboard movement upwards value
-    var kbHeight: CGFloat!
+   
+    var kbHeight: CGFloat! = 60.0
    var keyboardWasShown = false
 
     @IBOutlet weak var errorMessageLabel: UILabel!
@@ -66,8 +67,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             return
         } else {
             if let userInfo = notification.userInfo {
-                if let keyboardSize =  (userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-                    kbHeight = 20.0
+                if let _ =  (userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+                    kbHeight = 60.0
                     animateTextField(true)
                     keyboardWasShown = true
                     
@@ -87,7 +88,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         let movement = (up ? -kbHeight : kbHeight)
         
         UIView.animateWithDuration(0.3, animations: {
-          //  self.view.frame = CGRectOffset(self.view.frame, 0, movement)
+            self.view.frame = CGRectOffset(self.view.frame, 0, movement)
         })
     }
     
