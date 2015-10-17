@@ -32,6 +32,7 @@ class MapViewController: UIViewController ,  CLLocationManagerDelegate, MKMapVie
         // Empty Back Button
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain,
             target: nil, action: nil)
+           navigationItem.titleView = UIImageView(image: UIImage(named: "linecons_e026(0)_55"))
     }
     
     func mapSetUp(){
