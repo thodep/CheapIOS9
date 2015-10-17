@@ -28,8 +28,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         navigationItem.titleView = UIImageView(image: UIImage(named: "linecons_e026(0)_55"))
-     
-   
         
                 usernameField!.delegate = self
                 passwordField!.delegate = self

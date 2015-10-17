@@ -9,8 +9,9 @@
 import UIKit
 
 class SettingsViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
     
-    @IBOutlet var firstNameTextField: UITextField!
+    @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet var lastNameTextField: UITextField!
     @IBOutlet var emailAddressTextField: UITextField!
     
@@ -27,11 +28,12 @@ class SettingsViewController: UIViewController,UIImagePickerControllerDelegate, 
         case NoImage
     }
     
-    @IBAction func logoutButtonPressed(sender: UIButton) {
+
+    @IBAction func logoutButtonPressed(sender: AnyObject) {
         PFUser.logOut()
         self.performSegueWithIdentifier("goBacktoMain", sender: nil)
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
@@ -83,7 +85,8 @@ class SettingsViewController: UIViewController,UIImagePickerControllerDelegate, 
          navigationItem.titleView = UIImageView(image: UIImage(named: "linecons_e026(0)_55"))
     }
 
-    @IBAction func savePressed(sender: UIBarButtonItem) {
+    
+    @IBAction func savePressed(sender: AnyObject) {
         resign()
         // REMEMBER TO WRAP YOUR VARIABLES IN IF LET's!!!!
         if let user = PFUser.currentUser() {
@@ -108,8 +111,10 @@ class SettingsViewController: UIViewController,UIImagePickerControllerDelegate, 
             })
             
         }
+
+        
     }
-    
+
     
     
     // choose from the library of photos

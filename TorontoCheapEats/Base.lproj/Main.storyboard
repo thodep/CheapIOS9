@@ -1150,13 +1150,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6uI-5j-YNt" userLabel="Settings Stack">
-                                <rect key="frame" x="30" y="74" width="540" height="420"/>
+                                <rect key="frame" x="30" y="94" width="540" height="290"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="fjd-HB-10i">
-                                        <rect key="frame" x="27" y="0.0" width="486" height="199.5"/>
+                                        <rect key="frame" x="27" y="0.0" width="486" height="109"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noImage" translatesAutoresizingMaskIntoConstraints="NO" id="CEe-Xj-ibU" customClass="PictureImageView" customModule="TorontoCheapEats" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="46" width="108" height="108"/>
+                                                <rect key="frame" x="0.0" y="1" width="108" height="108"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="CEe-Xj-ibU" secondAttribute="height" multiplier="1:1" id="V3i-Co-MKF"/>
                                                 </constraints>
@@ -1173,7 +1173,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4TG-IC-tid">
-                                                <rect key="frame" x="117" y="83.5" width="369" height="33"/>
+                                                <rect key="frame" x="117" y="38" width="369" height="33"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                                 <state key="normal" title="Change Photo"/>
                                                 <connections>
@@ -1183,80 +1183,97 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTU-AL-oJb">
-                                        <rect key="frame" x="0.0" y="204.5" width="540" height="20.5"/>
+                                        <rect key="frame" x="27" y="114" width="486" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="486" id="Hhh-m6-7xa"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pBB-FP-8fy">
-                                        <rect key="frame" x="27" y="230" width="486" height="30"/>
+                                        <rect key="frame" x="27" y="139" width="486" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sxh-pY-AXX">
-                                        <rect key="frame" x="0.0" y="265" width="540" height="20.5"/>
+                                        <rect key="frame" x="27" y="174" width="486" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="486" id="ekW-9U-TXY"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wtQ-2G-dkM">
-                                        <rect key="frame" x="27" y="290.5" width="486" height="30"/>
+                                        <rect key="frame" x="27" y="200" width="486" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXx-VN-Eit">
-                                        <rect key="frame" x="0.0" y="325.5" width="540" height="20.5"/>
+                                        <rect key="frame" x="27" y="235" width="486" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="486" id="M13-8c-bzs"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gzJ-IG-o6U">
-                                        <rect key="frame" x="27" y="351" width="486" height="30"/>
+                                        <rect key="frame" x="27" y="260" width="486" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olJ-4E-UUD">
-                                        <rect key="frame" x="243.5" y="386" width="53" height="34"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
-                                        <state key="normal" title="Logout">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="logoutButtonPressed:" destination="RwF-0f-ZKR" eventType="touchUpInside" id="KXy-Ci-11g"/>
-                                            <segue destination="6gr-Jo-Kon" kind="showDetail" identifier="goBacktoMain" id="ni2-Io-lCm"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="gzJ-IG-o6U" firstAttribute="width" secondItem="6uI-5j-YNt" secondAttribute="width" multiplier="0.9" id="0vT-pT-igw"/>
-                                    <constraint firstItem="lTU-AL-oJb" firstAttribute="width" secondItem="6uI-5j-YNt" secondAttribute="width" id="8OI-ze-HQb"/>
-                                    <constraint firstItem="Sxh-pY-AXX" firstAttribute="width" secondItem="6uI-5j-YNt" secondAttribute="width" id="PiL-hT-2P6"/>
                                     <constraint firstItem="pBB-FP-8fy" firstAttribute="width" secondItem="6uI-5j-YNt" secondAttribute="width" multiplier="0.9" id="cEg-vO-RVZ"/>
                                     <constraint firstItem="fjd-HB-10i" firstAttribute="width" secondItem="6uI-5j-YNt" secondAttribute="width" multiplier="0.9" id="mrr-cU-TWj"/>
                                     <constraint firstItem="CEe-Xj-ibU" firstAttribute="width" secondItem="6uI-5j-YNt" secondAttribute="width" multiplier="0.2" id="reD-bS-n57"/>
-                                    <constraint firstItem="DXx-VN-Eit" firstAttribute="width" secondItem="6uI-5j-YNt" secondAttribute="width" id="ucs-wA-seq"/>
                                     <constraint firstItem="wtQ-2G-dkM" firstAttribute="width" secondItem="6uI-5j-YNt" secondAttribute="width" multiplier="0.9" id="vPq-if-GZ0"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olJ-4E-UUD" customClass="ButtonStyle" customModule="TorontoCheapEats" customModuleProvider="target">
+                                <rect key="frame" x="145" y="423" width="308" height="34"/>
+                                <color key="backgroundColor" red="0.97616745670000005" green="0.95806183690000002" blue="1" alpha="0.82999999999999996" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="308" id="eTC-hP-KtP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="savePressed:" destination="RwF-0f-ZKR" eventType="touchUpInside" id="gHA-w7-M96"/>
+                                    <segue destination="6gr-Jo-Kon" kind="showDetail" identifier="goBacktoMain" id="ni2-Io-lCm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6uI-5j-YNt" firstAttribute="top" secondItem="9TT-Rc-k9i" secondAttribute="bottom" constant="10" id="are-A3-TwE"/>
+                            <constraint firstItem="6uI-5j-YNt" firstAttribute="top" secondItem="9TT-Rc-k9i" secondAttribute="bottom" constant="30" id="are-A3-TwE"/>
                             <constraint firstItem="6uI-5j-YNt" firstAttribute="width" secondItem="s16-jq-BFo" secondAttribute="width" multiplier="0.9" id="bce-dZ-IGZ"/>
+                            <constraint firstItem="olJ-4E-UUD" firstAttribute="centerX" secondItem="6uI-5j-YNt" secondAttribute="centerX" constant="-1" id="cUb-iT-aLT"/>
                             <constraint firstItem="6uI-5j-YNt" firstAttribute="centerX" secondItem="s16-jq-BFo" secondAttribute="centerX" id="cmE-C0-47P"/>
-                            <constraint firstItem="6uI-5j-YNt" firstAttribute="height" secondItem="s16-jq-BFo" secondAttribute="height" multiplier="0.7" id="sSO-J6-kZK"/>
+                            <constraint firstItem="olJ-4E-UUD" firstAttribute="top" secondItem="6uI-5j-YNt" secondAttribute="bottom" constant="39" id="e2c-Sn-K6h"/>
+                            <constraint firstItem="nJ7-xU-ErV" firstAttribute="top" secondItem="olJ-4E-UUD" secondAttribute="bottom" constant="94" id="tDj-P5-kVz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wsY-nx-ssL">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="AwL-wm-e9c">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="AwL-wm-e9c">
                             <connections>
-                                <action selector="savePressed:" destination="RwF-0f-ZKR" id="vmF-0d-zQK"/>
+                                <action selector="logoutButtonPressed:" destination="RwF-0f-ZKR" id="kJp-BL-4rP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="emailAddressTextField" destination="gzJ-IG-o6U" id="q8B-oT-9IE"/>
-                        <outlet property="firstNameTextField" destination="wtQ-2G-dkM" id="hRD-Bz-UDO"/>
+                        <outlet property="firstNameTextField" destination="pBB-FP-8fy" id="W6u-2e-0oR"/>
                         <outlet property="lastNameTextField" destination="wtQ-2G-dkM" id="LiC-IU-49B"/>
                         <outlet property="userImageView" destination="CEe-Xj-ibU" id="fgA-Jl-MLQ"/>
                     </connections>
