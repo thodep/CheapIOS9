@@ -43,7 +43,6 @@ class DetailViewController: UIViewController,MKMapViewDelegate, CLLocationManage
     var destination: MKMapItem?
     var region:MKCoordinateRegion?
     var userLocation:CLLocationCoordinate2D?
-    //var logInVC = LoginViewController()
     
     
     override func viewDidLoad() {

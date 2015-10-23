@@ -18,7 +18,7 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
     
     @IBOutlet weak var tableView: UITableView!
     
-  //  var restaurantsFromCD = [Restaurant]()
+   // var restaurantsFromCD = [Restaurant]()
     
     
     // Working With Coredata
@@ -32,10 +32,14 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
 //        restaurantCD.setValue(restaurant.address, forKey: "restaurantAddress")
 //        restaurantCD.setValue(restaurant.distance, forKey: "restaurantDistance")
 //        restaurantCD.setValue(restaurant.categories, forKey: "restaurantCategories")
+//        //user["userImage"] = PFFile(name:"image.jpg" , data: UIImageJPEGRepresentation(userImageView.image!, 0.5)!)
 //        
-//        // Convert NSURL to NSData???
-//        // http://stackoverflow.com/questions/22951791/click-to-add-image-to-core-data
-//       // restaurantCD.setValue(restaurant.imageURL, forKey: "restaurantImage")
+//        restaurantCD.setValue(restaurant.imageURL, forKey: "restaurantImage")
+//        restaurantCD.setValue(restaurant.ratingImageURL, forKey: "restaurantRatingImage")
+//        
+////        // Convert NSURL to NSData??
+////        // http://stackoverflow.com/questions/22951791/click-to-add-image-to-core-data
+////       // restaurantCD.setValue(restaurant.imageURL, forKey: "restaurantImage")
 //        
 //        // add info to the Entity
 //        var err: NSError?
@@ -50,14 +54,14 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
 //        }
 //    
 //    }
-    
+//    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //---- Working with CoreData-------
    
-        // Reference to Manage Context to retrieve data from CoreData
+//        // Reference to Manage Context to retrieve data from CoreData
 //        let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
 //        let context = delegate.managedObjectContext
 //        let request = NSFetchRequest(entityName: "Restaurant")
@@ -75,7 +79,7 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
 //        if err != nil{
 //        print("problem with coredata")
 //        }
-//     
+     
       
         //---- End working with CoreData------
         
@@ -92,17 +96,17 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
 
     
     func configureSearchController() {
-        //  instanciate our searchController (it will display the result
+        //  instanciate our searchController ,it will display the result
         searchController = UISearchController(searchResultsController: nil)
         // Self is responsible for updating the contents of the search results controller
         searchController.searchResultsUpdater = self
         // Dim the current view when you sélect search bar ( will be hidden when the user type something)
         searchController.dimsBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search Here..."
+        searchController.searchBar.placeholder = "Search Restaurant Name & Categories"
         searchController.searchBar.delegate = self
         searchController.searchBar.sizeToFit()
         // Prevent the searchbar to disapear during search
-       searchController.hidesNavigationBarDuringPresentation =   false
+        searchController.hidesNavigationBarDuringPresentation =   false
         searchController.searchBar.barTintColor = UIColor(red: 231.0/255.0, green: 95.0/255.0, blue:
             53.0/255.0, alpha: 0.3)
         // Set cancel button and search cursor in gray
@@ -191,7 +195,7 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
            
             cell.restaurantImage.layer.cornerRadius = 10
             cell.restaurantImage.layer.masksToBounds = true
-            cell.backgroundColor = UIColor.clearColor()
+            //cell.backgroundColor = UIColor.clearColor()
             
         }
         

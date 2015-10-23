@@ -41,8 +41,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         passwordField.delegate = self
         passwordConfirmationField.delegate = self
         emailAddressField.delegate = self
-        
-        
+    
 
         navigationItem.titleView = UIImageView(image: UIImage(named: "linecons_e026(0)_55"))
     }
@@ -254,7 +253,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         })
     }
     
- 
     
     @IBAction func cancelButtonPressed(sender: UIBarButtonItem) {
         self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)

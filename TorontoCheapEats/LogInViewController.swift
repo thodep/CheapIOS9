@@ -20,7 +20,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     // keyboard movement upwards value
     var kbHeight: CGFloat! = 60.0
-   var keyboardWasShown = false
+    var keyboardWasShown = false
     
     
     

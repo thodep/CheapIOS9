@@ -23,6 +23,7 @@
 		D17AC4591BBD7D610039E5F1 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17AC4581BBD7D610039E5F1 /* AddressBook.framework */; };
 		D17AC45B1BBD7D680039E5F1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17AC45A1BBD7D680039E5F1 /* MapKit.framework */; };
 		D19DB4451BBA121600DF6F53 /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = D19DB4441BBA121600DF6F53 /* UIScrollView+SVInfiniteScrolling.m */; settings = {ASSET_TAGS = (); }; };
+		D1A89FB61BD53D1B004F3247 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A89FB51BD53D1B004F3247 /* Restaurant.swift */; settings = {ASSET_TAGS = (); }; };
 		D1B13CE91BB4F344006A546C /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B13CE81BB4F344006A546C /* Business.swift */; settings = {ASSET_TAGS = (); }; };
 		D1B13CEE1BB4F972006A546C /* BusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B13CED1BB4F972006A546C /* BusinessViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D1B13CF01BB50003006A546C /* BusinessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B13CEF1BB50003006A546C /* BusinessTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
@@ -40,7 +41,6 @@
 		D1DF01FC1BB8FA3700C9290C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DF01FB1BB8FA3700C9290C /* DetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D1DF01FE1BB8FAE000C9290C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1DF01FD1BB8FAE000C9290C /* CoreLocation.framework */; };
 		D1E667451BD00B0100182B0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1E667441BD00B0100182B0F /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
-		D1E667491BD00E4A00182B0F /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E667481BD00E4A00182B0F /* Restaurant.swift */; settings = {ASSET_TAGS = (); }; };
 		D1F6FA6D1BBEEE6B00476BA7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F6FA6C1BBEEE6B00476BA7 /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D1F6FA6F1BBF0F8E00476BA7 /* BusinessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F6FA6E1BBF0F8E00476BA7 /* BusinessController.swift */; settings = {ASSET_TAGS = (); }; };
 		D1FEAF171BB471D8000F0F12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FEAF161BB471D8000F0F12 /* AppDelegate.swift */; };
@@ -90,6 +90,7 @@
 		D17AC45A1BBD7D680039E5F1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D19DB4431BBA121600DF6F53 /* UIScrollView+SVInfiniteScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVInfiniteScrolling.h"; sourceTree = "<group>"; };
 		D19DB4441BBA121600DF6F53 /* UIScrollView+SVInfiniteScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVInfiniteScrolling.m"; sourceTree = "<group>"; };
+		D1A89FB51BD53D1B004F3247 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		D1B13CE81BB4F344006A546C /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		D1B13CED1BB4F972006A546C /* BusinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessViewController.swift; sourceTree = "<group>"; };
 		D1B13CEF1BB50003006A546C /* BusinessTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessTableViewCell.swift; sourceTree = "<group>"; };
@@ -107,7 +108,6 @@
 		D1DF01FB1BB8FA3700C9290C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D1DF01FD1BB8FAE000C9290C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D1E667441BD00B0100182B0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D1E667481BD00E4A00182B0F /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Restaurant.swift; path = ../../../../.Trash/Restaurant.swift; sourceTree = "<group>"; };
 		D1F6FA6C1BBEEE6B00476BA7 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D1F6FA6E1BBF0F8E00476BA7 /* BusinessController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessController.swift; sourceTree = "<group>"; };
 		D1FEAF131BB471D8000F0F12 /* TorontoCheapEats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TorontoCheapEats.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -265,7 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				D14F49231BCF2F53009DA152 /* Restaurant+CoreDataProperties.swift */,
-				D1E667481BD00E4A00182B0F /* Restaurant.swift */,
+				D1A89FB51BD53D1B004F3247 /* Restaurant.swift */,
 				D1FEAF1D1BB471D9000F0F12 /* TorontoCheapEats.xcdatamodeld */,
 			);
 			name = CoreData;
@@ -512,6 +512,7 @@
 				D1F6FA6D1BBEEE6B00476BA7 /* MapViewController.swift in Sources */,
 				9FA7536A1BC5B48D003AEA78 /* ButtonStyle.swift in Sources */,
 				D16C7CDD1BD18085000061A8 /* PictureImageView.swift in Sources */,
+				D1A89FB61BD53D1B004F3247 /* Restaurant.swift in Sources */,
 				D16DD89D1BB473D20058EE3D /* YelpAPI.swift in Sources */,
 				D1FEAF171BB471D8000F0F12 /* AppDelegate.swift in Sources */,
 				9FA753681BC5B468003AEA78 /* TextFieldStyle.swift in Sources */,
@@ -521,7 +522,6 @@
 				D1B13CE91BB4F344006A546C /* Business.swift in Sources */,
 				D1561BEA1BC43DDD007B72A3 /* LogInViewController.swift in Sources */,
 				D16C7CE11BD181BF000061A8 /* ImageAsyncFromURL.swift in Sources */,
-				D1E667491BD00E4A00182B0F /* Restaurant.swift in Sources */,
 				D1FEAF1F1BB471D9000F0F12 /* TorontoCheapEats.xcdatamodeld in Sources */,
 				D16DD8A11BB47F640058EE3D /* Yelp-Bridging-Header.m in Sources */,
 				D1DF01FC1BB8FA3700C9290C /* DetailViewController.swift in Sources */,

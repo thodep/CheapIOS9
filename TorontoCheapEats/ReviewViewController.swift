@@ -23,6 +23,7 @@ class ReviewViewController: UIViewController , UIAlertViewDelegate {
     
     var activities: [PFObject]?
     var currentResturant: Business?
+    
     var isItCheap : Bool?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +57,7 @@ class ReviewViewController: UIViewController , UIAlertViewDelegate {
 
         uiAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
             print("Click of default button")
-            print("Saved on Parse")
+            
             // to go back to detailVC
             self.dismissViewControllerAnimated(true, completion: nil)
         }))
@@ -75,7 +76,7 @@ class ReviewViewController: UIViewController , UIAlertViewDelegate {
         
         uiAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
             print("Click of default button")
-            print("Saved on Parse")
+          
              // to go back to detailVC
             self.dismissViewControllerAnimated(true, completion: nil)
         }))
@@ -94,6 +95,7 @@ class ReviewViewController: UIViewController , UIAlertViewDelegate {
     
           // We create cheap and userID objects into the CheapOrNotReview Class
         review["cheap"] = isItCheap
+        review["restaurantName"] = currentRest.name
         review["userID"] =  PFUser.currentUser()
            // Save the PFObject in background
             review.saveInBackgroundWithBlock({ (success, error: NSError?) -> Void in

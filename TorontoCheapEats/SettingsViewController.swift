@@ -36,6 +36,11 @@ class SettingsViewController: UIViewController,UIImagePickerControllerDelegate, 
         self.performSegueWithIdentifier("goBacktoMain", sender: nil)
     }
     
+    // keyboard movement upwards value
+    var kbHeight: CGFloat! = 60.0
+    var keyboardWasShown = false
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
@@ -87,6 +92,59 @@ class SettingsViewController: UIViewController,UIImagePickerControllerDelegate, 
          navigationItem.titleView = UIImageView(image: UIImage(named: "linecons_e026(0)_55"))
     }
 
+    // Show Key Board When typing 
+    
+    override func viewWillAppear(animated:Bool) {
+        super.viewWillAppear(animated)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        if keyboardWasShown {
+            return
+        } else {
+            if let userInfo = notification.userInfo {
+                if let _ =  (userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+                    kbHeight = 60.0
+                    animateTextField(true)
+                    keyboardWasShown = true
+                    
+                }
+            }
+        }
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        animateTextField(false)
+        
+        // reset the state of the keyboard
+        keyboardWasShown = false
+    }
+    
+    
+    func animateTextField(up: Bool) {
+        let movement = (up ? -kbHeight : kbHeight)
+        
+        UIView.animateWithDuration(0.3, animations: {
+            self.view.frame = CGRectOffset(self.view.frame, 0, movement)
+        })
+    }
+    
+    // if you press the return button the keyboard will dissappear
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        resign()
+        return true
+    }
+    
+    //---- End Working with Key Board
     
     @IBAction func savePressed(sender: AnyObject) {
         resign()
@@ -109,7 +167,7 @@ class SettingsViewController: UIViewController,UIImagePickerControllerDelegate, 
                     // TODO: give response for saved data
                     print("saved")
                     
-                    let uiAlert = UIAlertController(title: "Bye", message: "Thanks for using our app", preferredStyle: UIAlertControllerStyle.Alert)
+                    let uiAlert = UIAlertController(title: "Congrats!", message: "You just updated your info", preferredStyle: UIAlertControllerStyle.Alert)
                     self.presentViewController(uiAlert, animated: true, completion: nil)
                     
                     uiAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
@@ -129,26 +187,7 @@ class SettingsViewController: UIViewController,UIImagePickerControllerDelegate, 
         
     }
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        let uiAlert = UIAlertController(title: "Bye", message: "Thanks for using our app", preferredStyle: UIAlertControllerStyle.Alert)
-//        self.presentViewController(uiAlert, animated: true, completion: nil)
-//        
-//        uiAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
-//            print("Click of default button")
-//    
-//            // to go back to main App
-//             self.dismissViewControllerAnimated(true, completion: nil)
-//            if (segue.identifier == "goBacktoMain") {
-//                let businessVC = segue.destinationViewController as? BusinessViewController
-//               
-//                print("hey")
-//            
-//            }
-//
-//           
-//        }))
-//
-//    }
+
     // choose from the library of photos
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
