@@ -38,6 +38,7 @@
 		D1BF088C1BC43BAA000936E0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BF088B1BC43BAA000936E0 /* SystemConfiguration.framework */; };
 		D1BF088E1BC43BC0000936E0 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BF088D1BC43BC0000936E0 /* libsqlite3.tbd */; };
 		D1BF08901BC43BCF000936E0 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BF088F1BC43BCF000936E0 /* libstdc++.6.tbd */; };
+		D1D24A7F1BDC2B5500F27C75 /* FloatRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D24A7E1BDC2B5500F27C75 /* FloatRatingView.swift */; settings = {ASSET_TAGS = (); }; };
 		D1DF01FC1BB8FA3700C9290C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DF01FB1BB8FA3700C9290C /* DetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D1DF01FE1BB8FAE000C9290C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1DF01FD1BB8FAE000C9290C /* CoreLocation.framework */; };
 		D1E667451BD00B0100182B0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1E667441BD00B0100182B0F /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
@@ -105,6 +106,7 @@
 		D1BF088B1BC43BAA000936E0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D1BF088D1BC43BC0000936E0 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		D1BF088F1BC43BCF000936E0 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
+		D1D24A7E1BDC2B5500F27C75 /* FloatRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatRatingView.swift; sourceTree = "<group>"; };
 		D1DF01FB1BB8FA3700C9290C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D1DF01FD1BB8FAE000C9290C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D1E667441BD00B0100182B0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 				D1DF01FB1BB8FA3700C9290C /* DetailViewController.swift */,
 				D1F6FA6C1BBEEE6B00476BA7 /* MapViewController.swift */,
 				D1561BEB1BC44D05007B72A3 /* ReviewViewController.swift */,
+				D1D24A7E1BDC2B5500F27C75 /* FloatRatingView.swift */,
 				D1561BE91BC43DDD007B72A3 /* LogInViewController.swift */,
 				9FA753631BC5B378003AEA78 /* SignUpViewController.swift */,
 				D16C7CDE1BD1816E000061A8 /* SettingsViewController.swift */,
@@ -522,6 +525,7 @@
 				D1B13CE91BB4F344006A546C /* Business.swift in Sources */,
 				D1561BEA1BC43DDD007B72A3 /* LogInViewController.swift in Sources */,
 				D16C7CE11BD181BF000061A8 /* ImageAsyncFromURL.swift in Sources */,
+				D1D24A7F1BDC2B5500F27C75 /* FloatRatingView.swift in Sources */,
 				D1FEAF1F1BB471D9000F0F12 /* TorontoCheapEats.xcdatamodeld in Sources */,
 				D16DD8A11BB47F640058EE3D /* Yelp-Bridging-Header.m in Sources */,
 				D1DF01FC1BB8FA3700C9290C /* DetailViewController.swift in Sources */,

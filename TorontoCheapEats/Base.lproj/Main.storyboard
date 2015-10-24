@@ -375,33 +375,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TiS-23-YjE">
-                                <rect key="frame" x="134" y="177" width="333" height="187"/>
+                                <rect key="frame" x="90" y="90" width="420" height="420"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've dined here. Was it Cheap or Not?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEC-aG-Hog">
-                                        <rect key="frame" x="55" y="18" width="222" height="72"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbH-2F-g4N" userLabel="NotCheap" customClass="ButtonStyle" customModule="TorontoCheapEats" customModuleProvider="target">
-                                        <rect key="frame" x="184" y="98" width="64" height="64"/>
-                                        <color key="backgroundColor" red="0.98431372549999996" green="0.38823529410000002" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" image="great"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
-                                                <real key="value" value="40"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="happButtonPressed:" destination="2It-Zs-Uw0" eventType="touchUpInside" id="Bhy-6C-teB"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhd-NJ-4wG" customClass="ButtonStyle" customModule="TorontoCheapEats" customModuleProvider="target">
-                                        <rect key="frame" x="303" y="0.0" width="30" height="31"/>
+                                        <rect key="frame" x="388" y="0.0" width="32" height="32"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="31" id="hcE-Pp-qGC"/>
-                                            <constraint firstAttribute="width" constant="30" id="yfv-xm-ztg"/>
+                                            <constraint firstAttribute="width" constant="32" id="iCA-YD-GfF"/>
+                                            <constraint firstAttribute="height" constant="32" id="zfV-ZF-Xee"/>
                                         </constraints>
                                         <state key="normal" image="close"/>
                                         <userDefinedRuntimeAttributes>
@@ -413,56 +394,81 @@
                                             <segue destination="pT7-tM-dfY" kind="unwind" unwindAction="close:" id="QaM-Bi-CQz"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ds-uf-eI8" userLabel="Cheap" customClass="ButtonStyle" customModule="TorontoCheapEats" customModuleProvider="target">
-                                        <rect key="frame" x="92" y="98" width="64" height="64"/>
-                                        <color key="backgroundColor" red="0.16862745583057404" green="0.99215692281723022" blue="0.73725491762161255" alpha="1" colorSpace="deviceRGB"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="x7S-Uh-7ak">
+                                        <rect key="frame" x="42" y="42" width="336" height="336"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leave Your Review" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugi-0j-SfV">
+                                                <rect key="frame" x="33.5" y="0.0" width="269" height="50"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3A7-i3-u0n">
+                                                <rect key="frame" x="33.5" y="50" width="269" height="202"/>
+                                                <color key="backgroundColor" red="1" green="0.39349789969999999" blue="0.28175022379999998" alpha="0.45000000000000001" colorSpace="calibratedRGB"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt egum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wrl-zW-Ejl" customClass="FloatRatingView" customModule="TorontoCheapEats" customModuleProvider="target">
+                                                <rect key="frame" x="33.5" y="252" width="269" height="33.5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="StarEmpty"/>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="fullImage" value="StarFull"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="minRating">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxRating">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLt-Ap-hfC">
+                                                <rect key="frame" x="33.5" y="285.5" width="269" height="50.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                                <state key="normal" title="Save">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="64" id="JNn-2V-heK"/>
+                                            <constraint firstItem="3A7-i3-u0n" firstAttribute="width" secondItem="x7S-Uh-7ak" secondAttribute="width" multiplier="0.8" id="0R2-St-Euq"/>
+                                            <constraint firstItem="wrl-zW-Ejl" firstAttribute="width" secondItem="x7S-Uh-7ak" secondAttribute="width" multiplier="0.8" id="0jt-Ae-TBk"/>
+                                            <constraint firstItem="Ugi-0j-SfV" firstAttribute="width" secondItem="x7S-Uh-7ak" secondAttribute="width" multiplier="0.8" id="D1e-Iz-ro2"/>
+                                            <constraint firstItem="wrl-zW-Ejl" firstAttribute="height" secondItem="x7S-Uh-7ak" secondAttribute="height" multiplier="0.1" id="N6W-fd-Ucw"/>
+                                            <constraint firstItem="lLt-Ap-hfC" firstAttribute="height" secondItem="x7S-Uh-7ak" secondAttribute="height" multiplier="0.15" id="gk0-Xt-fTU"/>
+                                            <constraint firstItem="lLt-Ap-hfC" firstAttribute="width" secondItem="x7S-Uh-7ak" secondAttribute="width" multiplier="0.8" id="i6w-Tg-aEv"/>
+                                            <constraint firstItem="3A7-i3-u0n" firstAttribute="height" secondItem="x7S-Uh-7ak" secondAttribute="height" multiplier="0.6" id="wlQ-bX-7rL"/>
                                         </constraints>
-                                        <state key="normal" image="bad"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
-                                                <real key="value" value="40"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="unHappyButtonPressed:" destination="2It-Zs-Uw0" eventType="touchUpInside" id="ugb-4X-GpN"/>
-                                        </connections>
-                                    </button>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="bhd-NJ-4wG" secondAttribute="trailing" id="3Ib-Mf-sgw"/>
-                                    <constraint firstItem="5ds-uf-eI8" firstAttribute="top" secondItem="HbH-2F-g4N" secondAttribute="top" id="DlC-X4-0c9"/>
-                                    <constraint firstItem="bhd-NJ-4wG" firstAttribute="top" secondItem="TiS-23-YjE" secondAttribute="top" id="Eao-b2-Uav"/>
-                                    <constraint firstAttribute="width" constant="333" id="PZm-Ja-BGp"/>
-                                    <constraint firstAttribute="height" constant="187" id="RK8-1x-O1k"/>
-                                    <constraint firstItem="SEC-aG-Hog" firstAttribute="centerX" secondItem="TiS-23-YjE" secondAttribute="centerX" id="UUi-Yh-xhg"/>
-                                    <constraint firstItem="5ds-uf-eI8" firstAttribute="top" secondItem="SEC-aG-Hog" secondAttribute="bottom" constant="8" symbolic="YES" id="ZRm-CO-wHm"/>
-                                    <constraint firstItem="SEC-aG-Hog" firstAttribute="top" secondItem="TiS-23-YjE" secondAttribute="top" constant="18" id="i9d-3t-W3F"/>
-                                    <constraint firstItem="SEC-aG-Hog" firstAttribute="leading" secondItem="TiS-23-YjE" secondAttribute="leading" constant="55" id="iDL-PO-eI2"/>
-                                    <constraint firstItem="HbH-2F-g4N" firstAttribute="leading" secondItem="5ds-uf-eI8" secondAttribute="trailing" constant="28" id="nhh-7z-nsW"/>
-                                    <constraint firstAttribute="bottom" secondItem="5ds-uf-eI8" secondAttribute="bottom" constant="25" id="oZi-0j-iag"/>
-                                    <constraint firstItem="5ds-uf-eI8" firstAttribute="leading" secondItem="TiS-23-YjE" secondAttribute="leading" constant="92" id="qec-nF-rNv"/>
+                                    <constraint firstItem="x7S-Uh-7ak" firstAttribute="centerX" secondItem="TiS-23-YjE" secondAttribute="centerX" id="J7f-ST-CKn"/>
+                                    <constraint firstItem="bhd-NJ-4wG" firstAttribute="top" secondItem="TiS-23-YjE" secondAttribute="top" id="J81-GS-5Tx"/>
+                                    <constraint firstItem="x7S-Uh-7ak" firstAttribute="height" secondItem="TiS-23-YjE" secondAttribute="height" multiplier="0.8" id="b3N-H9-y6F"/>
+                                    <constraint firstItem="x7S-Uh-7ak" firstAttribute="centerY" secondItem="TiS-23-YjE" secondAttribute="centerY" id="lAP-KH-ObA"/>
+                                    <constraint firstItem="x7S-Uh-7ak" firstAttribute="width" secondItem="TiS-23-YjE" secondAttribute="width" multiplier="0.8" id="lgK-U7-A3V"/>
+                                    <constraint firstAttribute="trailing" secondItem="bhd-NJ-4wG" secondAttribute="trailing" id="ywc-Yl-Z7T"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="TiS-23-YjE" firstAttribute="centerY" secondItem="C5z-Zz-jNv" secondAttribute="centerY" constant="-29.5" id="6L0-cV-ik3"/>
-                            <constraint firstItem="NEQ-WQ-mYn" firstAttribute="leading" secondItem="C5z-Zz-jNv" secondAttribute="leading" id="BSr-e0-6BP"/>
-                            <constraint firstItem="TiS-23-YjE" firstAttribute="centerX" secondItem="C5z-Zz-jNv" secondAttribute="centerX" constant="0.5" id="FQg-pZ-gQF"/>
-                            <constraint firstItem="NEQ-WQ-mYn" firstAttribute="top" secondItem="C5z-Zz-jNv" secondAttribute="top" id="Hub-ML-3Ji"/>
-                            <constraint firstAttribute="trailing" secondItem="NEQ-WQ-mYn" secondAttribute="trailing" id="OI5-2V-KWK"/>
-                            <constraint firstItem="5XT-nx-Cpj" firstAttribute="top" secondItem="NEQ-WQ-mYn" secondAttribute="bottom" id="iJl-bt-c47"/>
+                            <constraint firstItem="TiS-23-YjE" firstAttribute="width" secondItem="C5z-Zz-jNv" secondAttribute="width" multiplier="0.7" id="2dE-Nt-tVr"/>
+                            <constraint firstItem="TiS-23-YjE" firstAttribute="centerY" secondItem="C5z-Zz-jNv" secondAttribute="centerY" id="59b-iP-5Gj"/>
+                            <constraint firstItem="NEQ-WQ-mYn" firstAttribute="bottom" secondItem="5XT-nx-Cpj" secondAttribute="top" id="9jM-sH-Omu"/>
+                            <constraint firstItem="TiS-23-YjE" firstAttribute="height" secondItem="C5z-Zz-jNv" secondAttribute="height" multiplier="0.7" id="Fud-Ri-QWG"/>
+                            <constraint firstItem="NEQ-WQ-mYn" firstAttribute="top" secondItem="C5z-Zz-jNv" secondAttribute="top" id="HRs-Yh-V21"/>
+                            <constraint firstAttribute="trailing" secondItem="NEQ-WQ-mYn" secondAttribute="trailing" id="fK5-jy-iPi"/>
+                            <constraint firstItem="NEQ-WQ-mYn" firstAttribute="leading" secondItem="C5z-Zz-jNv" secondAttribute="leading" id="wyh-MQ-DgE"/>
+                            <constraint firstItem="TiS-23-YjE" firstAttribute="centerX" secondItem="C5z-Zz-jNv" secondAttribute="centerX" id="xtE-FU-BZQ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="RatingView" destination="wrl-zW-Ejl" id="IIB-vS-b73"/>
                         <outlet property="backgroundImage" destination="NEQ-WQ-mYn" id="i3a-KQ-s97"/>
-                        <outlet property="badRating" destination="5ds-uf-eI8" id="orT-k0-UHn"/>
                         <outlet property="bgroundView" destination="TiS-23-YjE" id="9Na-TA-rm5"/>
                         <outlet property="closeButton" destination="bhd-NJ-4wG" id="HMu-IP-q7y"/>
-                        <outlet property="goodRating" destination="HbH-2F-g4N" id="JqI-FY-cPR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JNw-Aa-5D9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1285,11 +1291,11 @@
     </scenes>
     <resources>
         <image name="05" width="1300" height="1668"/>
-        <image name="bad" width="64" height="64"/>
+        <image name="StarEmpty" width="22" height="22"/>
+        <image name="StarFull" width="22" height="22"/>
         <image name="close" width="64" height="64"/>
         <image name="facebook" width="202" height="46"/>
         <image name="find" width="32" height="32"/>
-        <image name="great" width="64" height="64"/>
         <image name="map" width="32" height="32"/>
         <image name="noImage" width="480" height="480"/>
         <image name="user(1)" width="32" height="32"/>
