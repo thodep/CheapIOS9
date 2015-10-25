@@ -15,9 +15,8 @@ class SettingsViewController: UIViewController,UIImagePickerControllerDelegate, 
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet var emailAddressTextField: UITextField!
     @IBOutlet var userImageView: PictureImageView!
-    // keyboard movement upwards value
-    var kbHeight: CGFloat! = 60.0
-    var keyboardWasShown = false
+ 
+
     
     // image picker variables
     let imagePicker = UIImagePickerController()
@@ -42,8 +41,8 @@ class SettingsViewController: UIViewController,UIImagePickerControllerDelegate, 
         firstNameTextField.delegate = self
         lastNameTextField.delegate = self
         emailAddressTextField.delegate = self
-        
         imagePicker.delegate = self
+        
         
         PFUser.currentUser()?.fetchInBackgroundWithBlock({ (result: PFObject?, error: NSError?) -> Void in
             if error != nil {
@@ -90,54 +89,9 @@ class SettingsViewController: UIViewController,UIImagePickerControllerDelegate, 
         })
         
          navigationItem.titleView = UIImageView(image: UIImage(named: "linecons_e026(0)_55"))
-    }
 
-    // Show Key Board When typing , push the whole view up 
-    
-    override func viewWillAppear(animated:Bool) {
-        super.viewWillAppear(animated)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
     }
-    
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        NSNotificationCenter.defaultCenter().removeObserver(self)
-    }
-    
-    func keyboardWillShow(notification: NSNotification) {
-        if keyboardWasShown {
-            return
-        } else {
-            if let userInfo = notification.userInfo {
-                if let _ =  (userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-                    kbHeight = 60.0
-                    animateTextField(true)
-                    keyboardWasShown = true
-                    
-                }
-            }
-        }
-    }
-    
-    func keyboardWillHide(notification: NSNotification) {
-        animateTextField(false)
-        
-        // reset the state of the keyboard
-        keyboardWasShown = false
-    }
-    
-    
-    func animateTextField(up: Bool) {
-        let movement = (up ? -kbHeight : kbHeight)
-        
-        UIView.animateWithDuration(0.3, animations: {
-            self.view.frame = CGRectOffset(self.view.frame, 0, movement)
-        })
-    }
-    
     // if you press the return button the keyboard will dissappear
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         resign()
@@ -155,7 +109,7 @@ class SettingsViewController: UIViewController,UIImagePickerControllerDelegate, 
         
     }
 
-    //---- End Working with Key Board
+    
     
     @IBAction func savePressed(sender: AnyObject) {
         resign()
@@ -250,7 +204,6 @@ class SettingsViewController: UIViewController,UIImagePickerControllerDelegate, 
     }
     
 
-    
 
     /*
     // MARK: - Navigation

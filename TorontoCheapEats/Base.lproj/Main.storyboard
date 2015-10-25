@@ -481,7 +481,7 @@
         <scene sceneID="1Aw-P0-WiG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XnK-mZ-3iR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" image="find" id="I7m-g9-CN6"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="find" selectedImage="find" id="I7m-g9-CN6"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ToQ-ZK-RBz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1125,11 +1125,11 @@
             </objects>
             <point key="canvasLocation" x="4036" y="76"/>
         </scene>
-        <!--About Me-->
+        <!--Navigation Controller-->
         <scene sceneID="KSu-Yi-eI6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uMe-Lf-FbC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="About Me" image="user(1)" id="eor-CJ-E3X"/>
+                    <tabBarItem key="tabBarItem" title="" systemItem="more" id="eor-CJ-E3X"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dnz-eg-WVW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1156,14 +1156,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="6uI-5j-YNt" userLabel="Settings Stack">
-                                <rect key="frame" x="30" y="94" width="540" height="360"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6uI-5j-YNt" userLabel="Settings Stack">
+                                <rect key="frame" x="30" y="94" width="540" height="350"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="fjd-HB-10i">
-                                        <rect key="frame" x="54" y="0.0" width="432" height="108"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fjd-HB-10i" userLabel="ImageStack">
+                                        <rect key="frame" x="180" y="0.0" width="179" height="70"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noImage" translatesAutoresizingMaskIntoConstraints="NO" id="CEe-Xj-ibU" customClass="PictureImageView" customModule="TorontoCheapEats" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="108" height="108"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="CEe-Xj-ibU" secondAttribute="height" multiplier="1:1" id="V3i-Co-MKF"/>
                                                 </constraints>
@@ -1180,7 +1180,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4TG-IC-tid">
-                                                <rect key="frame" x="117" y="37.5" width="315" height="33"/>
+                                                <rect key="frame" x="80" y="18.5" width="99" height="33"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                                 <state key="normal" title="Change Photo"/>
                                                 <connections>
@@ -1190,7 +1190,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTU-AL-oJb">
-                                        <rect key="frame" x="27" y="114" width="486" height="36"/>
+                                        <rect key="frame" x="27" y="75" width="486" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="486" id="Hhh-m6-7xa"/>
                                         </constraints>
@@ -1199,12 +1199,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pBB-FP-8fy">
-                                        <rect key="frame" x="54" y="156" width="432" height="36"/>
+                                        <rect key="frame" x="54" y="115" width="432" height="35"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sxh-pY-AXX">
-                                        <rect key="frame" x="27" y="198" width="486" height="36"/>
+                                        <rect key="frame" x="27" y="155" width="486" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="486" id="ekW-9U-TXY"/>
                                         </constraints>
@@ -1213,12 +1213,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wtQ-2G-dkM">
-                                        <rect key="frame" x="54" y="240" width="432" height="36"/>
+                                        <rect key="frame" x="54" y="195" width="432" height="35"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXx-VN-Eit">
-                                        <rect key="frame" x="27" y="282" width="486" height="36"/>
+                                        <rect key="frame" x="27" y="235" width="486" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="486" id="M13-8c-bzs"/>
                                         </constraints>
@@ -1227,65 +1227,54 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gzJ-IG-o6U">
-                                        <rect key="frame" x="54" y="324" width="432" height="36"/>
+                                        <rect key="frame" x="54" y="275" width="432" height="35"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olJ-4E-UUD" customClass="ButtonStyle" customModule="TorontoCheapEats" customModuleProvider="target">
+                                        <rect key="frame" x="54" y="315" width="432" height="35"/>
+                                        <color key="backgroundColor" red="0.97616745670000005" green="0.95806183690000002" blue="1" alpha="0.82999999999999996" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="savePressed:" destination="RwF-0f-ZKR" eventType="touchUpInside" id="gHA-w7-M96"/>
+                                            <segue destination="6gr-Jo-Kon" kind="showDetail" identifier="goBacktoMain" id="ni2-Io-lCm"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="gzJ-IG-o6U" firstAttribute="width" secondItem="6uI-5j-YNt" secondAttribute="width" multiplier="0.8" id="0vT-pT-igw"/>
                                     <constraint firstItem="wtQ-2G-dkM" firstAttribute="height" secondItem="6uI-5j-YNt" secondAttribute="height" multiplier="0.1" id="2Bx-ua-V2r"/>
-                                    <constraint firstItem="fjd-HB-10i" firstAttribute="height" secondItem="6uI-5j-YNt" secondAttribute="height" multiplier="0.3" id="E92-9D-jJE"/>
-                                    <constraint firstItem="wtQ-2G-dkM" firstAttribute="height" secondItem="fjd-HB-10i" secondAttribute="height" multiplier="0.1" id="I43-bC-x4l"/>
+                                    <constraint firstItem="fjd-HB-10i" firstAttribute="height" secondItem="6uI-5j-YNt" secondAttribute="height" multiplier="0.2" id="E92-9D-jJE"/>
                                     <constraint firstItem="DXx-VN-Eit" firstAttribute="height" secondItem="6uI-5j-YNt" secondAttribute="height" multiplier="0.1" id="IsD-zB-sgp"/>
+                                    <constraint firstItem="olJ-4E-UUD" firstAttribute="height" secondItem="6uI-5j-YNt" secondAttribute="height" multiplier="0.1" id="JZ3-DQ-0e6"/>
                                     <constraint firstItem="pBB-FP-8fy" firstAttribute="width" secondItem="6uI-5j-YNt" secondAttribute="width" multiplier="0.8" id="cEg-vO-RVZ"/>
                                     <constraint firstItem="lTU-AL-oJb" firstAttribute="height" secondItem="6uI-5j-YNt" secondAttribute="height" multiplier="0.1" id="eIW-ra-xhk"/>
                                     <constraint firstItem="gzJ-IG-o6U" firstAttribute="height" secondItem="6uI-5j-YNt" secondAttribute="height" multiplier="0.1" id="lG0-e0-MXb"/>
-                                    <constraint firstItem="fjd-HB-10i" firstAttribute="width" secondItem="6uI-5j-YNt" secondAttribute="width" multiplier="0.8" id="mrr-cU-TWj"/>
-                                    <constraint firstItem="CEe-Xj-ibU" firstAttribute="width" secondItem="6uI-5j-YNt" secondAttribute="width" multiplier="0.2" id="reD-bS-n57"/>
                                     <constraint firstItem="Sxh-pY-AXX" firstAttribute="height" secondItem="6uI-5j-YNt" secondAttribute="height" multiplier="0.1" id="snW-Uw-gja"/>
                                     <constraint firstItem="pBB-FP-8fy" firstAttribute="height" secondItem="6uI-5j-YNt" secondAttribute="height" multiplier="0.1" id="sup-e5-cep"/>
                                     <constraint firstItem="wtQ-2G-dkM" firstAttribute="width" secondItem="6uI-5j-YNt" secondAttribute="width" multiplier="0.8" id="vPq-if-GZ0"/>
+                                    <constraint firstItem="olJ-4E-UUD" firstAttribute="width" secondItem="6uI-5j-YNt" secondAttribute="width" multiplier="0.8" id="xH1-Xa-3HI"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="I43-bC-x4l"/>
-                                    </mask>
-                                </variation>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olJ-4E-UUD" customClass="ButtonStyle" customModule="TorontoCheapEats" customModuleProvider="target">
-                                <rect key="frame" x="145" y="493" width="308" height="34"/>
-                                <color key="backgroundColor" red="0.97616745670000005" green="0.95806183690000002" blue="1" alpha="0.82999999999999996" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="308" id="eTC-hP-KtP"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
-                                <state key="normal" title="Save">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="savePressed:" destination="RwF-0f-ZKR" eventType="touchUpInside" id="gHA-w7-M96"/>
-                                    <segue destination="6gr-Jo-Kon" kind="showDetail" identifier="goBacktoMain" id="ni2-Io-lCm"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="nJ7-xU-ErV" firstAttribute="top" secondItem="6uI-5j-YNt" secondAttribute="bottom" constant="107" id="19U-VL-2kM"/>
                             <constraint firstItem="6uI-5j-YNt" firstAttribute="top" secondItem="9TT-Rc-k9i" secondAttribute="bottom" constant="30" id="are-A3-TwE"/>
                             <constraint firstItem="6uI-5j-YNt" firstAttribute="width" secondItem="s16-jq-BFo" secondAttribute="width" multiplier="0.9" id="bce-dZ-IGZ"/>
-                            <constraint firstItem="olJ-4E-UUD" firstAttribute="centerX" secondItem="6uI-5j-YNt" secondAttribute="centerX" constant="-1" id="cUb-iT-aLT"/>
                             <constraint firstItem="6uI-5j-YNt" firstAttribute="centerX" secondItem="s16-jq-BFo" secondAttribute="centerX" id="cmE-C0-47P"/>
-                            <constraint firstItem="olJ-4E-UUD" firstAttribute="top" secondItem="6uI-5j-YNt" secondAttribute="bottom" constant="39" id="e2c-Sn-K6h"/>
-                            <constraint firstItem="nJ7-xU-ErV" firstAttribute="top" secondItem="olJ-4E-UUD" secondAttribute="bottom" constant="94" id="tDj-P5-kVz"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="tDj-P5-kVz"/>
+                                <exclude reference="19U-VL-2kM"/>
                             </mask>
                         </variation>
                     </view>
@@ -1297,6 +1286,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="bottomSpacingConstraint" destination="19U-VL-2kM" id="p4M-XY-VGp"/>
                         <outlet property="emailAddressTextField" destination="gzJ-IG-o6U" id="q8B-oT-9IE"/>
                         <outlet property="firstNameTextField" destination="pBB-FP-8fy" id="W6u-2e-0oR"/>
                         <outlet property="lastNameTextField" destination="wtQ-2G-dkM" id="e6b-8e-rMe"/>
@@ -1305,7 +1295,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FvN-Na-9jh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2256" y="-744"/>
+            <point key="canvasLocation" x="2390" y="-744"/>
         </scene>
     </scenes>
     <resources>
@@ -1314,10 +1304,9 @@
         <image name="StarFull" width="22" height="22"/>
         <image name="close" width="64" height="64"/>
         <image name="facebook" width="202" height="46"/>
-        <image name="find" width="32" height="32"/>
+        <image name="find" width="24" height="24"/>
         <image name="map" width="32" height="32"/>
-        <image name="noImage" width="480" height="480"/>
-        <image name="user(1)" width="32" height="32"/>
+        <image name="noImage" width="1490" height="1080"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="YCR-5E-yJ3"/>

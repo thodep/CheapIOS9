@@ -16,7 +16,6 @@ import ParseFacebookUtilsV4
 
 //import "FBSDKCoreKit/FBSDKCoreKit.h"
 
-// Hide the keyboard when typing , view scrolll up , hidding password in Log in field
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -38,7 +37,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             
         }
-        
         
         // Parse Appdelegate Code
         
