@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6gr-Jo-Kon">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RwF-0f-ZKR">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -1156,14 +1156,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6uI-5j-YNt" userLabel="Settings Stack">
-                                <rect key="frame" x="30" y="94" width="540" height="350"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="6uI-5j-YNt" userLabel="Settings Stack">
+                                <rect key="frame" x="30" y="94" width="540" height="280"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fjd-HB-10i" userLabel="ImageStack">
-                                        <rect key="frame" x="180" y="0.0" width="179" height="70"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="fjd-HB-10i" userLabel="ImageStack">
+                                        <rect key="frame" x="190" y="0.0" width="161" height="56"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noImage" translatesAutoresizingMaskIntoConstraints="NO" id="CEe-Xj-ibU" customClass="PictureImageView" customModule="TorontoCheapEats" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="56" height="56"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="CEe-Xj-ibU" secondAttribute="height" multiplier="1:1" id="V3i-Co-MKF"/>
                                                 </constraints>
@@ -1180,7 +1180,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4TG-IC-tid">
-                                                <rect key="frame" x="80" y="18.5" width="99" height="33"/>
+                                                <rect key="frame" x="62" y="12" width="99" height="33"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                                 <state key="normal" title="Change Photo"/>
                                                 <connections>
@@ -1190,7 +1190,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTU-AL-oJb">
-                                        <rect key="frame" x="27" y="75" width="486" height="35"/>
+                                        <rect key="frame" x="27" y="60" width="486" height="28"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="486" id="Hhh-m6-7xa"/>
                                         </constraints>
@@ -1199,12 +1199,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pBB-FP-8fy">
-                                        <rect key="frame" x="54" y="115" width="432" height="35"/>
+                                        <rect key="frame" x="54" y="92" width="432" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sxh-pY-AXX">
-                                        <rect key="frame" x="27" y="155" width="486" height="35"/>
+                                        <rect key="frame" x="27" y="124" width="486" height="28"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="486" id="ekW-9U-TXY"/>
                                         </constraints>
@@ -1213,12 +1213,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wtQ-2G-dkM">
-                                        <rect key="frame" x="54" y="195" width="432" height="35"/>
+                                        <rect key="frame" x="54" y="156" width="432" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXx-VN-Eit">
-                                        <rect key="frame" x="27" y="235" width="486" height="35"/>
+                                        <rect key="frame" x="27" y="188" width="486" height="28"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="486" id="M13-8c-bzs"/>
                                         </constraints>
@@ -1227,12 +1227,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gzJ-IG-o6U">
-                                        <rect key="frame" x="54" y="275" width="432" height="35"/>
+                                        <rect key="frame" x="54" y="220" width="432" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olJ-4E-UUD" customClass="ButtonStyle" customModule="TorontoCheapEats" customModuleProvider="target">
-                                        <rect key="frame" x="54" y="315" width="432" height="35"/>
+                                        <rect key="frame" x="54" y="252" width="432" height="28"/>
                                         <color key="backgroundColor" red="0.97616745670000005" green="0.95806183690000002" blue="1" alpha="0.82999999999999996" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                         <state key="normal" title="Save">
