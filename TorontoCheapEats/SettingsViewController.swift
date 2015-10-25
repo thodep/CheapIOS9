@@ -8,16 +8,16 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class SettingsViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     
     @IBOutlet weak var firstNameTextField: UITextField!
-    
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet var emailAddressTextField: UITextField!
-    
     @IBOutlet var userImageView: PictureImageView!
-   
+    // keyboard movement upwards value
+    var kbHeight: CGFloat! = 60.0
+    var keyboardWasShown = false
     
     // image picker variables
     let imagePicker = UIImagePickerController()
@@ -36,13 +36,13 @@ class SettingsViewController: UIViewController,UIImagePickerControllerDelegate, 
         self.performSegueWithIdentifier("goBacktoMain", sender: nil)
     }
     
-    // keyboard movement upwards value
-    var kbHeight: CGFloat! = 60.0
-    var keyboardWasShown = false
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        firstNameTextField.delegate = self
+        lastNameTextField.delegate = self
+        emailAddressTextField.delegate = self
+        
         imagePicker.delegate = self
         
         PFUser.currentUser()?.fetchInBackgroundWithBlock({ (result: PFObject?, error: NSError?) -> Void in
@@ -92,7 +92,7 @@ class SettingsViewController: UIViewController,UIImagePickerControllerDelegate, 
          navigationItem.titleView = UIImageView(image: UIImage(named: "linecons_e026(0)_55"))
     }
 
-    // Show Key Board When typing 
+    // Show Key Board When typing , push the whole view up 
     
     override func viewWillAppear(animated:Bool) {
         super.viewWillAppear(animated)
@@ -143,7 +143,18 @@ class SettingsViewController: UIViewController,UIImagePickerControllerDelegate, 
         resign()
         return true
     }
+    // resign they keyboard
+    func resign() {
+        firstNameTextField.resignFirstResponder()
+        lastNameTextField.resignFirstResponder()
+        emailAddressTextField.resignFirstResponder()
     
+    }
+    override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
+        resign()
+        
+    }
+
     //---- End Working with Key Board
     
     @IBAction func savePressed(sender: AnyObject) {
@@ -238,12 +249,6 @@ class SettingsViewController: UIViewController,UIImagePickerControllerDelegate, 
         
     }
     
-    // resign they keyboard
-    func resign() {
-        firstNameTextField.resignFirstResponder()
-        lastNameTextField.resignFirstResponder()
-        emailAddressTextField.resignFirstResponder()
-    }
 
     
 

@@ -23,19 +23,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     var keyboardWasShown = false
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.titleView = UIImageView(image: UIImage(named: "linecons_e026(0)_55"))
-        
-                usernameField!.delegate = self
-                passwordField!.delegate = self
+        usernameField!.delegate = self
+        passwordField!.delegate = self
         
         if PFUser.currentUser()?.sessionToken != nil {
             print("sending user to the main app screen because he's a current user")
-            
-        //    self.performSegueWithIdentifier("Main", sender: self)
             
         } else {
             // Show the signup or login screen
@@ -47,6 +42,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             print("User is already logged in go to the next viewcontroller")
             
         }
+        navigationItem.titleView = UIImageView(image: UIImage(named: "linecons_e026(0)_55"))
     }
     
     override func viewWillAppear(animated:Bool) {

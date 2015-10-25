@@ -17,13 +17,12 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var lastNameField: UITextField!
 
     let reviewVC = ReviewViewController()
-    
     var activityIndicator = UIActivityIndicatorView()
     
     // keyboard movement upwards value
    
     var kbHeight: CGFloat! = 60.0
-   var keyboardWasShown = false
+    var keyboardWasShown = false
 
     @IBOutlet weak var errorMessageLabel: UILabel!
 
