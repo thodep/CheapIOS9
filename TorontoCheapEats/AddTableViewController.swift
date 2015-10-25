@@ -1,10 +1,4 @@
-//
-//  AddTableViewController.swift
-//  FoodPin
-//
-//  Created by Simon Ng on 3/9/14.
-//  Copyright (c) 2014 AppCoda. All rights reserved.
-//
+
 
 import UIKit
 
@@ -22,13 +16,6 @@ class AddTableViewController: UITableViewController, UIImagePickerControllerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    
         
     }
 
@@ -103,7 +90,7 @@ class AddTableViewController: UITableViewController, UIImagePickerControllerDele
         print("Name: " + nameTextField!.text!)
         print("Type: " + typeTextField!.text!)
         print("Location: " + locationTextField!.text!)
-        //print("Have you been here: " + (isVisited ? "yes" : "no"))
+        print("Have you been here: " + (isVisited ? "yes" : "no"))
         
        
     }
@@ -123,15 +110,6 @@ class AddTableViewController: UITableViewController, UIImagePickerControllerDele
     }
 
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
 
    
 }

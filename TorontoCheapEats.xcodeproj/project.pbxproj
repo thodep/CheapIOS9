@@ -12,6 +12,8 @@
 		9FA753661BC5B45B003AEA78 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA753651BC5B45B003AEA78 /* BackgroundView.swift */; settings = {ASSET_TAGS = (); }; };
 		9FA753681BC5B468003AEA78 /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA753671BC5B468003AEA78 /* TextFieldStyle.swift */; settings = {ASSET_TAGS = (); }; };
 		9FA7536A1BC5B48D003AEA78 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA753691BC5B48D003AEA78 /* ButtonStyle.swift */; settings = {ASSET_TAGS = (); }; };
+		D11A45CE1BDD814400B2DA4F /* AbouMeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11A45CD1BDD814400B2DA4F /* AbouMeVC.swift */; settings = {ASSET_TAGS = (); }; };
+		D11A45D01BDD877900B2DA4F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11A45CF1BDD877900B2DA4F /* WebViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D14F49251BCF2F53009DA152 /* Restaurant+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14F49231BCF2F53009DA152 /* Restaurant+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
 		D1561BEA1BC43DDD007B72A3 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1561BE91BC43DDD007B72A3 /* LogInViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D1561BEC1BC44D05007B72A3 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1561BEB1BC44D05007B72A3 /* ReviewViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -77,6 +79,8 @@
 		9FA753651BC5B45B003AEA78 /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		9FA753671BC5B468003AEA78 /* TextFieldStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = "<group>"; };
 		9FA753691BC5B48D003AEA78 /* ButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		D11A45CD1BDD814400B2DA4F /* AbouMeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbouMeVC.swift; sourceTree = "<group>"; };
+		D11A45CF1BDD877900B2DA4F /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		D14F49231BCF2F53009DA152 /* Restaurant+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Restaurant+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D1561BE91BC43DDD007B72A3 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		D1561BEB1BC44D05007B72A3 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
@@ -242,6 +246,7 @@
 		D1F6FA711BBF0FC800476BA7 /* ViewContollers */ = {
 			isa = PBXGroup;
 			children = (
+				D11A45CD1BDD814400B2DA4F /* AbouMeVC.swift */,
 				D1E6A3D91BDD2E6E00F02E1C /* AddTableViewController.swift */,
 				D1FEAF161BB471D8000F0F12 /* AppDelegate.swift */,
 				D1B13CED1BB4F972006A546C /* BusinessViewController.swift */,
@@ -251,6 +256,7 @@
 				D1561BE91BC43DDD007B72A3 /* LogInViewController.swift */,
 				9FA753631BC5B378003AEA78 /* SignUpViewController.swift */,
 				D16C7CDE1BD1816E000061A8 /* SettingsViewController.swift */,
+				D11A45CF1BDD877900B2DA4F /* WebViewController.swift */,
 			);
 			name = ViewContollers;
 			sourceTree = "<group>";
@@ -519,12 +525,14 @@
 				D1A89FB61BD53D1B004F3247 /* Restaurant.swift in Sources */,
 				D16DD89D1BB473D20058EE3D /* YelpAPI.swift in Sources */,
 				D1FEAF171BB471D8000F0F12 /* AppDelegate.swift in Sources */,
+				D11A45D01BDD877900B2DA4F /* WebViewController.swift in Sources */,
 				9FA753681BC5B468003AEA78 /* TextFieldStyle.swift in Sources */,
 				9FA753641BC5B378003AEA78 /* SignUpViewController.swift in Sources */,
 				D16C7CDF1BD1816E000061A8 /* SettingsViewController.swift in Sources */,
 				D14F49251BCF2F53009DA152 /* Restaurant+CoreDataProperties.swift in Sources */,
 				D1B13CE91BB4F344006A546C /* Business.swift in Sources */,
 				D1561BEA1BC43DDD007B72A3 /* LogInViewController.swift in Sources */,
+				D11A45CE1BDD814400B2DA4F /* AbouMeVC.swift in Sources */,
 				D16C7CE11BD181BF000061A8 /* ImageAsyncFromURL.swift in Sources */,
 				D1FEAF1F1BB471D9000F0F12 /* TorontoCheapEats.xcdatamodeld in Sources */,
 				D16DD8A11BB47F640058EE3D /* Yelp-Bridging-Header.m in Sources */,

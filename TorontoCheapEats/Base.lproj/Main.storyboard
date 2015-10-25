@@ -167,7 +167,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="jPk-sw-56l">
                                 <rect key="frame" x="15" y="74" width="570" height="467"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="BTn-Qr-a4b" userLabel="Details stack">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BTn-Qr-a4b" userLabel="Details stack">
                                         <rect key="frame" x="0.0" y="0.0" width="371" height="114"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="detailRestNameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="y7U-N1-0Zd">
@@ -178,11 +178,11 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3sm-a1-P5F">
-                                                <rect key="frame" x="0.0" y="46" width="148" height="13"/>
+                                                <rect key="frame" x="0.0" y="45" width="148" height="16"/>
                                                 <animations/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="detailTypeLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Vmz-WY-XbD">
-                                                <rect key="frame" x="0.0" y="59" width="371" height="29"/>
+                                                <rect key="frame" x="0.0" y="60" width="371" height="29"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -219,7 +219,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dws-hv-TEg">
                                                 <rect key="frame" x="0.0" y="0.0" width="570" height="35"/>
                                                 <animations/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                                 <state key="normal" title="Rate the Restaurant Price">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -241,11 +241,11 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="dVB-2b-jKC" userLabel="Get Directions Stack">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="dVB-2b-jKC" userLabel="Get Directions Stack">
                                                 <rect key="frame" x="0.0" y="280" width="570" height="70"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q31-2K-icf" customClass="ButtonStyle" customModule="TorontoCheapEats" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="570" height="33"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="570" height="34"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                                         <state key="normal" title="Get Direction">
@@ -267,7 +267,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHX-7f-Prf" customClass="ButtonStyle" customModule="TorontoCheapEats" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="35" width="570" height="35"/>
+                                                        <rect key="frame" x="0.0" y="36" width="570" height="34"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                                         <state key="normal" title="Call For Reservation">
@@ -299,6 +299,7 @@
                                                 <variation key="default">
                                                     <mask key="constraints">
                                                         <exclude reference="o8k-T7-8ik"/>
+                                                        <exclude reference="iLh-k5-AKF"/>
                                                     </mask>
                                                 </variation>
                                             </stackView>
@@ -586,7 +587,7 @@
         <!--About-->
         <scene sceneID="hHk-AH-Q4d">
             <objects>
-                <viewController id="yPE-gN-5zi" sceneMemberID="viewController">
+                <viewController id="yPE-gN-5zi" customClass="AbouMeVC" customModule="TorontoCheapEats" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TMK-LX-JY0"/>
                         <viewControllerLayoutGuide type="bottom" id="Kpu-fw-eSu"/>
@@ -595,47 +596,89 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Raw-Foods" translatesAutoresizingMaskIntoConstraints="NO" id="cME-HV-fNB">
-                                <rect key="frame" x="200" y="100" width="250" height="250"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Got a Question? You just a tap way" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWM-f8-MZQ">
-                                <rect key="frame" x="256" y="353" width="158" height="63"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcC-Na-gwg">
-                                <rect key="frame" x="200" y="429" width="250" height="40"/>
-                                <color key="backgroundColor" red="0.98431372549999996" green="0.38823529410000002" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
-                                <state key="normal" title="Contact Me">
-                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWy-Pe-cgE">
-                                <rect key="frame" x="200" y="477" width="250" height="40"/>
-                                <color key="backgroundColor" red="0.98431372549999996" green="0.38823529410000002" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
-                                <state key="normal" title="Visit My Website">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="qTC-qZ-E3r">
+                                <rect key="frame" x="45" y="120" width="510" height="360"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Question-Mark_V3" translatesAutoresizingMaskIntoConstraints="NO" id="cME-HV-fNB" customClass="PictureImageView" customModule="TorontoCheapEats" customModuleProvider="target">
+                                        <rect key="frame" x="76.5" y="0.0" width="357" height="216"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Got a Question? You just a tap way" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWM-f8-MZQ">
+                                        <rect key="frame" x="114.5" y="222" width="281" height="54"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcC-Na-gwg" customClass="ButtonStyle" customModule="TorontoCheapEats" customModuleProvider="target">
+                                        <rect key="frame" x="13" y="282" width="484.5" height="36"/>
+                                        <color key="backgroundColor" red="0.98431372549999996" green="0.38823529410000002" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                        <state key="normal" title="Contact Me">
+                                            <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWy-Pe-cgE" customClass="ButtonStyle" customModule="TorontoCheapEats" customModuleProvider="target">
+                                        <rect key="frame" x="13" y="324" width="484.5" height="36"/>
+                                        <color key="backgroundColor" red="0.98431372549999996" green="0.38823529410000002" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                        <state key="normal" title="Visit My Website">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="6YW-Ne-dj8" kind="push" id="BR8-Em-UE2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="qWy-Pe-cgE" firstAttribute="width" secondItem="qTC-qZ-E3r" secondAttribute="width" multiplier="0.95" id="7Pi-U1-lCP"/>
+                                    <constraint firstItem="PWM-f8-MZQ" firstAttribute="height" secondItem="qTC-qZ-E3r" secondAttribute="height" multiplier="0.15" id="7iV-nj-1rp"/>
+                                    <constraint firstItem="cME-HV-fNB" firstAttribute="height" secondItem="qTC-qZ-E3r" secondAttribute="height" multiplier="0.6" id="Anl-3k-1fj"/>
+                                    <constraint firstItem="cME-HV-fNB" firstAttribute="width" secondItem="qTC-qZ-E3r" secondAttribute="width" multiplier="0.7" id="Uv6-t4-G60"/>
+                                    <constraint firstItem="qWy-Pe-cgE" firstAttribute="height" secondItem="qTC-qZ-E3r" secondAttribute="height" multiplier="0.1" id="XDS-WF-MD6"/>
+                                    <constraint firstItem="PWM-f8-MZQ" firstAttribute="width" secondItem="qTC-qZ-E3r" secondAttribute="width" multiplier="0.55" id="b66-5i-a7B"/>
+                                    <constraint firstItem="dcC-Na-gwg" firstAttribute="width" secondItem="qTC-qZ-E3r" secondAttribute="width" multiplier="0.95" id="hJi-H1-sLx"/>
+                                    <constraint firstItem="dcC-Na-gwg" firstAttribute="height" secondItem="qTC-qZ-E3r" secondAttribute="height" multiplier="0.1" id="xe1-Jt-uw9"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qTC-qZ-E3r" firstAttribute="centerX" secondItem="qza-bC-GhF" secondAttribute="centerX" id="AwN-ob-I93"/>
+                            <constraint firstItem="qTC-qZ-E3r" firstAttribute="centerY" secondItem="qza-bC-GhF" secondAttribute="centerY" id="FTD-8m-Vgu"/>
+                            <constraint firstItem="qTC-qZ-E3r" firstAttribute="height" secondItem="qza-bC-GhF" secondAttribute="height" multiplier="0.6" id="HfG-RU-zU0"/>
+                            <constraint firstItem="qTC-qZ-E3r" firstAttribute="width" secondItem="qza-bC-GhF" secondAttribute="width" multiplier="0.85" id="mRd-js-6WR"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="zSe-wG-v65"/>
                     <connections>
-                        <segue destination="6YW-Ne-dj8" kind="push" id="wbX-j3-2NP"/>
+                        <outlet property="imageView" destination="cME-HV-fNB" id="pVC-8K-0t9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VGP-bc-Y15" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1185" y="2203"/>
         </scene>
-        <!--View Controller-->
+        <!--Web View Controller-->
         <scene sceneID="MJU-1d-2Cn">
             <objects>
-                <viewController id="6YW-Ne-dj8" sceneMemberID="viewController">
+                <viewController id="6YW-Ne-dj8" customClass="WebViewController" customModule="TorontoCheapEats" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="g8t-5z-xYc"/>
                         <viewControllerLayoutGuide type="bottom" id="giC-7l-cxx"/>
@@ -658,10 +701,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9xA-gB-KTB"/>
+                    <connections>
+                        <outlet property="webView" destination="sgc-Og-Ujz" id="kRj-eW-W9X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vh0-iG-13U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1185" y="2873"/>
+            <point key="canvasLocation" x="1190" y="2981"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="RgF-DG-wgW">
@@ -1208,11 +1254,11 @@
             </objects>
             <point key="canvasLocation" x="4340" y="772"/>
         </scene>
-        <!--About Me-->
+        <!--Your Profile-->
         <scene sceneID="KSu-Yi-eI6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uMe-Lf-FbC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="About Me" image="user(1)" id="eor-CJ-E3X"/>
+                    <tabBarItem key="tabBarItem" title="Your Profile" image="user(1)" id="eor-CJ-E3X"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dnz-eg-WVW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1227,7 +1273,7 @@
             </objects>
             <point key="canvasLocation" x="1710" y="-312"/>
         </scene>
-        <!--About Me-->
+        <!--Your Profile-->
         <scene sceneID="tod-ng-kpt">
             <objects>
                 <viewController id="RwF-0f-ZKR" customClass="SettingsViewController" customModule="TorontoCheapEats" customModuleProvider="target" sceneMemberID="viewController">
@@ -1240,13 +1286,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6uI-5j-YNt" userLabel="Settings Stack">
-                                <rect key="frame" x="30" y="84" width="540" height="320"/>
+                                <rect key="frame" x="30" y="84" width="540" height="316"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="fjd-HB-10i" userLabel="Image Stack">
-                                        <rect key="frame" x="108" y="0.0" width="324" height="138.5"/>
+                                        <rect key="frame" x="108" y="0.0" width="324" height="134.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noImage" translatesAutoresizingMaskIntoConstraints="NO" id="CEe-Xj-ibU" customClass="PictureImageView" customModule="TorontoCheapEats" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="15.5" width="108" height="108"/>
+                                                <rect key="frame" x="0.0" y="13" width="108" height="108"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="CEe-Xj-ibU" secondAttribute="height" multiplier="1:1" id="V3i-Co-MKF"/>
                                                 </constraints>
@@ -1263,7 +1309,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4TG-IC-tid">
-                                                <rect key="frame" x="110" y="51.5" width="214" height="36"/>
+                                                <rect key="frame" x="110" y="49" width="214" height="36"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                                 <state key="normal" title="Change Photo">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -1276,7 +1322,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="First Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTU-AL-oJb">
-                                        <rect key="frame" x="27" y="143.5" width="486" height="20.5"/>
+                                        <rect key="frame" x="27" y="139" width="486" height="20.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="486" id="Hhh-m6-7xa"/>
                                         </constraints>
@@ -1285,12 +1331,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pBB-FP-8fy">
-                                        <rect key="frame" x="27" y="169" width="486" height="30"/>
+                                        <rect key="frame" x="27" y="165" width="486" height="30"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sxh-pY-AXX">
-                                        <rect key="frame" x="27" y="204" width="486" height="20.5"/>
+                                        <rect key="frame" x="27" y="200" width="486" height="20.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="486" id="ekW-9U-TXY"/>
                                         </constraints>
@@ -1299,12 +1345,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wtQ-2G-dkM">
-                                        <rect key="frame" x="27" y="229.5" width="486" height="30"/>
+                                        <rect key="frame" x="27" y="225" width="486" height="30"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXx-VN-Eit">
-                                        <rect key="frame" x="27" y="264.5" width="486" height="20.5"/>
+                                        <rect key="frame" x="27" y="260" width="486" height="20.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="486" id="M13-8c-bzs"/>
                                         </constraints>
@@ -1313,7 +1359,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gzJ-IG-o6U">
-                                        <rect key="frame" x="27" y="290" width="486" height="30"/>
+                                        <rect key="frame" x="27" y="286" width="486" height="30"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -1327,12 +1373,14 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olJ-4E-UUD" customClass="ButtonStyle" customModule="TorontoCheapEats" customModuleProvider="target">
-                                <rect key="frame" x="145" y="424" width="308" height="33"/>
+                                <rect key="frame" x="145" y="420" width="308" height="37"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.38823529410000002" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="308" id="eTC-hP-KtP"/>
                                 </constraints>
-                                <state key="normal" image="button-3">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
@@ -1355,7 +1403,7 @@
                             <constraint firstItem="nJ7-xU-ErV" firstAttribute="top" secondItem="olJ-4E-UUD" secondAttribute="bottom" constant="94" id="tDj-P5-kVz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="About Me" id="wsY-nx-ssL">
+                    <navigationItem key="navigationItem" title="Your Profile" id="wsY-nx-ssL">
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="AwL-wm-e9c">
                             <connections>
                                 <action selector="logoutButtonPressed:" destination="RwF-0f-ZKR" id="kJp-BL-4rP"/>
@@ -1589,9 +1637,8 @@
     </scenes>
     <resources>
         <image name="05" width="1300" height="1668"/>
-        <image name="Raw-Foods" width="570" height="639"/>
+        <image name="Question-Mark_V3" width="300" height="300"/>
         <image name="bad" width="64" height="64"/>
-        <image name="button-3" width="303" height="33"/>
         <image name="camera" width="256" height="256"/>
         <image name="close" width="64" height="64"/>
         <image name="facebook" width="202" height="46"/>
