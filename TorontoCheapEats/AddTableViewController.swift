@@ -133,7 +133,5 @@ class AddTableViewController: UITableViewController, UIImagePickerControllerDele
     }
     */
 
-    func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
-        UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: true)
-    }
+   
 }

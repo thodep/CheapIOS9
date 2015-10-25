@@ -255,9 +255,6 @@ class SettingsViewController: UIViewController,UIImagePickerControllerDelegate, 
     }
 
     
-    func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
-        UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: false)
-    }
     /*
     // MARK: - Navigation
 

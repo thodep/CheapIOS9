@@ -267,7 +267,5 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
 }
 
-func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
-    UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: false)
-}
+
 
