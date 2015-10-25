@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class SettingsViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate , UITextFieldDelegate{
 
     
     @IBOutlet weak var firstNameTextField: UITextField!
@@ -43,6 +43,10 @@ class SettingsViewController: UIViewController,UIImagePickerControllerDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        firstNameTextField.delegate = self
+        lastNameTextField.delegate = self
+        emailAddressTextField.delegate = self
+        
         imagePicker.delegate = self
         
         PFUser.currentUser()?.fetchInBackgroundWithBlock({ (result: PFObject?, error: NSError?) -> Void in
@@ -144,6 +148,11 @@ class SettingsViewController: UIViewController,UIImagePickerControllerDelegate, 
         return true
     }
     
+    override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
+        resign()
+        
+    }
+    
     //---- End Working with Key Board
     
     @IBAction func savePressed(sender: AnyObject) {
@@ -166,19 +175,19 @@ class SettingsViewController: UIViewController,UIImagePickerControllerDelegate, 
                 } else {
                     // TODO: give response for saved data
                     print("saved")
-                    
-                    let uiAlert = UIAlertController(title: "Congrats!", message: "You just updated your info", preferredStyle: UIAlertControllerStyle.Alert)
-                    self.presentViewController(uiAlert, animated: true, completion: nil)
-                    
-                    uiAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
-                        print("Click of default button")
-                        
-                        // to go back to main App
-                       self.performSegueWithIdentifier("goBacktoMain", sender: self)
+//                    
+//                    let uiAlert = UIAlertController(title: "Congrats!", message: "You just updated your info", preferredStyle: UIAlertControllerStyle.Alert)
+//                    self.presentViewController(uiAlert, animated: true, completion: nil)
+//                    
+//                    uiAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
+//                        print("Click of default button")
+//                        
+//                        // to go back to main App
+//                       self.performSegueWithIdentifier("goBacktoMain", sender: self)
 
                         
                         
-                    }))
+                   // }))
                     
                 }
             })
@@ -246,7 +255,9 @@ class SettingsViewController: UIViewController,UIImagePickerControllerDelegate, 
     }
 
     
-
+    func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
+        UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: false)
+    }
     /*
     // MARK: - Navigation
 

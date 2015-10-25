@@ -41,6 +41,7 @@
 		D1DF01FC1BB8FA3700C9290C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DF01FB1BB8FA3700C9290C /* DetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D1DF01FE1BB8FAE000C9290C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1DF01FD1BB8FAE000C9290C /* CoreLocation.framework */; };
 		D1E667451BD00B0100182B0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1E667441BD00B0100182B0F /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
+		D1E6A3DA1BDD2E6E00F02E1C /* AddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E6A3D91BDD2E6E00F02E1C /* AddTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D1F6FA6D1BBEEE6B00476BA7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F6FA6C1BBEEE6B00476BA7 /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D1F6FA6F1BBF0F8E00476BA7 /* BusinessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F6FA6E1BBF0F8E00476BA7 /* BusinessController.swift */; settings = {ASSET_TAGS = (); }; };
 		D1FEAF171BB471D8000F0F12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FEAF161BB471D8000F0F12 /* AppDelegate.swift */; };
@@ -108,6 +109,7 @@
 		D1DF01FB1BB8FA3700C9290C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D1DF01FD1BB8FAE000C9290C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D1E667441BD00B0100182B0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D1E6A3D91BDD2E6E00F02E1C /* AddTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTableViewController.swift; sourceTree = "<group>"; };
 		D1F6FA6C1BBEEE6B00476BA7 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D1F6FA6E1BBF0F8E00476BA7 /* BusinessController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessController.swift; sourceTree = "<group>"; };
 		D1FEAF131BB471D8000F0F12 /* TorontoCheapEats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TorontoCheapEats.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -240,6 +242,7 @@
 		D1F6FA711BBF0FC800476BA7 /* ViewContollers */ = {
 			isa = PBXGroup;
 			children = (
+				D1E6A3D91BDD2E6E00F02E1C /* AddTableViewController.swift */,
 				D1FEAF161BB471D8000F0F12 /* AppDelegate.swift */,
 				D1B13CED1BB4F972006A546C /* BusinessViewController.swift */,
 				D1DF01FB1BB8FA3700C9290C /* DetailViewController.swift */,
@@ -508,6 +511,7 @@
 				D1B13CF01BB50003006A546C /* BusinessTableViewCell.swift in Sources */,
 				D1561BEC1BC44D05007B72A3 /* ReviewViewController.swift in Sources */,
 				D19DB4451BBA121600DF6F53 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
+				D1E6A3DA1BDD2E6E00F02E1C /* AddTableViewController.swift in Sources */,
 				D1F6FA6F1BBF0F8E00476BA7 /* BusinessController.swift in Sources */,
 				D1F6FA6D1BBEEE6B00476BA7 /* MapViewController.swift in Sources */,
 				9FA7536A1BC5B48D003AEA78 /* ButtonStyle.swift in Sources */,

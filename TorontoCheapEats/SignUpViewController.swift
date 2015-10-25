@@ -91,11 +91,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         })
     }
     
-    // if you press the return button the keyboard will dissappear
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        resign()
-        return true
-    }
+   
 
     
     // resigning of firstResponders of the textField's
@@ -269,5 +265,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         let viewController = storyboard.instantiateViewControllerWithIdentifier("Login")
         self.presentViewController(viewController, animated: true, completion: nil)
     }
+}
+
+func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
+    UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: false)
 }
 

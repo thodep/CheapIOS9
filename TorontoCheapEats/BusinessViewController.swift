@@ -92,6 +92,8 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
             target: nil, action: nil)
            
     }
+     @IBAction func unwindToHomeScreen(segue:UIStoryboardSegue) {
+    }
     //----Adding Search Bar & implement Search Methods-------------
 
     
@@ -110,14 +112,16 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
         searchController.searchBar.barTintColor = UIColor(red: 231.0/255.0, green: 95.0/255.0, blue:
             53.0/255.0, alpha: 0.3)
         // Set cancel button and search cursor in gray
-        searchController.searchBar.tintColor = UIColor.blackColor()
+        searchController.searchBar.tintColor = UIColor.grayColor()
          // Include the search controller's search bar on Navigation Bar
-        navigationItem.titleView = searchController.searchBar
+        //navigationItem.titleView = searchController.searchBar
+        
+        // Include search bar on top of tableview
+          self.tableView.tableHeaderView = searchController.searchBar
         
         self.definesPresentationContext = true
     }
     
-
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         let searchText = searchController.searchBar.text

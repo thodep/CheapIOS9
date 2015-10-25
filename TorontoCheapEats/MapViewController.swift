@@ -97,7 +97,7 @@ class MapViewController: UIViewController ,  CLLocationManagerDelegate, MKMapVie
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
 
         performSegueWithIdentifier("MapViewPushtoDetailView", sender: self)
-       // self.navigationController?.pushViewController(self.detailVC, animated: true)
+       
     }
 
     
