@@ -94,6 +94,7 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
     }
      @IBAction func unwindToHomeScreen(segue:UIStoryboardSegue) {
     }
+    
     //----Adding Search Bar & implement Search Methods-------------
 
     
@@ -119,7 +120,7 @@ class BusinessViewController: UIViewController , UITableViewDelegate, UITableVie
         // Include search bar on top of tableview
           self.tableView.tableHeaderView = searchController.searchBar
         
-        self.definesPresentationContext = true
+        self.definesPresentationContext = true// to turn off the search bar in detail VC
     }
     
     
