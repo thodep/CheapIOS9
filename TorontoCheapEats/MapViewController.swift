@@ -85,6 +85,7 @@ class MapViewController: UIViewController ,  CLLocationManagerDelegate, MKMapVie
             
         }
     }
+    // passing data to the next VC
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         //
         if segue.identifier == "MapViewPushtoDetailView" {

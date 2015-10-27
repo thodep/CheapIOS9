@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import MessageUI
 
-class AbouMeVC: UIViewController {
+class AbouMeVC: UIViewController, MFMailComposeViewControllerDelegate, UINavigationBarDelegate {
 
     @IBOutlet weak var imageView: PictureImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,7 +26,39 @@ class AbouMeVC: UIViewController {
         imageView.startAnimating()
     }
 
-    override func didReceiveMemoryWarning() {
+    @IBAction func sendEmail(sender: AnyObject) {
+        if MFMailComposeViewController.canSendMail() {
+            let composer = MFMailComposeViewController()
+            
+            composer.mailComposeDelegate = self
+            composer.setToRecipients(["thodep@yahoo.com"])
+            composer.navigationBar.tintColor = UIColor.whiteColor()
+          
+            presentViewController(composer, animated: true, completion: {
+                UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: false)
+              
+                })
+        }
+    }
+    
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+            switch result.rawValue {
+    case MFMailComposeResultCancelled.rawValue:
+        print("Mail cancelled")
+    case MFMailComposeResultSaved.rawValue:
+        print("Mail saved")
+    case MFMailComposeResultSent.rawValue:
+        print("Mail sent")
+    case MFMailComposeResultFailed.rawValue:
+        print("Failed to send mail: \(error!.localizedDescription)")
+    default:
+        break
+            }
+            // Dismiss the Mail interface
+            dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+       override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }

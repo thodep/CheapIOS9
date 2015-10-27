@@ -247,7 +247,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func signupButtonPressed(sender: AnyObject) {
-        performSegueWithIdentifier("pushToSignUp", sender: self)
+        //performSegueWithIdentifier("pushToSignUp", sender: self)
         
     }
     

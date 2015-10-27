@@ -628,6 +628,9 @@
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="sendEmail:" destination="yPE-gN-5zi" eventType="touchUpInside" id="u20-Yh-LQa"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWy-Pe-cgE" customClass="ButtonStyle" customModule="TorontoCheapEats" customModuleProvider="target">
                                         <rect key="frame" x="13" y="324" width="484.5" height="36"/>
@@ -861,6 +864,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="signupButtonPressed:" destination="AUU-bb-PHW" eventType="touchUpInside" id="LBv-hs-G1M"/>
+                                            <segue destination="PHQ-Eb-xRb" kind="push" identifier="pushToSignUp" id="NIC-jI-mx9"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login or Sign up with Facebook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tR-pn-Rww">
@@ -940,301 +944,11 @@
                         <outlet property="passwordField" destination="lyq-W6-33C" id="pIf-mJ-xm7"/>
                         <outlet property="signupButton" destination="Cuf-2Z-8KG" id="LhF-Cd-dRw"/>
                         <outlet property="usernameField" destination="Fxz-Pm-CtH" id="hWr-TN-Wf9"/>
-                        <segue destination="SNB-hq-ZLb" kind="presentation" identifier="pushToSignUp" id="7Uu-YT-UTb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Rn-Ls-1Ef" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5064" y="788"/>
-        </scene>
-        <!--Sign Up Controller-->
-        <scene sceneID="Vzp-a9-obB">
-            <objects>
-                <viewController storyboardIdentifier="Signup" title="SignUp" id="0OG-UI-9TD" userLabel="Sign Up Controller" customClass="SignUpViewController" customModule="TorontoCheapEats" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ePz-ph-Ahp"/>
-                        <viewControllerLayoutGuide type="bottom" id="B8g-yU-qsP"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="awJ-gF-Xa4" customClass="BackgroundView" customModule="TorontoCheapEats" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gDF-nL-iAI">
-                                <rect key="frame" x="75" y="150" width="450" height="350"/>
-                                <subviews>
-                                    <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PWo-UT-3fV" userLabel="Username Background" customClass="BackgroundView" customModule="TorontoCheapEats" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="450" height="50"/>
-                                        <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ntC-gW-89V">
-                                                <rect key="frame" x="0.0" y="0.0" width="450" height="45"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="ntC-gW-89V" secondAttribute="trailing" id="6HZ-hk-hEi"/>
-                                            <constraint firstItem="ntC-gW-89V" firstAttribute="top" secondItem="PWo-UT-3fV" secondAttribute="top" id="Dnc-nf-fNr"/>
-                                            <constraint firstAttribute="bottom" secondItem="ntC-gW-89V" secondAttribute="bottom" constant="5" id="I3U-t7-nQK"/>
-                                            <constraint firstItem="ntC-gW-89V" firstAttribute="leading" secondItem="PWo-UT-3fV" secondAttribute="leading" id="ywo-ho-NPe"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
-                                                <real key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="0.0" width="360" height="50"/>
-                                        </variation>
-                                    </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="x1n-t3-YhN">
-                                        <rect key="frame" x="0.0" y="60" width="450" height="50"/>
-                                        <subviews>
-                                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UWR-GI-ZMP" userLabel="Firstname Background" customClass="BackgroundView" customModule="TorontoCheapEats" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="220" height="50"/>
-                                                <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uuR-Bz-rKw">
-                                                        <rect key="frame" x="0.0" y="0.0" width="220" height="45"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstItem="uuR-Bz-rKw" firstAttribute="top" secondItem="UWR-GI-ZMP" secondAttribute="top" id="1cH-Ms-bJa"/>
-                                                    <constraint firstAttribute="trailing" secondItem="uuR-Bz-rKw" secondAttribute="trailing" id="Gm1-Tg-YTI"/>
-                                                    <constraint firstItem="uuR-Bz-rKw" firstAttribute="leading" secondItem="UWR-GI-ZMP" secondAttribute="leading" id="eb2-SF-ZUK"/>
-                                                    <constraint firstAttribute="bottom" secondItem="uuR-Bz-rKw" secondAttribute="bottom" constant="5" id="gdu-fv-A1a"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
-                                                        <real key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <variation key="widthClass=compact" misplaced="YES">
-                                                    <rect key="frame" x="0.0" y="0.0" width="175" height="50"/>
-                                                </variation>
-                                            </view>
-                                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XKh-dg-rCi" userLabel="Lastname Background" customClass="BackgroundView" customModule="TorontoCheapEats" customModuleProvider="target">
-                                                <rect key="frame" x="230" y="0.0" width="220" height="50"/>
-                                                <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lnX-fA-Lgd">
-                                                        <rect key="frame" x="0.0" y="0.0" width="220" height="45"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="lnX-fA-Lgd" secondAttribute="bottom" constant="5" id="B8x-rp-7L5"/>
-                                                    <constraint firstAttribute="trailing" secondItem="lnX-fA-Lgd" secondAttribute="trailing" id="Eyr-6o-zG9"/>
-                                                    <constraint firstItem="lnX-fA-Lgd" firstAttribute="leading" secondItem="XKh-dg-rCi" secondAttribute="leading" id="Ne9-kH-IQp"/>
-                                                    <constraint firstItem="lnX-fA-Lgd" firstAttribute="top" secondItem="XKh-dg-rCi" secondAttribute="top" id="Sd3-bP-uuR"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
-                                                        <real key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <variation key="widthClass=compact" misplaced="YES">
-                                                    <rect key="frame" x="185" y="0.0" width="175" height="50"/>
-                                                </variation>
-                                            </view>
-                                        </subviews>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="60" width="360" height="50"/>
-                                        </variation>
-                                    </stackView>
-                                    <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KiW-og-Kdh" userLabel="Email Address Background" customClass="BackgroundView" customModule="TorontoCheapEats" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="120" width="450" height="50"/>
-                                        <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qqh-zq-G1k">
-                                                <rect key="frame" x="0.0" y="0.0" width="450" height="45"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="Qqh-zq-G1k" secondAttribute="trailing" id="EjZ-Gm-Bd0"/>
-                                            <constraint firstItem="Qqh-zq-G1k" firstAttribute="top" secondItem="KiW-og-Kdh" secondAttribute="top" id="IuX-5d-CMl"/>
-                                            <constraint firstItem="Qqh-zq-G1k" firstAttribute="leading" secondItem="KiW-og-Kdh" secondAttribute="leading" id="cTw-w1-Uiu"/>
-                                            <constraint firstAttribute="bottom" secondItem="Qqh-zq-G1k" secondAttribute="bottom" constant="5" id="vnG-RF-UiU"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
-                                                <real key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="120" width="360" height="50"/>
-                                        </variation>
-                                    </view>
-                                    <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQL-1W-0op" userLabel="Password Background" customClass="BackgroundView" customModule="TorontoCheapEats" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="180" width="450" height="50"/>
-                                        <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="39f-O2-e6u">
-                                                <rect key="frame" x="0.0" y="0.0" width="450" height="45"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                            </textField>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="39f-O2-e6u" secondAttribute="trailing" id="7Qj-V3-eBo"/>
-                                            <constraint firstAttribute="bottom" secondItem="39f-O2-e6u" secondAttribute="bottom" constant="5" id="FKM-xI-gXC"/>
-                                            <constraint firstItem="39f-O2-e6u" firstAttribute="leading" secondItem="UQL-1W-0op" secondAttribute="leading" id="Pwd-9N-fRe"/>
-                                            <constraint firstItem="39f-O2-e6u" firstAttribute="top" secondItem="UQL-1W-0op" secondAttribute="top" id="hUO-jJ-zMO"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
-                                                <real key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="180" width="360" height="50"/>
-                                        </variation>
-                                    </view>
-                                    <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TK7-Zg-VmR" userLabel="Password Confirmation Background" customClass="BackgroundView" customModule="TorontoCheapEats" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="240" width="450" height="50"/>
-                                        <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password Confirmation" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3AW-Rb-dPX">
-                                                <rect key="frame" x="0.0" y="0.0" width="450" height="45"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                            </textField>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="3AW-Rb-dPX" secondAttribute="trailing" id="9H4-Mj-kku"/>
-                                            <constraint firstItem="3AW-Rb-dPX" firstAttribute="top" secondItem="TK7-Zg-VmR" secondAttribute="top" id="c8D-tO-lmG"/>
-                                            <constraint firstAttribute="bottom" secondItem="3AW-Rb-dPX" secondAttribute="bottom" constant="5" id="ddA-Oo-GzH"/>
-                                            <constraint firstItem="3AW-Rb-dPX" firstAttribute="leading" secondItem="TK7-Zg-VmR" secondAttribute="leading" id="hGl-Pp-U9y"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
-                                                <real key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="240" width="360" height="50"/>
-                                        </variation>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBN-NU-XIi" customClass="ButtonStyle" customModule="TorontoCheapEats" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="300" width="450" height="50"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="FKj-Ty-aBp"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
-                                        <state key="normal" title="Create Account">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
-                                                <real key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="useBorder" value="NO"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="300" width="360" height="30"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="createAccountButtonPressed:" destination="0OG-UI-9TD" eventType="touchUpInside" id="yH9-qe-v0M"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="KiW-og-Kdh" firstAttribute="top" secondItem="gDF-nL-iAI" secondAttribute="top" constant="120" id="5pM-M5-EMn"/>
-                                    <constraint firstItem="UQL-1W-0op" firstAttribute="top" secondItem="gDF-nL-iAI" secondAttribute="top" constant="180" id="H4W-1j-oUP"/>
-                                    <constraint firstItem="x1n-t3-YhN" firstAttribute="top" secondItem="PWo-UT-3fV" secondAttribute="bottom" constant="10" id="Mt2-xu-pP4"/>
-                                    <constraint firstItem="x1n-t3-YhN" firstAttribute="top" secondItem="gDF-nL-iAI" secondAttribute="top" constant="60" id="WdU-GI-O7q"/>
-                                    <constraint firstItem="TK7-Zg-VmR" firstAttribute="top" secondItem="gDF-nL-iAI" secondAttribute="top" constant="240" id="izW-YJ-HUd"/>
-                                </constraints>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="20" y="136" width="360" height="330"/>
-                                </variation>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEC-ZJ-S1q" userLabel="Error Label">
-                                <rect key="frame" x="0.0" y="74" width="600" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="o32-9w-0Kd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="11"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="B8g-yU-qsP" firstAttribute="top" secondItem="gDF-nL-iAI" secondAttribute="bottom" constant="100" id="3HY-Vw-x0h"/>
-                            <constraint firstItem="sEC-ZJ-S1q" firstAttribute="top" secondItem="ePz-ph-Ahp" secondAttribute="bottom" constant="10" id="9FJ-o6-2Fc"/>
-                            <constraint firstItem="sEC-ZJ-S1q" firstAttribute="leading" secondItem="awJ-gF-Xa4" secondAttribute="leading" id="J6s-Wa-JW8"/>
-                            <constraint firstAttribute="trailing" secondItem="sEC-ZJ-S1q" secondAttribute="trailing" id="WeE-XH-OB6"/>
-                            <constraint firstItem="gDF-nL-iAI" firstAttribute="leading" secondItem="awJ-gF-Xa4" secondAttribute="leadingMargin" constant="55" id="cJX-Pp-wNk"/>
-                            <constraint firstItem="sEC-ZJ-S1q" firstAttribute="centerX" secondItem="gDF-nL-iAI" secondAttribute="centerX" id="g7F-d2-p2L"/>
-                            <constraint firstItem="gDF-nL-iAI" firstAttribute="top" secondItem="sEC-ZJ-S1q" secondAttribute="bottom" constant="52" id="vti-YM-dlI"/>
-                        </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="roundness">
-                                <real key="value" value="0.0"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
-                                <real key="value" value="-1"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
-                                <color key="value" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
-                                <color key="value" red="1" green="0.46048092969999999" blue="0.27389336780000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="point" keyPath="startPoint">
-                                <point key="value" x="1" y="0.0"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="point" keyPath="endPoint">
-                                <point key="value" x="0.0" y="14"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="useGradient" value="YES"/>
-                        </userDefinedRuntimeAttributes>
-                    </view>
-                    <navigationItem key="navigationItem" title="Sign Up " id="h36-Jc-B8C">
-                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="cancel" id="XAr-gB-5dT">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="cancelButtonPressed:" destination="0OG-UI-9TD" id="ack-o8-GMo"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="emailAddressField" destination="Qqh-zq-G1k" id="PVj-f2-AHV"/>
-                        <outlet property="errorMessageLabel" destination="sEC-ZJ-S1q" id="2aI-W7-ahm"/>
-                        <outlet property="firstNameField" destination="uuR-Bz-rKw" id="EKD-an-G1U"/>
-                        <outlet property="lastNameField" destination="lnX-fA-Lgd" id="oAm-Vk-l6M"/>
-                        <outlet property="passwordConfirmationField" destination="3AW-Rb-dPX" id="kVa-7v-q5d"/>
-                        <outlet property="passwordField" destination="39f-O2-e6u" id="66c-sU-J0h"/>
-                        <outlet property="usernameField" destination="ntC-gW-89V" id="qlw-dJ-eaq"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dDs-xF-2Lv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6528" y="752"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="W7K-Y6-GdY">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SNB-hq-ZLb" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Eur-Bx-2js">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="0OG-UI-9TD" kind="relationship" relationship="rootViewController" id="o82-1n-asb"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2iy-vP-Qyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5792" y="772"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gM5-kr-Nwg">
@@ -1384,7 +1098,7 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
-                                        <real key="value" value="3"/>
+                                        <real key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -1633,6 +1347,281 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FcF-e3-d5N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1185" y="1509"/>
+        </scene>
+        <!--Sign Up Controller-->
+        <scene sceneID="2Kg-gs-Pfw">
+            <objects>
+                <viewController storyboardIdentifier="Signup" title="SignUp" id="PHQ-Eb-xRb" userLabel="Sign Up Controller" customClass="SignUpViewController" customModule="TorontoCheapEats" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ReX-xz-ugj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xtp-6M-j4H"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s5A-1M-xR8" customClass="BackgroundView" customModule="TorontoCheapEats" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WOy-aa-fQS">
+                                <rect key="frame" x="75" y="106" width="450" height="350"/>
+                                <subviews>
+                                    <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VgA-wT-t3t" userLabel="Username Background" customClass="BackgroundView" customModule="TorontoCheapEats" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="450" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jpx-ld-qAi">
+                                                <rect key="frame" x="0.0" y="0.0" width="450" height="50"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="jpx-ld-qAi" firstAttribute="width" secondItem="VgA-wT-t3t" secondAttribute="width" id="MHM-rx-2Y4"/>
+                                            <constraint firstItem="jpx-ld-qAi" firstAttribute="centerX" secondItem="VgA-wT-t3t" secondAttribute="centerX" id="TbF-Vi-7Ex"/>
+                                            <constraint firstItem="jpx-ld-qAi" firstAttribute="centerY" secondItem="VgA-wT-t3t" secondAttribute="centerY" id="Xtf-gf-Ekc"/>
+                                            <constraint firstAttribute="height" constant="50" id="wE0-HA-BKX"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="360" height="50"/>
+                                        </variation>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7HC-Uv-dx4">
+                                        <rect key="frame" x="0.0" y="60" width="450" height="50"/>
+                                        <subviews>
+                                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xQ6-6I-SZx" userLabel="Firstname Background" customClass="BackgroundView" customModule="TorontoCheapEats" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="220" height="50"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J1u-8f-xdC">
+                                                        <rect key="frame" x="0.0" y="0.0" width="220" height="50"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="J1u-8f-xdC" firstAttribute="centerY" secondItem="xQ6-6I-SZx" secondAttribute="centerY" id="KNT-fj-XoO"/>
+                                                    <constraint firstItem="J1u-8f-xdC" firstAttribute="centerX" secondItem="xQ6-6I-SZx" secondAttribute="centerX" id="kMc-Uc-T8e"/>
+                                                    <constraint firstItem="J1u-8f-xdC" firstAttribute="width" secondItem="xQ6-6I-SZx" secondAttribute="width" id="nIl-wu-rD5"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="widthClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="175" height="50"/>
+                                                </variation>
+                                            </view>
+                                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qJE-i5-YsW" userLabel="Lastname Background" customClass="BackgroundView" customModule="TorontoCheapEats" customModuleProvider="target">
+                                                <rect key="frame" x="230" y="0.0" width="220" height="50"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1OF-Z9-lCp">
+                                                        <rect key="frame" x="0.0" y="0.0" width="220" height="50"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="1OF-Z9-lCp" firstAttribute="width" secondItem="qJE-i5-YsW" secondAttribute="width" id="JSJ-bg-XKU"/>
+                                                    <constraint firstItem="1OF-Z9-lCp" firstAttribute="centerX" secondItem="qJE-i5-YsW" secondAttribute="centerX" id="Z7I-v3-IBl"/>
+                                                    <constraint firstItem="1OF-Z9-lCp" firstAttribute="centerY" secondItem="qJE-i5-YsW" secondAttribute="centerY" id="cxZ-jH-Cun"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="widthClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="185" y="0.0" width="175" height="50"/>
+                                                </variation>
+                                            </view>
+                                        </subviews>
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="60" width="360" height="50"/>
+                                        </variation>
+                                    </stackView>
+                                    <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nfn-qY-Q0a" userLabel="Email Address Background" customClass="BackgroundView" customModule="TorontoCheapEats" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="120" width="450" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E8e-YJ-8Sx">
+                                                <rect key="frame" x="0.0" y="0.0" width="450" height="50"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="E8e-YJ-8Sx" firstAttribute="centerY" secondItem="Nfn-qY-Q0a" secondAttribute="centerY" id="EDh-Ss-a16"/>
+                                            <constraint firstItem="E8e-YJ-8Sx" firstAttribute="width" secondItem="Nfn-qY-Q0a" secondAttribute="width" id="JVy-Sf-GrY"/>
+                                            <constraint firstItem="E8e-YJ-8Sx" firstAttribute="centerX" secondItem="Nfn-qY-Q0a" secondAttribute="centerX" id="fLY-Yv-pvx"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="120" width="360" height="50"/>
+                                        </variation>
+                                    </view>
+                                    <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGp-7t-RS7" userLabel="Password Background" customClass="BackgroundView" customModule="TorontoCheapEats" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="180" width="450" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OwR-OY-MrW">
+                                                <rect key="frame" x="0.0" y="0.0" width="450" height="50"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="OwR-OY-MrW" firstAttribute="centerX" secondItem="fGp-7t-RS7" secondAttribute="centerX" id="bFu-Ha-KsU"/>
+                                            <constraint firstItem="OwR-OY-MrW" firstAttribute="width" secondItem="fGp-7t-RS7" secondAttribute="width" id="gq5-Qr-6By"/>
+                                            <constraint firstItem="OwR-OY-MrW" firstAttribute="centerY" secondItem="fGp-7t-RS7" secondAttribute="centerY" id="ojR-IK-e7Q"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="180" width="360" height="50"/>
+                                        </variation>
+                                    </view>
+                                    <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cS9-ig-1mR" userLabel="Password Confirmation Background" customClass="BackgroundView" customModule="TorontoCheapEats" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="240" width="450" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password Confirmation" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ep6-m9-rfd">
+                                                <rect key="frame" x="0.0" y="0.0" width="450" height="50"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="Ep6-m9-rfd" firstAttribute="centerY" secondItem="cS9-ig-1mR" secondAttribute="centerY" id="KB1-hk-r3b"/>
+                                            <constraint firstItem="Ep6-m9-rfd" firstAttribute="height" secondItem="cS9-ig-1mR" secondAttribute="height" id="KGb-OF-Q6t"/>
+                                            <constraint firstItem="Ep6-m9-rfd" firstAttribute="centerX" secondItem="cS9-ig-1mR" secondAttribute="centerX" id="bso-BF-uoZ"/>
+                                            <constraint firstItem="Ep6-m9-rfd" firstAttribute="width" secondItem="cS9-ig-1mR" secondAttribute="width" id="sk8-BL-HkT"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="240" width="360" height="50"/>
+                                        </variation>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5FC-IS-2sW" customClass="ButtonStyle" customModule="TorontoCheapEats" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="300" width="450" height="50"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                        <state key="normal" title="Create Account">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="useBorder" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="300" width="360" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="createAccountButtonPressed:" destination="PHQ-Eb-xRb" eventType="touchUpInside" id="sVd-ab-xT3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="fGp-7t-RS7" firstAttribute="width" secondItem="WOy-aa-fQS" secondAttribute="width" id="2Gq-t1-ccu"/>
+                                    <constraint firstItem="Nfn-qY-Q0a" firstAttribute="height" secondItem="VgA-wT-t3t" secondAttribute="height" id="7mg-T2-U9q"/>
+                                    <constraint firstItem="Ep6-m9-rfd" firstAttribute="height" secondItem="jpx-ld-qAi" secondAttribute="height" id="ANZ-zf-9k4"/>
+                                    <constraint firstItem="xQ6-6I-SZx" firstAttribute="height" secondItem="VgA-wT-t3t" secondAttribute="height" id="DHm-On-Neq"/>
+                                    <constraint firstItem="fGp-7t-RS7" firstAttribute="height" secondItem="VgA-wT-t3t" secondAttribute="height" id="FCV-T1-8Wz"/>
+                                    <constraint firstItem="Nfn-qY-Q0a" firstAttribute="width" secondItem="WOy-aa-fQS" secondAttribute="width" id="Fsc-gh-ZfB"/>
+                                    <constraint firstItem="OwR-OY-MrW" firstAttribute="height" secondItem="jpx-ld-qAi" secondAttribute="height" id="G9i-hT-uOw"/>
+                                    <constraint firstItem="J1u-8f-xdC" firstAttribute="height" secondItem="jpx-ld-qAi" secondAttribute="height" id="IHJ-Nb-Szo"/>
+                                    <constraint firstItem="fGp-7t-RS7" firstAttribute="centerX" secondItem="WOy-aa-fQS" secondAttribute="centerX" id="Kd2-n5-yGC"/>
+                                    <constraint firstItem="5FC-IS-2sW" firstAttribute="height" secondItem="cS9-ig-1mR" secondAttribute="height" id="Lna-GJ-Hzd"/>
+                                    <constraint firstItem="VgA-wT-t3t" firstAttribute="width" secondItem="WOy-aa-fQS" secondAttribute="width" id="O3q-dx-hpg"/>
+                                    <constraint firstItem="cS9-ig-1mR" firstAttribute="height" secondItem="VgA-wT-t3t" secondAttribute="height" id="XBA-2B-Wbl"/>
+                                    <constraint firstItem="7HC-Uv-dx4" firstAttribute="width" secondItem="WOy-aa-fQS" secondAttribute="width" id="dQl-8a-FTp"/>
+                                    <constraint firstItem="1OF-Z9-lCp" firstAttribute="height" secondItem="jpx-ld-qAi" secondAttribute="height" id="fI9-S2-HFB"/>
+                                    <constraint firstItem="cS9-ig-1mR" firstAttribute="width" secondItem="WOy-aa-fQS" secondAttribute="width" id="iS3-sf-kBj"/>
+                                    <constraint firstItem="qJE-i5-YsW" firstAttribute="height" secondItem="VgA-wT-t3t" secondAttribute="height" id="nlh-Qe-mTO"/>
+                                    <constraint firstItem="E8e-YJ-8Sx" firstAttribute="height" secondItem="jpx-ld-qAi" secondAttribute="height" id="o9v-gP-WBy"/>
+                                </constraints>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="136" width="360" height="330"/>
+                                </variation>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qz-3g-KKL" userLabel="Error Label">
+                                <rect key="frame" x="0.0" y="30" width="600" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="AgH-QO-3mJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="11"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WOy-aa-fQS" firstAttribute="width" secondItem="s5A-1M-xR8" secondAttribute="width" multiplier="0.75" id="5cb-oI-4fL"/>
+                            <constraint firstItem="7qz-3g-KKL" firstAttribute="width" secondItem="s5A-1M-xR8" secondAttribute="width" id="63Y-Dp-EFw"/>
+                            <constraint firstItem="WOy-aa-fQS" firstAttribute="top" secondItem="7qz-3g-KKL" secondAttribute="bottom" constant="52" id="Gpc-By-xCn"/>
+                            <constraint firstItem="7qz-3g-KKL" firstAttribute="top" secondItem="ReX-xz-ugj" secondAttribute="bottom" constant="10" id="XQh-xU-fQa"/>
+                            <constraint firstItem="WOy-aa-fQS" firstAttribute="centerX" secondItem="s5A-1M-xR8" secondAttribute="centerX" id="qEK-HI-Azv"/>
+                            <constraint firstItem="7qz-3g-KKL" firstAttribute="centerX" secondItem="s5A-1M-xR8" secondAttribute="centerX" id="y3H-Pd-h0w"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="roundness">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRounding">
+                                <real key="value" value="-1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
+                                <color key="value" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
+                                <color key="value" red="1" green="0.46048092969999999" blue="0.27389336780000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="point" keyPath="startPoint">
+                                <point key="value" x="1" y="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="point" keyPath="endPoint">
+                                <point key="value" x="0.0" y="14"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="useGradient" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" id="L5E-FQ-6lZ">
+                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="cancel" id="auW-oJ-3yf">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="PHQ-Eb-xRb" id="cRP-MA-NrU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailAddressField" destination="E8e-YJ-8Sx" id="hra-ph-Ryf"/>
+                        <outlet property="errorMessageLabel" destination="7qz-3g-KKL" id="O6L-XV-m5c"/>
+                        <outlet property="firstNameField" destination="J1u-8f-xdC" id="s1v-lZ-hmk"/>
+                        <outlet property="lastNameField" destination="1OF-Z9-lCp" id="ftc-nj-nH9"/>
+                        <outlet property="passwordConfirmationField" destination="Ep6-m9-rfd" id="39n-O6-zcs"/>
+                        <outlet property="passwordField" destination="OwR-OY-MrW" id="Pz6-Sy-kKz"/>
+                        <outlet property="usernameField" destination="jpx-ld-qAi" id="zNE-cV-coR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GAv-Bj-TYo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5868" y="788"/>
         </scene>
     </scenes>
     <resources>
