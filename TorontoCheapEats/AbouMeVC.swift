@@ -34,6 +34,8 @@ class AbouMeVC: UIViewController, MFMailComposeViewControllerDelegate, UINavigat
             composer.setToRecipients(["thodep@yahoo.com"])
             composer.navigationBar.tintColor = UIColor.whiteColor()
           
+            
+           // presentViewController(composer, animated: true, completion: nil)
             presentViewController(composer, animated: true, completion: {
                 UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: false)
               
